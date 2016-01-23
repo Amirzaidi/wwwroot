@@ -3,7 +3,7 @@
 $europe = new continent('Europe');
 
 $country = country::continent($europe->id);
-while ($country->next())
+while ($country->found())
 {
 	echo $country->name, ': ', $country->desc, '<br/>';
 }

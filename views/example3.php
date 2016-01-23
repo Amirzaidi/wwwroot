@@ -3,7 +3,7 @@
 $europe = new continent('Europe');
 
 $countries = country::continent($europe->id);
-while ($countries->next())
+while ($countries->found())
 {
 	echo $countries->desc, '<br/>';
 	$countries->desc .= '_';

@@ -22,6 +22,10 @@ abstract class mysql
 		{
 			$this->stmt = $value;
 		}
+		else if (is_array($value))
+		{
+			$this->prepareInsert($value);
+		}
 		else
 		{
 			if (is_int($value))
@@ -48,6 +52,31 @@ abstract class mysql
 		$this->result = $this->stmt->get_result();
 	}
 
+	private function prepareInsert(&$keyvalues)
+	{
+		$qmarks = [];
+		$qmarkcount = count($keyvalues);
+		for ($i = 0; $i < $qmarkcount; $i++)
+		{
+			$qmarks[] = '?';
+		}
+
+		$keys = [];
+		$values = [];
+		$types = '';
+		foreach ($keyvalues as $key => &$value)
+		{
+			$keys[] = '`' . $key . '`';
+			$values[] = &$value;
+			$type = gettype($value);
+			$types .= $type[0];
+		}
+
+		$this->stmt = self::$conn->prepare('INSERT INTO ' . $this->table() . ' (' . implode(', ', $keys) . ') VALUES (' . implode(', ', $qmarks) . ')');
+		array_unshift($values, $types);
+		call_user_func_array([$this->stmt, 'bind_param'], $values);
+	}
+
 	protected abstract function table();
 
 	protected function intKey()
@@ -60,7 +89,7 @@ abstract class mysql
 		return 'name';
 	}
 
-	public function next()
+	public function found()
 	{
 		$this->row = $this->result->fetch_object();
 		return ($this->row !== null);
@@ -70,7 +99,7 @@ abstract class mysql
 	{
 		if ($this->row === false)
 		{
-			$this->next();
+			$this->found();
 		}
 
 		return $this->row->$key;
@@ -86,6 +115,17 @@ abstract class mysql
 		$update->execute();
 
 		$this->row->$updatekey = $updatevalue;
+	}
+
+	public function delete()
+	{
+		$primarykey = $this->intKey();
+
+		$delete = self::$conn->prepare('DELETE FROM `' . $this->table() . '` WHERE `' . $primarykey . '` = ? LIMIT 1');
+		$delete->bind_param('i', $this->row->$primarykey);
+		$delete->execute();
+
+		$this->row = null;
 	}
 }
 ?>
