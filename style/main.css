@@ -1,0 +1,472 @@
+* {
+	margin: 0;
+	padding: 0;
+	line-height: normal;
+	transition: all 0.75s;
+	box-sizing: border-box;
+}
+
+html, body {
+	font-family: Segoe UI,Frutiger,Frutiger Linotype,Dejavu Sans,Helvetica Neue,Arial,sans-serif;
+	height: 100%;
+}
+
+a {
+	text-decoration: none;
+	color: #02B0AA;
+}
+
+nav {
+	background-color: #fff;
+	text-align: center;
+	border-bottom: 3px solid #f1f1f1;
+	position: fixed;
+	z-index: 99999999999999;
+	box-shadow: 0px 0px 5px #222;
+	width: 100%;
+}
+
+.navcon {
+	display: inline-block;
+}
+
+.title {
+	display: inline;
+	padding-right: 25px;
+	text-shadow: 2px 2px 0px #e1e1e1;
+	border-right: 3px solid #e1e1e1;
+	border-radius: 3px;
+}
+
+.title > a {
+	font-variant: small-caps;
+	font-style: oblique;
+	font-weight: bold;
+	font-size: 18px;
+}
+
+.navcon > ul > li {
+	list-type-style: none;
+	display: inline-block;
+	padding: 12px 0px;
+	border-bottom: 4px solid transparent;
+}
+
+.navcon > ul > li > a {
+	padding: 12px;
+	font-size: 18px;
+	border-bottom: 7px solid transparent;
+	color: #444;
+}
+
+.navcon > ul > li > a:hover {
+	border-color: teal;
+	color: teal;
+}
+
+header {
+	height: 97%;
+	background-size: cover;
+	background-position: center center;
+	box-shadow: 0px 0px 10px inset;
+}
+
+.header {
+	height: auto;
+	box-shadow: 0px 0px 10px inset;
+	background-image: url('/images/bgads.png');
+	background-size: cover;
+}
+
+.stylelayer {
+	position: inherit;
+	background-color: rgba(0,0,0,0.5);
+	height: 100%;
+}
+
+.headcon {
+	width: 1024px;
+	margin: 0px auto;
+	padding-top: 60px;
+}
+
+#headerfixedcon {
+	padding-top: 120px;
+}
+
+.imgheadcon {
+	padding-top: 110px;
+	width: 1024px;
+	margin: 0px auto;
+	padding-bottom: 55.8px;
+}
+
+.webstar {
+	text-align: center;
+}
+
+.webstar > img {
+	width: 7.5%;
+	height: auto;
+}
+
+h2 {
+	font-size: 40px;
+	color: #fff;
+	text-shadow: 0px 0px 2px #111;
+	letter-spacing: 1px;
+	font-weight: normal;
+}
+
+.webstarinfo {
+	margin-top: 20px;
+	text-align: center;
+}
+
+.webstarinfo > p {
+	color: white;
+	text-shadow: 0px 0px 1px #222;
+	font-size: 22px;
+}
+
+.webstarinfo > a {
+	font-weight: bold;
+	font-size: 23px;
+}
+
+#sidephoto {
+	height: auto;
+	width: 150px;
+	vertical-align: top;
+	border-radius: 93px;
+	border: 3px solid #FD9CFF;
+	box-shadow: 0px 0px 2px rgb(17, 17, 17);
+	margin: 44px;
+	opacity: 0.85;
+}
+
+#sidephoto:hover {
+	opacity: 1;
+}
+
+.greyrow {
+	background-color: #f5f5f5;
+}
+
+.headconbody {
+	width: 1024px;
+	margin: 0px auto;
+	padding: 60px 0px;
+}
+
+.description {
+	text-align: center;
+}
+
+#opg {
+	text-align: left;
+}
+
+h3 {
+	font-size: 50px;
+	font-weight: normal;
+	font-variant: small-caps;
+	color: rgba(0, 113, 113, 0.8);
+}
+
+.description > p {
+	color: #444;
+	font-size: 22px;
+}
+
+.contentrow {
+	margin-top: 30px;
+	text-align: center;
+}
+
+#exfixed {
+	display: inline-block;
+	height: auto;
+	width: 237px;
+	margin: 7px;
+	vertical-align: top;
+}
+
+#exfixed > img {
+	height: auto;
+	width: 100%;
+	border-radius: 200px;
+}
+
+.imgtitle {
+	margin: 20px 0px;
+}
+
+h4 {
+	font-size: 35px;
+	color: rgba(0, 113, 113, 0.8);
+	font-variant: small-caps;
+	text-shadow: 0px 0px 2px #e1e1e1;
+}
+
+.imgtext > p {
+	color: #444;
+}
+
+.imgtext {
+	text-align: left;
+	padding: 0px 10px;
+}
+
+.imglink {
+	margin-top: 20px;
+}
+
+.whiterow {
+	background-color: #fff;
+}
+
+.devinfo {
+	vertical-align: top;
+	width: 49%;
+	display: inline-block;
+}
+
+.desinfo {
+	vertical-align: top;
+	width: 49%;
+	float: left;
+	margin-right: 1%;
+}
+
+.devsimg > img {
+	height: auto;
+	width: 230px;
+}
+
+.devstitle {
+	margin-top: 10px;
+}
+
+.devstext {
+	margin-top: 10px;
+	text-align: justify;
+}
+
+.devstext > p {
+	color: #444;
+	font-size: 18px;
+}
+
+.albumrow {
+	background-image: url('/images/bgvoting.png');
+	box-shadow: 0px 0px 15px inset;
+}
+
+h5 {
+	font-size: 50px;
+	font-variant: small-caps;
+	color: #fff;
+	font-weight: normal;
+	text-shadow: 0px 0px 5px #333;
+}
+
+h6 {
+	font-size: 45px;
+	font-variant: small-caps;
+	color: #fff;
+}
+
+#albump {
+	color: white;
+}
+
+#stylelayervote {
+	height: auto !important;
+}
+
+#vl {
+	color: white;
+	font-size: 25px;
+	display: inline;
+}
+
+.ch {
+	margin-right: 40px;
+}
+
+#formp {
+	font-size: 30px;
+	color: white;
+}
+
+input[type="submit"] { 
+	padding: 10px 30px;
+	color: #FFF;
+	background-color: #008080;
+	border-radius: 3px;
+	font-size: 24px;
+	overflow: hidden;
+	cursor: pointer;
+	border-width: medium medium 3px;
+	border-style: none none solid;
+	border-color: -moz-use-text-color -moz-use-text-color #025A5A;
+	-moz-border-top-colors: none;
+	-moz-border-right-colors: none;
+	-moz-border-bottom-colors: none;
+	-moz-border-left-colors: none;
+	border-image: none;
+}
+
+input[type="submit"]:hover { 
+	background-color: white;
+	border-bottom: 3px solid #e1e1e1;
+	color: teal;
+}
+
+.footer > p {
+	font-size: 27px;
+	color: #444;
+}
+
+.footer > a {
+	font-size: 18px;
+}
+
+.specialrow {
+	background-color: teal;
+	background-image: url('/images/explain.png');
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+#specialdesc > p {
+	color: #fff;
+}
+
+#col-md-i {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.col-md-3 {
+	width: 247px;
+	text-align: left;
+	background-color: rgba(0, 0, 0, 0.4);
+	padding: 7px;
+	box-shadow: 0px 0px 2px black;
+}
+
+#col-md-i > p {
+	color: #fff;
+	margin: 0px 5px 5px 5px;
+}
+
+#explt {
+	color: #e1e1e1;
+	font-variant: small-caps;
+	font-size: 23px;
+	text-shadow: none;
+}
+
+.col-md-6 {
+	width: 300px;
+}
+
+.col-md-6 > img {
+	height: auto;
+	width: 100%;
+}
+
+#explp {
+	text-shadow: 0px 0px 5px #333;
+}
+
+#advertwhite {
+	background-color: #fff;
+}
+
+#specialad {
+	background-color: teal;
+	box-shadow: 0px 0px 5px inset;
+}
+
+.col-md-4 {
+	display: inline-block;
+	width: 33%;
+	vertical-align: top;
+}
+
+.col-md-12 {
+	padding-top: 30px;
+}
+
+h1 > img {
+	vertical-align: top;
+	height: auto;
+	width: 9%;
+}
+
+h1 {
+	font-weight: normal;
+	color: teal;
+	font-size: 22px;
+}
+
+.contestinfo {
+	margin-top: 15px;
+}
+
+.datecontest > p {
+	font-size: 15px;
+}
+
+#timer {
+	color: darkred;
+}
+
+.votingwin {
+	margin-top: 5px;
+}
+
+.votingwin > p {
+	color: teal;
+	font-size: 19px;
+	font-weight: bold;
+}
+
+p > img {
+	height: auto;
+	width: 10%;
+	vertical-align: middle;
+}
+
+.col-md-24 {
+	display: inline-block;
+	width: 19%;
+	vertical-align: top;
+}
+
+/* OTHER PAGES */
+
+.par > p {
+	color: #444;
+	font-size: 18px;
+}
+
+.par {
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+
+.clearfix {
+	display: none;
+}
+
+@media only screen and (max-width: 1023px) {
+
+	.clearfix {
+		display: block;
+	}
+
+}
