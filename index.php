@@ -6,12 +6,19 @@ mysql::connect('adm78', 'cso');
 $uri = explode('?', $_SERVER['REQUEST_URI'], 2);
 $uri = explode('/', ltrim($uri[0], '/'));
 
-if (file_exists('views/' . $uri[0] . '.php'))
+if (empty($uri[0]))
 {
-	require 'views/' . $uri[0] . '.php';
+	$uri[0] = 'index';
+}
+
+if (!file_exists('views/' . $uri[0] . '.php'))
+{
+	$file = '404';
 }
 else
 {
-	echo $uri[0], ' not found';
+	$file = array_shift($uri);
 }
+
+require 'views/' . $file . '.php';
 ?>
