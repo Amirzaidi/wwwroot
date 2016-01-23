@@ -74,7 +74,7 @@ header {
 .header {
 	height: auto;
 	box-shadow: 0px 0px 10px inset;
-	background-image: url('/images/bgads.png');
+	background-image: url('images/bgads.png');
 	background-size: cover;
 }
 
@@ -259,7 +259,7 @@ h4 {
 }
 
 .albumrow {
-	background-image: url('/images/bgvoting.png');
+	background-image: url('images/bgvoting.png');
 	box-shadow: 0px 0px 15px inset;
 }
 
@@ -335,7 +335,7 @@ input[type="submit"]:hover {
 
 .specialrow {
 	background-color: teal;
-	background-image: url('/images/explain.png');
+	background-image: url('images/explain.png');
 	background-repeat: no-repeat;
 	background-position: center center;
 }

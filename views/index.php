@@ -11,11 +11,11 @@
 
 	  $(window).load(function() {          
 	  var i =1;
-	  var images = ['/images/bg0.jpg','/images/bg1.jpg'];
+	  var images = ['/style/images/bg0.jpg','/style/images/bg1.jpg'];
 	  var image = $('header');
 
 	                //Initial Background image setup
-	  image.css('background-image', 'url(/images/bg0.jpg)');
+	  image.css('background-image', 'url(/style/images/bg0.jpg)');
 	                //Change image at regular intervals
 
 	  setInterval(function(){  
@@ -128,26 +128,26 @@
 
 						<div class="contestinfo">
 
-							<h1>India <img src="images/vs.png"/> U.S. America</h1>
+							<h1>India <img src="/style/images/vs.png"/> U.S. America</h1>
 								<div class="datecontest">
 									<p>20-12-2015 to 4-1-2016</p>
 								</div>
 
 								<div class="votingwin">
-									<p><img src="images/winvoting.png"/>India</p>
+									<p><img src="/style/images/winvoting.png"/>India</p>
 								</div>
 
 						</div>
 
 						<div class="contestinfo">
 
-							<h1>China <img src="images/vs.png"/> India</h1>
+							<h1>China <img src="/style/images/vs.png"/> India</h1>
 								<div class="datecontest">
 									<p id="timer">13d 23:59:34 till end</p>
 								</div>
 
 								<div class="votingwin">
-									<p><img src="images/winvoting.png"/></p>
+									<p><img src="/style/images/winvoting.png"/></p>
 								</div>
 
 						</div>
@@ -158,26 +158,26 @@
 						
 						<div class="contestinfo">
 
-							<h1>India <img src="images/vs.png"/> U.S. America</h1>
+							<h1>India <img src="/style/images/vs.png"/> U.S. America</h1>
 								<div class="datecontest">
 									<p>20-12-2015 to 4-1-2016</p>
 								</div>
 
 								<div class="votingwin">
-									<p><img src="images/winvoting.png"/>India</p>
+									<p><img src="/style/images/winvoting.png"/>India</p>
 								</div>
 
 						</div>
 
 						<div class="contestinfo">
 
-							<h1>China <img src="images/vs.png"/> India</h1>
+							<h1>China <img src="/style/images/vs.png"/> India</h1>
 								<div class="datecontest">
 									<p id="timer">13d 23:59:34 till end</p>
 								</div>
 
 								<div class="votingwin">
-									<p><img src="images/winvoting.png"/></p>
+									<p><img src="/style/images/winvoting.png"/></p>
 								</div>
 
 						</div>
@@ -188,26 +188,26 @@
 
 						<div class="contestinfo">
 
-							<h1>India <img src="images/vs.png"/> U.S. America</h1>
+							<h1>India <img src="/style/images/vs.png"/> U.S. America</h1>
 								<div class="datecontest">
 									<p>20-12-2015 to 4-1-2016</p>
 								</div>
 
 								<div class="votingwin">
-									<p><img src="images/winvoting.png"/>India</p>
+									<p><img src="/style/images/winvoting.png"/>India</p>
 								</div>
 
 						</div>
 
 						<div class="contestinfo">
 
-							<h1>China <img src="images/vs.png"/> India</h1>
+							<h1>China <img src="/style/images/vs.png"/> India</h1>
 								<div class="datecontest">
 									<p id="timer">13d 23:59:34 till end</p>
 								</div>
 
 								<div class="votingwin">
-									<p><img src="images/winvoting.png"/></p>
+									<p><img src="/style/images/winvoting.png"/></p>
 								</div>
 
 						</div>
@@ -221,23 +221,23 @@
 						<div class="contentrow">
 
 							<div class="col-md-24">
-								<h1>Versus</h1><img src="images/vs.png"></img><p>The Standoff</p>
+								<h1>Versus</h1><img src="/style/images/vs.png"></img><p>The Standoff</p>
 							</div>
 
 							<div class="col-md-24">
-								<h1>Medal</h1><img src="images/winvoting.png"></img><p>Won a voting contest</p>
+								<h1>Medal</h1><img src="/style/images/winvoting.png"></img><p>Won a voting contest</p>
 							</div>
 
 							<div class="col-md-24">
-								<h1>Trophy </br> Rookie </h1><img src="images/trophy.png"></img><p>Won a year of voting</p>
+								<h1>Trophy </br> Rookie </h1><img src="/style/images/trophy.png"></img><p>Won a year of voting</p>
 							</div>
 
 							<div class="col-md-24">
-								<h1>Honour </br> Veteran </h1><img src="images/honour.png"></img><p>Won two years of voting</p>
+								<h1>Honour </br> Veteran </h1><img src="/style/images/honour.png"></img><p>Won two years of voting</p>
 							</div>
 
 							<div class="col-md-24">
-								<h1>Crown </br> Emperor of cso.com</h1><img src="images/win4years.png"></img><p>Won four years of voting</p>
+								<h1>Crown </br> Emperor of cso.com</h1><img src="/style/images/win4years.png"></img><p>Won four years of voting</p>
 							</div>
 
 						</div>
@@ -339,7 +339,7 @@
 
 				<div class="ex1" id="exfixed">
 
-					<img src="images/ex1.jpg"/>
+					<img src="/style/images/ex1.jpg"/>
 
 					<div class="imgtitle">
 
@@ -363,7 +363,7 @@
 
 				<div class="ex2" id="exfixed">
 
-					<img src="images/ex2.jpg"/>
+					<img src="/style/images/ex2.jpg"/>
 
 					<div class="imgtitle">
 
@@ -389,7 +389,7 @@
 
 				<div class="ex3" id="exfixed">
 
-					<img src="images/ex3.png"/>
+					<img src="/style/images/ex3.png"/>
 
 					<div class="imgtitle">
 
@@ -413,7 +413,7 @@
 
 				<div class="ex4" id="exfixed">
 
-					<img src="images/ex4.jpg"/>
+					<img src="/style/images/ex4.jpg"/>
 
 					<div class="imgtitle">
 
@@ -478,7 +478,7 @@
 
 				<div class="ex1" id="exfixed">
 
-					<img src="images/ex1i.jpg"/>
+					<img src="/style/images/ex1i.jpg"/>
 
 					<div class="imgtitle">
 
@@ -502,7 +502,7 @@
 
 				<div class="ex2" id="exfixed">
 
-					<img src="images/ex2i.jpg"/>
+					<img src="/style/images/ex2i.jpg"/>
 
 					<div class="imgtitle">
 
@@ -526,7 +526,7 @@
 
 				<div class="ex3" id="exfixed">
 
-					<img src="images/ex3i.jpg"/>
+					<img src="/style/images/ex3i.jpg"/>
 
 					<div class="imgtitle">
 
@@ -550,7 +550,7 @@
 
 				<div class="ex4" id="exfixed">
 
-					<img src="images/ex4i.jpg"/>
+					<img src="/style/images/ex4i.jpg"/>
 
 					<div class="imgtitle">
 

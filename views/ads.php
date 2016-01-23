@@ -7,35 +7,6 @@
 
 <script src="http://code.jquery.com/jquery-1.10.2.min.js" type="text/javascript"></script>
 
-	<script type="text/javascript">
-
-	  $(window).load(function() {          
-	  var i =1;
-	  var images = ['/images/bg0.jpg','/images/bg1.jpg'];
-	  var image = $('header');
-
-	                //Initial Background image setup
-	  image.css('background-image', 'url(/images/bg0.jpg)');
-	                //Change image at regular intervals
-
-	  setInterval(function(){  
-	   image.fadeOut(600, function () {
-	   image.css('background-image', 'url(' + images [i++] +')');
-	   image.fadeIn(600);
-	   });
-	   if(i == images.length)
-	    i = 0;
-	  }, 5000);           
-	 });
-
-	</script>
-
-	<script type="text/javascript">
-
-
-
-	</script>
-
 </head>
 
 <body>
