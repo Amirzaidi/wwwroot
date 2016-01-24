@@ -5,10 +5,5 @@ class cronjob extends mysql
 	{
 		return 'cronjobs';
 	}
-
-	protected function stringKey()
-	{
-		return 'name';
-	}
 }
 ?>
