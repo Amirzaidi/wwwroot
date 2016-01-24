@@ -17,7 +17,7 @@ mysql::connect('adm78', 'cso');
 
 // start permanent session
 $session = new session();
-$session->default('cronCheck', 0);
+$session->setDefault('cronCheck', 0);
 
 // check cron but block spam
 if ($session->cronCheck < (time() - 1))
