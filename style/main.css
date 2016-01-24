@@ -463,10 +463,41 @@ p > img {
 	display: none;
 }
 
-@media only screen and (max-width: 1023px) {
+@media only screen and (max-width: 1024px) {
 
-	.clearfix {
-		display: block;
+	.headconbody {
+		width: 910px;
+		padding: 40px 0px;
 	}
+
+	.headcon {
+		width: 910px;
+	}
+
+	#exfixed {
+		width: 200px;
+	}
+
+	.imgtext {
+		font-size: 13px;
+	}
+
+	h4 {
+		font-size: 25px;
+	}
+
+	.title a {
+		font-size: 14px;
+	}
+
+	.navcon > ul > li > a {
+		font-size: 14px;
+	}
+
+}
+
+@media only screen and (max-width: 910px) {
+
+	
 
 }
