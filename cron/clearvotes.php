@@ -1,3 +1,6 @@
 <?php
-ipvote::clear();
+function clearvotes()
+{
+	ipvote::clear();
+}
 ?>

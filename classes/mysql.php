@@ -2,6 +2,7 @@
 abstract class mysql
 {
 	protected static $conn;
+	public static $models;
 
 	public static function connect($pw, $db)
 	{
@@ -11,7 +12,7 @@ abstract class mysql
 
 	public static function loadmodel($name)
 	{
-		require 'models/' . $name . '.php';
+		require root . self::$models . $name . '.php';
 	}
 
 	protected static function execute($query)
@@ -24,7 +25,7 @@ abstract class mysql
 
 	protected $stmt, $result, $row = false;
 
-	public function __construct($value)
+	public function __construct($value = false)
 	{
 		if (is_object($value))
 		{
@@ -33,6 +34,10 @@ abstract class mysql
 		else if (is_array($value))
 		{
 			$this->prepareInsert($value);
+		}
+		else if ($value === false)
+		{
+			$this->stmt = self::$conn->prepare('SELECT * FROM `' . $this->table() . '`');
 		}
 		else
 		{

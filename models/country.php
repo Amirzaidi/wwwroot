@@ -18,7 +18,7 @@ class country extends mysql
 	{
 		$stmt = parent::$conn->prepare('SELECT * FROM `countries` WHERE `id` IN (
 			SELECT `country` FROM `slang` WHERE `text` = ?
-		) OR `name` = ?');
+		) OR `name` = ? LIMIT 1');
 
 		$stmt->bind_param('ss', $text, $text);
 

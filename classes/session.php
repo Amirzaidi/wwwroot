@@ -8,7 +8,7 @@ class session
 		session_start();
 	}
 
-	public function setDefault($key, $value)
+	public function default($key, $value)
 	{
 		$this->defaults[$key] = $value;
 	}
