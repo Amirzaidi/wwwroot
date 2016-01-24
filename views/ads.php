@@ -1,5 +1,3 @@
-﻿<!DOCTYPE html>
-<html>
 <head>
 <link rel="stylesheet" type="text/css" href="/style/main.css">
 <title>countriesstandoff.com | The site where countries win democratically!</title>
@@ -154,5 +152,3 @@
 </div>
 
 </body>
-
-</html>

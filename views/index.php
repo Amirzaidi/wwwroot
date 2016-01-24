@@ -1,7 +1,4 @@
-﻿<!DOCTYPE html>
-<html>
-<head>
-<link rel="stylesheet" type="text/css" href="/style/main.css">
+<head><link rel="stylesheet" type="text/css" href="/style/main.css">
 <title>countriesstandoff.com | The site where countries win democratically!</title>
 <meta name="description" content="countriesstandoff.com is a website where people can vote on their/or other countries during a standoff. Every six months the voting resets and new countries will be picked. The country that wins, will be honoured in a special rankinglist that keeps forever!" />
 
@@ -349,7 +346,7 @@
 				
 					<div class="imgtext">
 
-						<p>China is often considered the longest continuous civilization, with some historians marking 6000 B.C. as the dawn of Chinese civilization. It also has the world’s longest continuously used written language</p>
+						<p>China is often considered the longest continuous civilization, with some historians marking 6000 B.C. as the dawn of Chinese civilization. It also has the world�s longest continuously used written language</p>
 
 					</div>
 
@@ -679,5 +676,3 @@
 </div>
 
 </body>
-
-</html>
