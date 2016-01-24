@@ -1,7 +1,4 @@
-<head><link rel="stylesheet" type="text/css" href="/style/main.css">
-<title>countriesstandoff.com | The site where countries win democratically!</title>
 <meta name="description" content="countriesstandoff.com is a website where people can vote on their/or other countries during a standoff. Every six months the voting resets and new countries will be picked. The country that wins, will be honoured in a special rankinglist that keeps forever!" />
-
 <script src="http://code.jquery.com/jquery-1.10.2.min.js" type="text/javascript"></script>
 
 	<script type="text/javascript">
@@ -26,16 +23,6 @@
 	 });
 
 	</script>
-
-	<script type="text/javascript">
-
-
-
-	</script>
-
-</head>
-
-<body>
 
 <nav>
 
@@ -674,5 +661,3 @@
 	</div>
 
 </div>
-
-</body>

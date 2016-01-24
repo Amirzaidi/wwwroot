@@ -2,7 +2,7 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-define('time', time());
+define('start', microtime(true));
 define('root', __DIR__ . '/');
 
 require root . 'classes/cron.php';
@@ -28,17 +28,27 @@ if ($session->cronCheck < (time() - 1))
 	$session->cronCheck = time();
 }
 
-// url routing + template system
+// url routing
 router::$views = 'views/';
 router::$index = 'index';
 router::$error = '404';
 
-$tpl = new template([
-	'url' => 'www.cso.com'
-]);
-
 $uri = $_SERVER['REQUEST_URI'];
-require router::path($uri);
+$path = router::path($uri);
 
-$tpl->end();
+// auto-html template
+$tpl = new template();
+$tpl->title = 'www.CountriesStandOff.com';
+$tpl->url = '127.0.0.1';
+
+$css = ['/style/main.css'];
+$js = ['http://code.jquery.com/jquery-1.10.2.min.js'];
+$favicon = '/style/favicon.ico';
+
+require $path;
+
+$tpl->end($css, $js, $favicon);
+
+// millisecond counter (view source)
+echo '<!--', round(microtime(true) - start, 5) * 1000, 'ms-->';
 ?>
