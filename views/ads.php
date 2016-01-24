@@ -1,3 +1,15 @@
+<?php
+$ip = router::visitorIp();
+
+$found = new contact($ip);
+$found = $found->found();
+
+if (count($_POST) == 3 && !$found)
+{
+	$_POST['ip'] = $ip;
+	new contact($_POST);
+}
+?>
 <meta name="description" content="countriesstandoff.com is a website where people can vote on their/or other countries during a standoff. Every six months the voting resets and new countries will be picked. The country that wins, will be honoured in a special rankinglist that keeps forever!" />
 
 <nav>
@@ -104,6 +116,7 @@
 
 </div>
 
+
 <div class="greyrow">
 
 	<div class="headconbody">
@@ -113,20 +126,26 @@
 			<div class="description" id="opg">
 
 				<h3> Send us an email about it! </h3>
+<?php
+if ($found)
+{
+	echo '(Not possible, already submitted)';
+}
+?>
 
 				<div class="par">
 
 					<p>If you are interested in doing business, please send us a mail! Fill in the fields below!</p></br>
 
-					<form action="ads.php" method="post">
+					<form action="ads" method="post">
 
-					<p> Your email: </p><input type="text"></br>
+					<p> Your email: </p><input type="text" name="mail" /></br>
 
-					<p> Subject: </p><input type="text"></br>
+					<p> Subject: </p><input type="text" name="subject" /></br>
 
-					<p> Containment of email: </p><input type="text" style="width: 60%; height: 30%;"></br>
+					<p> Containment of email: </p><textarea name="content"></textarea></br>
 
-					<p> Appendix (optional): </p><input type="text"></br>
+					<input type="submit" />
 
 					</form>
 

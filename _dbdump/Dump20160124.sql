@@ -18,6 +18,34 @@ USE `cso`;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
+-- Table structure for table `contact`
+--
+
+DROP TABLE IF EXISTS `contact`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `contact` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `mail` varchar(45) DEFAULT NULL,
+  `subject` varchar(45) DEFAULT NULL,
+  `content` mediumtext,
+  `ip` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `ip_UNIQUE` (`ip`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `contact`
+--
+
+LOCK TABLES `contact` WRITE;
+/*!40000 ALTER TABLE `contact` DISABLE KEYS */;
+INSERT INTO `contact` VALUES (1,'azaidi@live.nl','xx','xx','127.0.0.1');
+/*!40000 ALTER TABLE `contact` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `continents`
 --
 
@@ -89,7 +117,7 @@ CREATE TABLE `cronjobs` (
 
 LOCK TABLES `cronjobs` WRITE;
 /*!40000 ALTER TABLE `cronjobs` DISABLE KEYS */;
-INSERT INTO `cronjobs` VALUES (1,'clearvotes',10,1453640610);
+INSERT INTO `cronjobs` VALUES (1,'clearvotes',10,1453664630);
 /*!40000 ALTER TABLE `cronjobs` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -148,4 +176,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-01-24 14:06:00
+-- Dump completed on 2016-01-24 20:47:57

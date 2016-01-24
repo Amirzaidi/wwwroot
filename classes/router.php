@@ -26,5 +26,20 @@ class router
 
 		return root . self::$views . $file . '.php';
 	}
+
+	public static function visitorIp()
+	{
+		if (!empty($_SERVER['HTTP_X_FORWARDED_FOR']))
+		{
+			exit('Proxy not allowed.');
+		}
+
+		if ($_SERVER['REMOTE_ADDR'] == '::1')
+		{
+			return '127.0.0.1';
+		}
+
+		return $_SERVER['REMOTE_ADDR'];
+	}
 }
 ?>
