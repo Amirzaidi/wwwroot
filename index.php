@@ -31,7 +31,7 @@ if ($session->cronCheck < (time() - 1))
 // url routing + template system
 router::$views = 'views/';
 router::$index = 'index';
-router::$error = 'error';
+router::$error = '404';
 
 $tpl = new template([
 	'url' => 'www.cso.com'
