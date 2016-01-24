@@ -5,12 +5,5 @@ class continent extends mysql
 	{
 		return 'continents';
 	}
-
-	/*
-	protected function intKey()
-	{
-		return 'id';
-	}
-	*/
 }
 ?>

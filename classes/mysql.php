@@ -14,6 +14,14 @@ abstract class mysql
 		require 'models/' . $name . '.php';
 	}
 
+	protected static function execute($query)
+	{
+		if (!self::$conn->real_query($query))
+		{
+			exit(self::$conn->error);
+		}
+	}
+
 	protected $stmt, $result, $row = false;
 
 	public function __construct($value)
@@ -37,6 +45,10 @@ abstract class mysql
 			{
 				$type = 's';
 				$key = $this->stringKey();
+			}
+			else
+			{
+				exit($this->table() . '~invalid value');
 			}
 
 			$this->stmt = self::$conn->prepare('SELECT * FROM `' . $this->table() . '` WHERE `' . $key . '` = ? LIMIT 1');

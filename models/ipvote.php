@@ -6,25 +6,14 @@ class ipvote extends mysql
 		return 'ipvotes';
 	}
 
-	protected function intKey()
+	protected function stringKey()
 	{
 		return 'ip';
 	}
 
-	public static function exists($ip)
-	{
-		$vote = new ipvote(ip2long($ip));
-		return $vote->found();
-	}
-
-	public static function insert($ip)
-	{
-
-	}
-
 	public static function clear()
 	{
-		
+		parent::execute('TRUNCATE TABLE ipvotes');
 	}
 }
 ?>
