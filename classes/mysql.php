@@ -90,6 +90,11 @@ abstract class mysql
 		}
 
 		$this->stmt = self::$conn->prepare('INSERT INTO ' . $this->table() . ' (' . implode(', ', $keys) . ') VALUES (' . implode(', ', $qmarks) . ')');
+		if (!$this->stmt)
+		{
+			exit(self::$conn->error);
+		}
+
 		array_unshift($values, $types);
 		call_user_func_array([$this->stmt, 'bind_param'], $values);
 	}

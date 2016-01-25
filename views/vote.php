@@ -31,7 +31,7 @@ else if (isset($uri[0]))
 	}
 	else
 	{
-		echo 'vote ', $uri[0], ' was not recognised<br/>';
+		echo 'vote for ', $uri[0], ' was not recognised<br/>';
 	}
 }
 
@@ -49,7 +49,7 @@ while ($voteable->found())
 
 	while ($medals->found())
 	{
-		echo ' (', $medals->id, ':', $medals->rank, ')', $medals->contest()->name;
+		echo ' ', $medals->contest()->name, $medals->rank, ';';
 	}
 
 	echo ')<br/>';
