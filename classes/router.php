@@ -24,7 +24,7 @@ class router
 			$file = array_shift($uri);
 		}
 
-		return root . self::$views . $file . '.php';
+		return $file;
 	}
 
 	public static function visitorIp()
@@ -40,6 +40,12 @@ class router
 		}
 
 		return $_SERVER['REMOTE_ADDR'];
+	}
+
+	public static function redirect($url)
+	{
+		header('Location: ' . $url);
+		exit();
 	}
 }
 ?>

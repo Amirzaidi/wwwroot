@@ -10,7 +10,7 @@ class template
 
 	public function __set($key, $value)
 	{
-		$this->vars['{' . $key . '}'] = $value;
+		$this->vars['[' . $key . ']'] = $value;
 	}
 
 	public function end($css, $js, $fav)
@@ -23,7 +23,7 @@ class template
 		$data = '<!DOCTYPE html>' . $b;
 		$data .= '<html>' . $b;
 		$data .= '<head>' . $b;
-			$data .= $t . '<title>{title}</title>' . $b;
+			$data .= $t . '<title>[title]</title>' . $b;
 			$data .= $t . '<link rel="shortcut icon" type="image/x-icon" href="' . $fav . '" />' . $b;
 		for ($i = 0; $i < $cssCount; $i++)
 			$data .= $t . '<link rel="stylesheet" type="text/css" href="' . $css[$i] . '" />' . $b;

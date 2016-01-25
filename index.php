@@ -1,11 +1,12 @@
 <?php
 error_reporting(E_ALL);
-ini_set('display_errors', 1);
+ini_set('display_errors', 'On');
 
 define('start', microtime(true));
 define('root', __DIR__ . '/');
 
 require root . 'classes/cron.php';
+require root . 'classes/language.php';
 require root . 'classes/mysql.php';
 require root . 'classes/router.php';
 require root . 'classes/session.php';
@@ -18,6 +19,7 @@ mysql::connect('adm78', 'cso');
 // start permanent session
 $session = new session();
 $session->setDefault('cronCheck', 0);
+$session->setDefault('language', 'en');
 
 // check cron but block spam
 if ($session->cronCheck < (time() - 1))
@@ -34,18 +36,25 @@ router::$index = 'index';
 router::$error = '404';
 
 $uri = $_SERVER['REQUEST_URI'];
-$path = router::path($uri);
+$page = router::path($uri);
 
 // auto-html template
 $tpl = new template();
-$tpl->title = 'www.CountriesStandOff.com';
+$tpl->title = 'CSO - ' . ucfirst($page);
 $tpl->url = '127.0.0.1';
 
 $css = ['/style/main.css'];
 $js = ['http://code.jquery.com/jquery-1.10.2.min.js'];
 $favicon = '/style/favicon.ico';
 
-require $path;
+// translate with vars
+language::$dir = 'lang/';
+
+$language = new language($session->language);
+$language->load($page);
+$language->translate($tpl);
+
+require root . router::$views . $page . '.php';
 
 $tpl->end($css, $js, $favicon);
 
