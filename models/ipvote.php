@@ -13,7 +13,8 @@ class ipvote extends mysql
 
 	public static function clear()
 	{
-		parent::execute('TRUNCATE TABLE ipvotes');
+		//parent::execute('TRUNCATE TABLE ipvotes');
+		parent::execute('DELETE FROM ipvotes');
 	}
 }
 ?>

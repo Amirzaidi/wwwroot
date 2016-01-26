@@ -18,11 +18,45 @@ class country extends mysql
 	{
 		$stmt = parent::$conn->prepare('SELECT * FROM `countries` WHERE `id` IN (
 			SELECT `country` FROM `slang` WHERE `text` = ?
-		) OR `name` = ? LIMIT 1');
+		) OR `name` = ? OR `id` = ? LIMIT 1');
 
-		$stmt->bind_param('ss', $text, $text);
+		$stmt->bind_param('sss', $text, $text, $text);
 
 		return new country($stmt);
+	}
+
+	public static function finalSortVotes()
+	{
+		$stmt = parent::$conn->prepare("SELECT * FROM `countries` WHERE `state` = 'won' ORDER BY `votes` DESC");
+		return new country($stmt);
+	}
+
+	public static function activeSortVotes()
+	{
+		$stmt = parent::$conn->prepare("SELECT * FROM `countries` WHERE `state` = 'active' ORDER BY `votes` DESC");
+		return new country($stmt);
+	}
+
+	public static function randomQueued($limit)
+	{
+		$stmt = parent::$conn->prepare("SELECT * FROM `countries` WHERE `state` = 'queue' ORDER BY RAND() LIMIT ?");
+		$stmt->bind_param('i', $limit);
+
+		return new country($stmt);
+	}
+
+	public static function resetVotes()
+	{
+		parent::execute("UPDATE `countries` SET `votes` = 0, `state` = 'queue'");
+	}
+
+	public function medals()
+	{
+		$stmt = parent::$conn->prepare("SELECT * FROM `medals` WHERE `country` = ? ORDER BY rank ASC");
+		$country_id = $this->id;
+		$stmt->bind_param('i', $country_id);
+
+		return new medal($stmt);
 	}
 }
 ?>

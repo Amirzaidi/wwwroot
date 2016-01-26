@@ -90,6 +90,11 @@ abstract class mysql
 		}
 
 		$this->stmt = self::$conn->prepare('INSERT INTO ' . $this->table() . ' (' . implode(', ', $keys) . ') VALUES (' . implode(', ', $qmarks) . ')');
+		if (!$this->stmt)
+		{
+			exit(self::$conn->error);
+		}
+
 		array_unshift($values, $types);
 		call_user_func_array([$this->stmt, 'bind_param'], $values);
 	}
@@ -112,6 +117,11 @@ abstract class mysql
 		return ($this->row !== null);
 	}
 
+	public function count()
+	{
+		return $this->result->num_rows;
+	}
+
 	public function __get($key)
 	{
 		if ($this->row === false)
@@ -119,19 +129,32 @@ abstract class mysql
 			$this->found();
 		}
 
+		if (!isset($this->row->$key))
+		{
+			exit('key ' . $key . ' not in ' . $this->table());
+		}
+
 		return $this->row->$key;
 	}
 
 	public function __set($updatekey, $updatevalue)
 	{
-		$type = gettype($updatevalue);
-		$primarykey = $this->intKey();
+		if ($this->row === false)
+		{
+			$this->found();
+		}
 
-		$update = self::$conn->prepare('UPDATE `' . $this->table() . '` SET `' . $updatekey . '` = ? WHERE `' . $primarykey . '` = ? LIMIT 1');
-		$update->bind_param($type[0] . 'i', $updatevalue, $this->row->$primarykey);
-		$update->execute();
+		if ($this->row !== null)
+		{
+			$type = gettype($updatevalue);
+			$primarykey = $this->intKey();
 
-		$this->row->$updatekey = $updatevalue;
+			$update = self::$conn->prepare('UPDATE `' . $this->table() . '` SET `' . $updatekey . '` = ? WHERE `' . $primarykey . '` = ? LIMIT 1');
+			$update->bind_param($type[0] . 'i', $updatevalue, $this->row->$primarykey);
+			$update->execute();
+
+			$this->row->$updatekey = $updatevalue;
+		}
 	}
 
 	public function delete()
