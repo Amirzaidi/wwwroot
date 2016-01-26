@@ -463,7 +463,7 @@ p > img {
 	display: none;
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1024px) and (min-width: 910px) {
 
 	.headconbody {
 		width: 910px;
@@ -496,8 +496,54 @@ p > img {
 
 }
 
-@media only screen and (max-width: 910px) {
+@media only screen and (max-width: 910px) and (min-width: 800px) {
 
-	
+	.headconbody {
+		width: 800px;
+		padding: 35px 0px;
+	}
+
+	.headcon {
+		width: 800px;
+	}
+
+	#headerfixedcon {
+		padding-top: 60px;
+	}
+
+	#exfixed {
+		width: 175px;
+	}
+
+	#exfixed > img {
+		width: 80%;
+	}
+
+	.imgtext {
+		font-size: 11px;
+	}
+
+	.imglink {
+		font-size: 11px;
+		margin-top: 10px;
+	}
+
+	h4 {
+		font-size: 22px;
+	}
+
+	.title a {
+		font-size: 12px;
+	}
+
+	.navcon > ul > li {
+		padding: 7px 0px;
+	}
+
+	.navcon > ul > li > a {
+		font-size: 11px;
+		padding: 10px;
+		border-bottom: 5px solid transparent;
+	}
 
 }
