@@ -20,6 +20,7 @@ mysql::connect('adm78', 'cso');
 $session = new session();
 $session->setDefault('cronCheck', 0);
 $session->setDefault('language', 'en');
+$session->setDefault('theme', 'light');
 
 // check cron but block spam
 if ($session->cronCheck < (time() - 1))
@@ -43,7 +44,7 @@ $tpl = new template();
 $tpl->title = 'CSO - ' . ucfirst($page);
 $tpl->url = '127.0.0.1';
 
-$css = ['/style/main.css'];
+$css = ['/style/main.css', '/style/' . $session->theme . '.css'];
 $js = ['http://code.jquery.com/jquery-1.10.2.min.js'];
 $favicon = '/style/favicon.ico';
 

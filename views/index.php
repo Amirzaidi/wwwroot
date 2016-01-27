@@ -41,6 +41,7 @@
 			<a href="#leaderboard">Leaderboard</a></li><li>
 			<a href="/ads">Advertise?</a></li><li>
 			<a href="#about">About us</a></li><li>
+			<a href="/themechange">Change theme</a></li><li>
 			<a href="contact/contact.php">Contact us</a></li>
 
 		</ul>
@@ -57,7 +58,7 @@
 
 		<div class="webstar">
 
-			<h2> <a href="https://www.countriesstandoff.com">www.countriesstandoff.com</a> </br></h2>
+			<h2> <a href="https://www.countriesstandoff.com">[indexmsg]</a> </br></h2>
 
 		</div>
 
