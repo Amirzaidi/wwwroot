@@ -1,0 +1,5 @@
+The connection the mysql server is made in the index.php file in the root directory with the mysql::connect() function
+This function takes two parameters: the first is the password, the second the name of the database
+Localhost and root will automatically be used as the hostname and username for the mysql server
+
+The only required database table is the cronjob table to make use of the cron scripts

@@ -27,7 +27,7 @@ class router
 		return $file;
 	}
 
-	public static function visitorIp()
+	public static function ip()
 	{
 		if (!empty($_SERVER['HTTP_X_FORWARDED_FOR']))
 		{

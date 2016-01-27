@@ -1,0 +1,7 @@
+Chronological scripts, also called cron scripts, are scripts that are ran every `x` seconds
+The database keeps track of when all your scripts ran for the last time, and how often they should run
+The actual php code can be found in the directory /cron/ in your webhost root, in the function with the same name as the file
+
+If for example 45 seconds have passed since the last time a script that should be ran every 20 seconds was executed,
+it will be executed twice and once more in 15 seconds (if the page is loaded in exactly 15 seconds)
+NB: Not in 20 seconds, the interval will be shortened to catch up with the lost time

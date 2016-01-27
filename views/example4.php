@@ -1,4 +1,7 @@
 IP Found: 
 <?php
-echo ipvote::exists($_SERVER['REMOTE_ADDR']) ? 'yes' : 'no';
+$ip = router::ip();
+
+$ipvote = new ipvote($ip);
+echo $ipvote->found() ? 'yes' : 'no';
 ?>

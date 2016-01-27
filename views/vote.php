@@ -5,7 +5,7 @@ echo cron::timeUntil('clearvotes'), 's until next vote<br/>';
 $contest = contest::active();
 echo 'current contest: (', $contest->id, ') ', $contest->name, '<br/>';
 
-$ip = router::visitorIp();
+$ip = router::ip();
 $ipvote = new ipvote($ip);
 
 $finalStarted = !country::activeSortVotes()->found();
@@ -17,9 +17,25 @@ if ($ipvote->found())
 }
 else if (isset($uri[0]))
 {
-	$country = country::slang($uri[0]);
+	if (ctype_digit($uri[0]))
+	{
+		$uri[0] = intval($uri[0]);
+	}
 
-	if ($country->found() && ($country->state == 'active' || ($country->state == 'won' && $finalStarted) ))
+	$country = new country($uri[0]);
+	$found = $country->found();
+
+	if (!$found)
+	{
+		$slang = new slang($uri[0]);
+		if ($slang->found())
+		{
+			$country = $slang->country();
+			$found = true;
+		}
+	}
+
+	if ($found && ($country->state == 'active' || ($country->state == 'won' && $finalStarted) ))
 	{
 		new ipvote([
 			'ip' => $ip,

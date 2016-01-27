@@ -1,14 +1,14 @@
 <?php
 
 $europe = new continent('Europe');
+$country = $europe->countries();
 
-$countries = country::continent($europe->id);
-while ($countries->found())
+while ($country->found())
 {
-	echo $countries->desc, '<br/>';
-	$countries->desc .= '_';
+	echo $country->desc, '<br/>';
+	$country->desc .= '_';
 
-	echo $countries->desc, '<br/>';
+	echo $country->desc, '<br/>';
 }
 
 ?>

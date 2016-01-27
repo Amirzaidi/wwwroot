@@ -1,0 +1,91 @@
+Models are a layer between the mysql database and php code of the views/pages
+They are easy to use and understand, and very intuitive for beginners
+The models are located in the /models/ directory in the root directory
+All models extend the mysql class (see: first line of models) to get the needed functionality
+
+A single model consists of four parts:
+- The basic functionality that every extention of the mysql class gets
+- The protected method(s) table(), and optionally intKey() and stringKey()
+- The public methods that return other models based on its own data
+- The public static methods that select data from its own table in a specialised way
+
+# BASIC FUNCTIONALITY
+All models can represent one or more rows of database access, and can update or delete that row or those rows
+
+//Selecting all rows
+$rows = new modelName();
+
+//Selecting one specific row
+$row = new modelName($integer or $string);
+
+When using an integer the first result with the intKey matching the integer will be used
+When using a string the first result with the stringKey matching the string will be used
+The default intKey is `id`, the default stringKey is `name`
+
+//Accessing a column
+$row = new modelName(3);
+echo $row->column;
+
+//Updating a column
+$row = new modelName('somename');
+$row->column = 57;
+
+//Looping over all rows
+$rows = new modelName();
+while ($rows->found())
+{
+	$rows->column += 3;
+	echo $rows->column;
+}
+
+//Deleting a row
+$row = new modelName(2);
+$row->delete();
+
+//Inserting a new row
+new modelName([
+	'id' => 37,
+	'name' => 'value2',
+	'key3' => 'value3',
+	'key4' => 'value4'
+]);
+
+# PROTECTED METHODS
+The three protected methods are used to tell the mysql class what table it is accessing and what the primary key(s) are
+The function that returns the tablename is called table() and is mandatory for every model
+By default the primary numerical key is called `id` and the primary alphanumerical key is called `name`
+To change these primary keys create a function called either intKey() or stringKey() and let it return the correct columnname
+
+# PUBLIC METHODS
+The public methods of a model initialise other models based on their own data and return those models
+For example a 'user' model may have a public method called stats() that returns a 'stats' model containing the user's stats
+The queries have to be created manually, the framework does not have the capabilities to generate such queries
+A query can be created by calling the self::$conn->prepare() function and then passing it to the correct model, example:
+
+class user extends mysql
+{
+	protected function table()
+	{
+		return 'users';
+	}
+
+	public function stats()
+	{
+		//copy is needed for bind_param
+		$user_id = $this->id;
+
+		//create a simple query
+		$stmt = self::$conn->prepare('SELECT * FROM `stats` WHERE user_id = ? LIMIT 1');
+		$stmt->bind_param('i', $user_id);
+
+		//create new 'stats' model with the just-created query and return it
+		return new stats($stmt);
+	}
+}
+//other file
+$user = new user('Brandon');
+$stats = $user->stats();
+
+# PUBLIC STATIC METHODS
+These methods are used to select rows from the database in a specific way, e.x. limited to a maximum of five or ordered by name
+Their names should tell in what way they will be selected
