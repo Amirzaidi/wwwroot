@@ -8,3 +8,4 @@ if (isset($uri[0]) && language::exists($uri[0]))
 
 <a href="/langchange/en">en</a>
 <a href="/langchange/nl">nl</a>
+<a href="/langchange/ar">ar</a>

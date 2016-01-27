@@ -44,12 +44,12 @@ if ($finalStarted)
 
 while ($voteable->found())
 {
-	echo '<a href="/vote/', $voteable->id, '">', $voteable->name, '</a> ', $voteable->votes, ' (medals:';
+	echo '<a href="/vote/', $voteable->id, '">', $voteable->name, ': ', $voteable->desc, '</a> ', $voteable->votes, ' (medals:';
 	$medals = $voteable->medals();
 
 	while ($medals->found())
 	{
-		echo ' ', $medals->contest()->name, $medals->rank, ';';
+		echo ' ', $medals->contest()->name, $medals->contest, ':', $medals->rank, ';';
 	}
 
 	echo ')<br/>';

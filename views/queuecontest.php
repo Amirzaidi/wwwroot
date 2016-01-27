@@ -2,6 +2,8 @@
 if (count($_POST) == 2)
 {
 	$_POST['active'] = '0';
+	$_POST['type'] = 'manual';
+
 	new contest($_POST);
 
 	echo 'added<br/>';
