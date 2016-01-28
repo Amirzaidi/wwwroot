@@ -26,7 +26,7 @@ $session->setDefault('theme', 'light');
 if ($session->cronCheck < (time() - 1))
 {
 	cron::$crondir = 'cron/';
-	cron::$maxRuns = 10;
+	cron::$maxRuns = 16;
 	cron::checkAll();
 	$session->cronCheck = time();
 }

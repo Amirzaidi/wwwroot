@@ -1,3 +1,22 @@
 nav {
-	background-color: #aaa;
+	background-color: #333;
+	border-bottom: 3px solid #000;
+}
+
+.navcon > ul > li > a {
+	color: #ddd;
+}
+
+.navcon > ul > li > a:hover {
+	border-color: #fff;
+	color: #fff;
+}
+
+.greyrow {
+	background-color: #757575;
+	text-shadow: 1px 1px #fff;
+}
+
+.whiterow {
+	background-color: #e0e0e0;
 }
