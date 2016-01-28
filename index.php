@@ -12,15 +12,19 @@ require root . 'classes/router.php';
 require root . 'classes/session.php';
 require root . 'classes/template.php';
 
+// start permanent session
+$session = new session();
+if (!$session->started())
+{
+	$session->cronCheck = 0;
+	$session->language = 'en';
+	$session->theme = 'light';
+	router::refresh();
+}
+
 // connect to localhost:3306/root
 mysql::$models = 'models/';
 mysql::connect('adm78', 'cso');
-
-// start permanent session
-$session = new session();
-$session->setDefault('cronCheck', 0);
-$session->setDefault('language', 'en');
-$session->setDefault('theme', 'light');
 
 // check cron but block spam
 if ($session->cronCheck < (time() - 1))

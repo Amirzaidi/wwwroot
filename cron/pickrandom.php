@@ -1,9 +1,7 @@
 <?php
 function pickFromQueue()
 {
-	echo microtime(true), ' ';
 	$queuedCountries = country::fiveQueued();
-	echo microtime(true), ' ';
 
 	while ($queuedCountries->found())
 	{

@@ -13,6 +13,11 @@ class session
 		$this->defaults[$key] = $value;
 	}
 
+	public function started()
+	{
+		return isset($_COOKIE['PHPSESSID']);
+	}
+
 	public function close()
 	{
 		session_destroy();

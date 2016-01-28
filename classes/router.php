@@ -47,5 +47,10 @@ class router
 		header('Location: ' . $url);
 		exit();
 	}
+
+	public static function refresh()
+	{
+		self::redirect($_SERVER['REQUEST_URI']);
+	}
 }
 ?>
