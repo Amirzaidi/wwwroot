@@ -1,7 +1,10 @@
 <?php
 function pickFromQueue()
 {
-	$queuedCountries = country::randomQueued(5);
+	echo microtime(true), ' ';
+	$queuedCountries = country::fiveQueued();
+	echo microtime(true), ' ';
+
 	while ($queuedCountries->found())
 	{
 		$queuedCountries->state = 'active';

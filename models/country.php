@@ -18,12 +18,38 @@ class country extends mysql
 		return new country($stmt);
 	}
 
-	public static function randomQueued($limit)
+	public static function fiveQueued()
 	{
-		$stmt = parent::$conn->prepare("SELECT * FROM `countries` WHERE `state` = 'queue' ORDER BY RAND() LIMIT ?");
-		$stmt->bind_param('i', $limit);
+		$stmt = parent::$conn->prepare("SELECT `id` FROM `countries` WHERE `state` = 'queue'");
+		$countries = new country($stmt);
 
-		return new country($stmt);
+		$ids = [];
+		while ($countries->found())
+		{
+			$ids[] = $countries->id;
+		}
+
+		$useIds = [];
+		for ($i = 0; $i < 5 && $i < $countries->count(); $i++)
+		{
+			$useIdKey = rand(0, count($ids) - 1);
+			$useIds[] = "`id` = '" . $ids[$useIdKey] . "'";
+
+			unset($ids[$useIdKey]);
+			$ids = array_values($ids);
+		}
+
+		$implode = implode(' OR ', $useIds);
+		if (empty($implode))
+		{
+			$implode = 'LIMIT 0';
+		}
+		else
+		{
+			$implode = 'WHERE ' . $implode;
+		}
+
+		return new country(parent::$conn->prepare('SELECT * FROM `countries` ' . $implode));
 	}
 
 	public static function resetVotes()

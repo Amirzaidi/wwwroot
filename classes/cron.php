@@ -12,14 +12,13 @@ class cron
 			$runs = floor((time() - $job->lastrun) / $job->interval);
 			if ($runs > 0)
 			{
+				$job->lastrun += ($runs * $job->interval); //asap!
 				require root . self::$crondir . $job->name . '.php';
 
 				for ($i = 0; $i < $runs && $i < self::$maxRuns; $i++)
 				{
 					call_user_func($job->name);
 				}
-
-				$job->lastrun += ($runs * $job->interval);
 			}
 		}
 	}
