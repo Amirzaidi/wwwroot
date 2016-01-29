@@ -56,6 +56,29 @@ nav {
 	border-bottom: 7px solid transparent;
 }
 
+#tcbut {
+	background-color: teal;
+	border-radius: 3px;
+	border-bottom: 3px solid rgb(0, 86, 86);
+	padding: 5px !important;
+}
+
+#tcbut:hover {
+	background-color: #e1e1e1;
+	border-bottom: 3px solid #999;
+}
+
+#tcbuta {
+	border-bottom: 0;
+	color: white;
+}
+
+#tcbuta:hover {
+	border-bottom: 0;
+	background-color: none;
+	color: teal;
+}
+
 header {
 	height: 97%;
 	background-size: cover;

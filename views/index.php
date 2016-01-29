@@ -40,8 +40,8 @@
 			<a href="#vote">Vote!</a></li><li>
 			<a href="#leaderboard">Leaderboard</a></li><li>
 			<a href="/ads">Advertise?</a></li><li>
-			<a href="#about">About us</a></li><li>
-			<a href="/themechange">Change theme</a></li><li>
+			<a href="#about">About us</a></li><li id="tcbut">
+			<a href="/themechange" id="tcbuta">Change theme</a></li><li>
 			<a href="contact/contact.php">Contact us</a></li>
 
 		</ul>
