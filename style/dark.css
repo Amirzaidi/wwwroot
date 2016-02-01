@@ -14,9 +14,29 @@ nav {
 
 .greyrow {
 	background-color: #757575;
-	text-shadow: 1px 1px #fff;
 }
 
 .whiterow {
 	background-color: #e0e0e0;
 }
+
+#advertwhite {
+	background-color: #d1d1d1;
+}
+
+h4 {
+	text-shadow: none;
+}
+
+.greyrow > .headconbody > .row > .description > .contentrow > #exfixed > .imgtitle > h4 {
+	text-shadow: none;
+}
+
+#dt {
+	background-color: #e0e0e0 !important;
+}
+
+.title {
+	text-shadow: 2px 2px 0px #111;
+}
+

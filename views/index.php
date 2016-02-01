@@ -66,7 +66,7 @@
 
 		<p style="color: red;">China vs India. Two very big countries. They attract people, entrepreneurs, businesses, and all other related stuff. But, no one has voted about the ultimate form of a BRIC country. Here, we vote on the two biggest BRIC countries. These two countries will go head to head in a voting! Who will win? </br><strong>VOTE BELOW!</strong> (Voting ends at 02-02-2016)</p> </br>
 		<p style="font-weight: bold; font-variant: small-caps;"> Must also see: </p>
-		<a href="adverts/ads.html">Advertise Here!</a>
+		<a href="adverts/ads.html">Advertise Here! [TEXT ADS] MYLIKES SOURCES</a>
 
 		</div>
 
@@ -239,6 +239,24 @@
 
 </div>
 
+<div class="greyrow">
+
+	<div class="headconbody">
+
+		<div class="row">
+			
+			<div class="description">
+
+				<p><a href="adverts/ads.html">Advertise Here!</a></p>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</div>
+
 <div class="specialrow">
 
 	<div class="headconbody">
@@ -289,6 +307,58 @@
 
 </div>
 
+<a id="vote"></a><div class="greyrow" id="advertwhite">
+
+	<div class="headconbody">
+
+		<div class="row">
+			
+			<div class="description">
+
+				<p><a href="adverts/ads.html">Advertise Here!</a></p>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</div>
+
+<div class="albumrow">
+
+<div class="stylelayer" id="stylelayervote">
+
+	<div class="headconbody">
+
+		<div class="row">
+
+			<div class="description">
+
+				<h6> VOTE TO WIN! </h6>
+				<p id="albump"> Here it is! This is the ultimate stand off between these two BRIC countries! Vote now!</p></br>
+
+					<form action="index.php" method="post" style="padding: 40px; background-color: rgba(0, 0, 0, 0.4);">
+
+					<p id="formp">Choose one of the two countries and click on vote!</p></br>
+
+					<div class="ch" id="vl"><input type="radio" name="formChina"> China</div>
+					<div class="in" id="vl"><input type="radio" name="formIndia"> India</div></br></br>
+
+					<input type="submit" name="submitbut" value="Vote!">
+
+					</form>
+
+			</div>
+
+		</div>
+	
+	</div>
+
+</div>
+
+</div>
+
 <div class="greyrow">
 
 	<div class="headconbody">
@@ -315,8 +385,8 @@
 			
 			<div class="description">
 
-			<h3> Why vote for China? </h3>
-			<p> We have listed some facts about why you should vote for China! </p>
+			<h3> Why vote for [insert c]? </h3>
+			<p> We have listed some facts about why you should vote for [insert c]! </p>
 
 			</div>
 
@@ -446,7 +516,7 @@
 
 </div>
 
-<div class="greyrow">
+<div class="greyrow" id="dt">
 
 	<div class="headconbody">
 
@@ -454,108 +524,14 @@
 			
 			<div class="description">
 
-			<h3> Why vote for India? </h3>
-			<p> We have listed some facts about why you should vote for India! </p>
+			<h3> THIS ROW IS FOR TRIVIA's </h3>
+			<p> [ENTER A SMALL DESC OF THIS ROW HERE] </p>
 
 			</div>
 
 			<div class="contentrow">
 
-				<div class="ex1" id="exfixed">
-
-					<img src="/style/images/ex1i.jpg"/>
-
-					<div class="imgtitle">
-
-						<h4> Civilization </h4>
-
-					</div>
-				
-					<div class="imgtext">
-
-						<p>The Indus valley civilization was one of the most advance civilizations in terms of town planning etc. </p>
-
-					</div>
-
-					<div class="imglink">
-
-						<a href="#">Learn More (PPC)</a>
-
-					</div>
-
-				</div>
-
-				<div class="ex2" id="exfixed">
-
-					<img src="/style/images/ex2i.jpg"/>
-
-					<div class="imgtitle">
-
-						<h4> Maths </h4>
-
-					</div>
-
-					<div class="imgtext">
-
-						<p>It is interesting to note that ancient India was so advanced in science and mathematics that Algebra, trigonometry and calculus all came from India. In the 11th century Sridharacharya propounded the Quadratic equations. </p>
-
-					</div>
-
-					<div class="imglink">
-
-						<a href="#">Learn More (PPC)</a>
-
-					</div>
-
-				</div>
-
-				<div class="ex3" id="exfixed">
-
-					<img src="/style/images/ex3i.jpg"/>
-
-					<div class="imgtitle">
-
-						<h4> Medicine </h4>
-
-					</div>
-
-					<div class="imgtext">
-
-						<p>Ayurveda is the earliest school of medicine known to mankind. The Father of Medicine, Charaka, consolidated Ayurveda 2500 years ago. </p>
-
-					</div>
-
-					<div class="imglink">
-
-						<a href="#">Learn More (PPC)</a>
-
-					</div>
-
-				</div>
-
-				<div class="ex4" id="exfixed">
-
-					<img src="/style/images/ex4i.jpg"/>
-
-					<div class="imgtitle">
-
-						<h4> Railways </h4>
-
-					</div>
-
-					<div class="imgtext">
-
-						<p>The total distance covered by the 14,300 trains on the Indian Railways everyday, equals three & half times the distance to moon</p>
-
-					</div>
-
-					<div class="imglink">
-
-						<a href="#">Learn More (PPC)</a>
-
-					</div>
-
-				</div>
+				<p style="color: red;">test m9<p>
 
 			</div>
 
@@ -565,7 +541,7 @@
 
 </div>
 
-<a id="vote"></a><div class="greyrow" id="advertwhite">
+<div class="greyrow" id="advertwhite">
 
 	<div class="headconbody">
 
@@ -583,59 +559,7 @@
 
 </div>
 
-<div class="albumrow">
-
-<div class="stylelayer" id="stylelayervote">
-
-	<div class="headconbody">
-
-		<div class="row">
-
-			<div class="description">
-
-				<h6> VOTE TO WIN! </h6>
-				<p id="albump"> Here it is! This is the ultimate stand off between these two BRIC countries! Vote now!</p></br>
-
-					<form action="index.php" method="post" style="padding: 40px; background-color: rgba(0, 0, 0, 0.4);">
-
-					<p id="formp">Choose one of the two countries and click on vote!</p></br>
-
-					<div class="ch" id="vl"><input type="radio" name="formChina"> China</div>
-					<div class="in" id="vl"><input type="radio" name="formIndia"> India</div></br></br>
-
-					<input type="submit" name="submitbut" value="Vote!">
-
-					</form>
-
-			</div>
-
-		</div>
-	
-	</div>
-
-</div>
-
-</div>
-
-<div class="greyrow">
-
-	<div class="headconbody">
-
-		<div class="row">
-			
-			<div class="description">
-
-				<p><a href="adverts/ads.html">Advertise Here!</a></p>
-
-			</div>
-
-		</div>
-
-	</div>
-
-</div>
-
-<div class="whiterow">
+<div class="footerrow">
 
 	<div class="headconbody">
 
@@ -645,11 +569,7 @@
 
 				<div class="footer">
 
-				<p>The voting will stop every month and thus, the country with the most votes wins!</br> It will be honoured in a rankinglist! So be sure to vote and share! </br>We will then vote between other countries!</p>
-				</br>
-				<p>Support us, keep the website online! Click on our sponsors below!</p>
-				</br>
-				<a href="adverts/ads.html">Advertise Here! [TEXT ADS]</a>
+				<a href="adverts/ads.html">Advertise Here! [TEXT ADS] MYLIKES.COM SOURCES</a>
 				</br>
 				<a href="#">Privacy Policy |</a><a href="#"> Terms and Conditions |</a><a href="#"> Hoster</a>
 

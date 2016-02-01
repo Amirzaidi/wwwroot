@@ -331,11 +331,6 @@ input[type="submit"]:hover {
 	color: teal;
 }
 
-.footer > p {
-	font-size: 27px;
-	color: #444;
-}
-
 .footer > a {
 	font-size: 18px;
 }
@@ -465,6 +460,9 @@ p > img {
 	margin-top: 10px;
 	margin-bottom: 20px;
 }
+.footerrow {
+	background-color: #444;
+}
 
 .clearfix {
 	display: none;
@@ -548,9 +546,13 @@ p > img {
 	}
 
 	.navcon > ul > li > a {
-		font-size: 11px;
+		font-size: 13px;
 		padding: 10px;
 		border-bottom: 5px solid transparent;
+	}
+
+	#tcbut {
+		padding: 2px !important;
 	}
 
 }
