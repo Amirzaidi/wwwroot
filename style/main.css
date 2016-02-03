@@ -556,3 +556,45 @@ p > img {
 	}
 
 }
+
+@media only screen and (max-width: 800px) and (min-width: 765px) {
+	
+	.clearfix {
+		display: block;
+	}
+
+	.headconbody {
+		width: 765px;
+		padding: 35px 0px;
+	}
+
+	.headcon {
+		width: 600px;
+	}
+
+	h3 {
+		font-size: 40px;
+	}
+
+	.description > p {
+		font-size: 18px;
+	}
+
+	#exfixed {
+		width: 200px;
+	}
+
+	#exfixed > img {
+		width: 70%;
+	}
+
+	.navcon > ul > li {
+		padding: 5px 0px;
+	}
+
+	.navcon > ul > li > a {
+		padding: 7.5px 10px;
+	}
+
+	
+}
