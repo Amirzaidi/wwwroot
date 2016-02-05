@@ -137,26 +137,38 @@ if ($found)
 
 					<a href="#mailmodal">Send us an email</a>
 
-				<div id="mailmodal" class="modal">
+						<div id="mailmodal" class="modal">
 
-  					<div class="modal-dialog">
+  							<div class="modal-dialog">
 
-    						<div class="modal-content">
+    								<div class="modal-content">
 
-      <header class="container"> 
-        <a href="#" class="closebtn">×</a>
-        <h2>Modal Header</h2>
-      </header>
-      <div class="container">
-        <p>Some text in the modal.</p>
-        <p>Some text in the modal.</p>
-      </div>
-      <footer class="container">
-        <p>Modal footer</p>
-      </footer>
-    </div>
-  </div>
-</div>
+      									<div class="container" id="modalheader"> 
+
+        									<a href="#" class="closebtn">×</a>
+        									<h2>Send us an email!</h2>
+
+      									</div>
+
+									<div class="container" id="modalquery">
+
+        									<p>Some text in the modal.</p>
+        									<p>Some text in the modal.</p>
+
+        									<p>Some text in the modal.</p>
+        									<p>Some text in the modal.</p>
+
+        									<p>Some text in the modal.</p>
+        									<p>Some text in the modal.</p>
+
+        									<p>Some text in the modal.</p>
+        									<p>Some text in the modal.</p>
+
+      									</div>
+
+   								 </div>
+ 							 </div>
+						</div>
 
 					</div>
 
