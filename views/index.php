@@ -498,50 +498,7 @@
 
 </div>
 
-<div class="greyrow" id="specialad">
-
-	<div class="headconbody">
-
-		<div class="row">
-			
-			<div class="description">
-
-				<p><a href="adverts/ads.html">Advertise Here!</a></p>
-
-			</div>
-
-		</div>
-
-	</div>
-
-</div>
-
-<div class="greyrow" id="dt">
-
-	<div class="headconbody">
-
-		<div class="row">
-			
-			<div class="description">
-
-			<h3> THIS ROW IS FOR TRIVIA's </h3>
-			<p> [ENTER A SMALL DESC OF THIS ROW HERE] </p>
-
-			</div>
-
-			<div class="contentrow">
-
-				<p style="color: red;">test m9<p>
-
-			</div>
-
-		</div>
-
-	</div>
-
-</div>
-
-<div class="greyrow" id="advertwhite">
+<div class="greyrow">
 
 	<div class="headconbody">
 
