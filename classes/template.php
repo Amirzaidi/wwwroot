@@ -36,6 +36,8 @@ class template
 		$data .= '</html>' . $b;
 
 		echo strtr($data, $this->vars);
+		ob_flush();
+
 		unset($data, $this->vars);
 	}
 }
