@@ -531,7 +531,7 @@ p > img {
 /* The modal's content */
 .modal-dialog .modal-content {
   	margin: auto;
-  	background-color: #f3f3f3;
+  	background-color: #fff;
   	position: relative;
   	padding: 0;
   	outline: 0;

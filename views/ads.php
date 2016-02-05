@@ -26,7 +26,8 @@ if (count($_POST) == 3 && !$found)
 
 			<li><a href="/index">Home</a></li><li>
 			<a href="/ads">Advertise?</a></li><li>
-			<a href="../about/aboutus.php">About us</a></li><li>
+			<a href="../about/aboutus.php">About us</a></li><li id="tcbut">
+			<a href="/themechange" id="tcbuta">Change theme</a></li><li>
 			<a href="../contact/contactus.php">Contact us</a></li>
 
 		</ul>
@@ -51,7 +52,7 @@ if (count($_POST) == 3 && !$found)
 
 <div class="bodycontent">
 
-<div class="greyrow">
+<div class="whiterow">
 
 	<div class="headconbody">
 
@@ -98,7 +99,7 @@ if (count($_POST) == 3 && !$found)
 
 </div>
 
-<div class="whiterow">
+<div class="greyrow">
 
 	<div class="headconbody">
 
@@ -117,7 +118,7 @@ if (count($_POST) == 3 && !$found)
 </div>
 
 
-<div class="greyrow">
+<div class="whiterow">
 
 	<div class="headconbody">
 
@@ -173,6 +174,30 @@ if ($found)
 					</div>
 
 				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</div>
+
+<div class="footerrow">
+
+	<div class="headconbody">
+
+		<div class="row">
+			
+			<div class="description">
+
+				<div class="footer">
+
+				<a href="adverts/ads.html">Advertise Here! [TEXT ADS] MYLIKES.COM SOURCES</a>
+				</br>
+				<a href="#">Privacy Policy |</a><a href="#"> Terms and Conditions |</a><a href="#"> Hoster</a>
+
+				</div>			
 
 			</div>
 
