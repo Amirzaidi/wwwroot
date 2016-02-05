@@ -1,5 +1,5 @@
 <?php
-$ip = router::visitorIp();
+$ip = router::Ip();
 
 $found = new contact($ip);
 $found = $found->found();
@@ -135,19 +135,30 @@ if ($found)
 
 				<div class="par">
 
-					<p>If you are interested in doing business, please send us a mail! Fill in the fields below!</p></br>
+					<a href="#mailmodal">Send us an email</a>
 
-					<form action="ads" method="post">
+				<div id="mailmodal" class="modal">
 
-					<p> Your email: </p><input type="text" name="mail" /></br>
+  					<div class="modal-dialog">
 
-					<p> Subject: </p><input type="text" name="subject" /></br>
+    						<div class="modal-content">
 
-					<p> Containment of email: </p><textarea name="content"></textarea></br>
+      <header class="container"> 
+        <a href="#" class="closebtn">×</a>
+        <h2>Modal Header</h2>
+      </header>
+      <div class="container">
+        <p>Some text in the modal.</p>
+        <p>Some text in the modal.</p>
+      </div>
+      <footer class="container">
+        <p>Modal footer</p>
+      </footer>
+    </div>
+  </div>
+</div>
 
-					<input type="submit" />
-
-					</form>
+					</div>
 
 				</div>
 
