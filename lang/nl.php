@@ -4,6 +4,11 @@ function lang(&$t)
 	$t['lang'] = 'Nederlands';
 }
 
+function lang_index(&$t)
+{
+	$t['indexmsg'] = 'Welkom op CSO!';
+}
+
 function lang_langtest(&$t)
 {
 	$t['currlang'] = 'Huidige taal';
