@@ -37,6 +37,7 @@ function pickrandom()
 		$new = contest::nextActive();
 		$new->active = '1';
 		$new->start = time();
+		$new->update();
 
 		pickFromQueue();
 	}

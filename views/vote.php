@@ -43,6 +43,7 @@ else if (isset($uri[0]))
 		]);
 
 		$country->votes++;
+		$country->update();
 		echo 'you have now voted for ', $country->name, '<br/>';
 	}
 	else
