@@ -64,5 +64,5 @@ require root . router::$views . $page . '.php';
 $tpl->end($css, $js, $favicon);
 
 // millisecond counter (view source)
-exit('<!--', round(microtime(true) - start, 5) * 1000, 'ms-->');
+exit('<!--', (round(microtime(true) - start, 5) * 1000), 'ms-->');
 ?>
