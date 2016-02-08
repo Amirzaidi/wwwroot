@@ -579,7 +579,31 @@ p > img {
 #modalquery {
 	font-size: 18px;
 	padding: 10px 16px;
+	text-align: center;
 }
+
+input[type="text"] {
+	padding: 13px 13px 13px 54px;
+	font-size: 20px;
+	color: #999;
+	text-align: left;
+	margin-bottom: 10px;
+	border: 3px solid #d1d1d1;
+}
+
+#name {
+	background-image: url("http://rexkirby.com/kirbyandson/images/name.svg");
+	background-size: 30px 30px;
+	background-repeat: no-repeat;
+	background-position: 10px;
+}
+
+#contain {
+	height: 150px;
+	width: 50%;
+}
+
+/*http://codepen.io/rexkirby/pen/Fdnlz*/
 
 /* QUERY FOR THE PAGES */
 

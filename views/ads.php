@@ -153,17 +153,10 @@ if ($found)
 
 									<div class="container" id="modalquery">
 
-        									<p>Some text in the modal.</p>
-        									<p>Some text in the modal.</p>
-
-        									<p>Some text in the modal.</p>
-        									<p>Some text in the modal.</p>
-
-        									<p>Some text in the modal.</p>
-        									<p>Some text in the modal.</p>
-
-        									<p>Some text in the modal.</p>
-        									<p>Some text in the modal.</p>
+										<input type="text" placeholder="Your Name" id="name"></br>
+										<input type="text" placeholder="Your Email" id="email"></br>
+										<input type="text" placeholder="Subject" id="subject"></br>
+										<textarea name="email" placeholder="Insert body of mail here" id="contain"></br>
 
       									</div>
 
