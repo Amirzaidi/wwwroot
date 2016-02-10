@@ -153,10 +153,12 @@ if ($found)
 
 									<div class="container" id="modalquery">
 
-										<input type="text" placeholder="Your Name" id="name"></br>
-										<input type="text" placeholder="Your Email" id="email"></br>
-										<input type="text" placeholder="Subject" id="subject"></br>
-										<textarea name="email" placeholder="Insert body of mail here" id="contain"></br>
+										<input type="text" placeholder="Your Name" id="name"/>
+										<input type="text" placeholder="Your Email" id="email"/>
+										<input type="text" placeholder="Subject" id="subject"/>
+										<textarea name="email" placeholder="Comment" id="contain"></textarea></br>
+
+										<input type="button" value="Send email!" id="sendemail"/>
 
       									</div>
 

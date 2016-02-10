@@ -519,7 +519,6 @@ p > img {
 /* Display the modal when targeted */
 .modal:target {
   	display: table;
-  	position: fixed;
 }
 
 /* The modal box */
@@ -537,7 +536,7 @@ p > img {
   	outline: 0;
   	border: 1px #777 solid;
   	text-align: justify;
-  	width: 60%;
+  	width: 50%;
   	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   	-webkit-animation-name: example; /* Chrome, Safari, Opera */
   	-webkit-animation-duration: 0.5s; /* Chrome, Safari, Opera */
@@ -583,12 +582,13 @@ p > img {
 }
 
 input[type="text"] {
-	padding: 13px 13px 13px 54px;
+	padding: 10px 10px 10px 51px;
 	font-size: 20px;
 	color: #999;
 	text-align: left;
-	margin-bottom: 10px;
+	margin-bottom: 8px;
 	border: 3px solid #d1d1d1;
+	width: 70%;
 }
 
 #name {
@@ -598,12 +598,65 @@ input[type="text"] {
 	background-position: 10px;
 }
 
-#contain {
-	height: 150px;
-	width: 50%;
+input[type="text"]:focus {
+	border: 3px solid teal;
+	color: teal;
 }
 
-/*http://codepen.io/rexkirby/pen/Fdnlz*/
+#email {
+	background-image: url("http://rexkirby.com/kirbyandson/images/email.svg");
+	background-size: 30px 30px;
+	background-repeat: no-repeat;
+	background-position: 10px;
+}
+
+#subject {
+	background-image: url("images/subject.png");
+	background-size: 30px 30px;
+	background-repeat: no-repeat;
+	background-position: 10px;
+}
+
+#contain {
+	padding: 10px 10px 10px 51px;
+	font-size: 18px;
+	color: #999;
+	text-align: left;
+	margin-bottom: 8px;
+	border: 3px solid #d1d1d1;
+	width: 70%;
+	height: 150px;
+	font-family: Segoe UI,Frutiger,Frutiger Linotype,Dejavu Sans,Helvetica Neue,Arial,sans-serif;
+	background-image: url("http://rexkirby.com/kirbyandson/images/comment.svg");
+	background-size: 30px 30px;
+	background-repeat: no-repeat;
+	background-position: 10px 10px;
+	resize: vertical;
+}
+
+#contain:focus {
+	border: 3px solid teal;
+	color: teal;
+}
+
+#sendemail {
+	background-color: teal;
+	border-radius: 3px;
+	border: 0;
+	border-bottom: 3px solid rgb(0, 86, 86);
+	padding: 5px 10px;
+	color: #fff;
+	cursor: pointer;
+	font-size: 15px;
+}
+
+#sendemail:hover {
+	color: teal;
+	background-color: #fff;
+	border: 0;
+	border-bottom: 3px solid #999;
+	font-size: 15px;
+}
 
 /* QUERY FOR THE PAGES */
 
