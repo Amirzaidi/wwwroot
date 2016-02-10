@@ -589,7 +589,7 @@ p > img {
 
 input[type="text"] {
 	padding: 10px 10px 10px 51px;
-	font-size: 18px;
+	font-size: 16px;
 	color: #999;
 	text-align: left;
 	margin-bottom: 8px;
@@ -625,7 +625,7 @@ input[type="text"]:focus {
 
 #contain {
 	padding: 10px 10px 10px 51px;
-	font-size: 18px;
+	font-size: 16px;
 	color: #999;
 	text-align: left;
 	margin-bottom: 8px;
