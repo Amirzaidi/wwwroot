@@ -5,4 +5,7 @@ $newCont = new continent([
 ]);
 
 $newCont->name = 'Test1';
+$newCont->desc = 'TestDesc1';
 ?>
+
+errorfree!
