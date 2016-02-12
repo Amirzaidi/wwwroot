@@ -154,18 +154,6 @@ abstract class mysql
 
 	public function __set($updatekey, $updatevalue)
 	{
-		/*if ($this->row !== false)
-		{
-			$type = gettype($updatevalue);
-			$primarykey = $this->intKey();
-
-			$update = self::$conn->prepare('UPDATE `' . $this->table() . '` SET `' . $updatekey . '` = ? WHERE `' . $primarykey . '` = ? LIMIT 1');
-			$update->bind_param($type[0] . 'i', $updatevalue, $this->row->$primarykey);
-			$update->execute();
-
-			$this->row->$updatekey = $updatevalue;
-		}*/
-
 		if ($this->row === false)
 		{
 			$this->found();
