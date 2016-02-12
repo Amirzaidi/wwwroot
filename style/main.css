@@ -514,30 +514,39 @@ p > img {
   	overflow: auto;
   	background-color: rgb(0, 0, 0);
   	background-color: rgba(0, 0, 0, 0.4);
-	z-index: 999999999999999999999999;
+	z-index: 9;
 }
 
 /* Display the modal when targeted */
 .modal:target {
-  	display: table;
+  	display: inherit;
 }
 
 /* The modal box */
 .modal-dialog {
-  	display: table-cell;
+	z-index: 8;
+  	position: fixed;
   	vertical-align: middle;
+	height: 100%;
+	width: 100%;
 }
 
 /* The modal's content */
-.modal-dialog .modal-content {
+.modal-content {
+  	position: fixed;
+	z-index: 10;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
   	margin: auto;
   	background-color: #fff;
-  	position: relative;
   	padding: 0;
   	outline: 0;
   	border: 1px #777 solid;
   	text-align: justify;
   	width: 40%;
+	height: 450px;
   	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   	-webkit-animation-name: example; /* Chrome, Safari, Opera */
   	-webkit-animation-duration: 0.5s; /* Chrome, Safari, Opera */

@@ -139,14 +139,15 @@ if ($found)
 					<a href="#mailmodal">Send us an email</a>
 
 						<div id="mailmodal" class="modal">
+							<a href="#"><div style="width: 100%; height: 100%; z-index: 9; position: fixed;"></div></a>
 
-  							<div class="modal-dialog">
+  							<!--<div class="modal-dialog">-->
 
     								<div class="modal-content">
 
       									<div class="container" id="modalheader"> 
 
-        									<a href="#" class="closebtn">×</a>
+        									<a href="#" class="closebtn">x</a>
         									<h2>Send us an email!</h2>
 
       									</div>
@@ -163,7 +164,7 @@ if ($found)
       									</div>
 
    								 </div>
- 							 </div>
+ 							<!--</div>-->
 						</div>
 
 					</div>

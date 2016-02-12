@@ -34,16 +34,18 @@ abstract class mysql
 		{
 			$this->stmt = $value;
 		}
-		else if (is_array($value))
-		{
-			$this->prepareInsert($value);
-		}
 		else if ($value === false)
 		{
 			$this->stmt = self::$conn->prepare('SELECT * FROM `' . $this->table() . '`');
 		}
 		else
 		{
+			if (is_array($value))
+			{
+				$this->insert($value);
+				$value = $this->stmt->insert_id;
+			}
+
 			if (is_string($value))
 			{
 				$this->key = $this->stringKey();
@@ -64,17 +66,10 @@ abstract class mysql
 		}
 
 		$this->stmt->execute();
-		if ($this->stmt->insert_id == 0)
-		{
-			$this->result = $this->stmt->get_result();
-		}
-		/*else
-		{
-			self::__construct($this->stmt->insert_id);
-		}*/
+		$this->result = $this->stmt->get_result();
 	}
 
-	private function prepareInsert(&$keyvalues)
+	private function insert(&$keyvalues)
 	{
 		$qmarks = [];
 		$qmarkcount = count($keyvalues);
@@ -102,6 +97,7 @@ abstract class mysql
 
 		array_unshift($values, $types);
 		call_user_func_array([$this->stmt, 'bind_param'], $values);
+		$this->stmt->execute();
 	}
 
 	protected abstract function table();
