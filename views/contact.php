@@ -58,7 +58,7 @@ if (count($_POST) == 3 && !$found)
 			
 			<div class="description" id="opg">
 
-				<h3> Send us an email about it! </h3>
+				<h3> Contact us </h3>
 
 				<p>Insert comp. details here (country, phone number etc.)</p>
 				<p>Insert comp. details here (country, phone number etc.)</p>

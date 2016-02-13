@@ -248,7 +248,7 @@ h4 {
 
 .devsimg > img {
 	height: auto;
-	width: 230px;
+	width: 45%;
 }
 
 .devstitle {
@@ -258,6 +258,7 @@ h4 {
 .devstext {
 	margin-top: 10px;
 	text-align: justify;
+	margin-bottom: 56px;
 }
 
 .devstext > p {
