@@ -36,13 +36,13 @@
 
 		<ul>
 
-			<li><a href="index.php">Home</a></li><li>
+			<li><a href="/index">Home</a></li><li>
 			<a href="#vote">Vote!</a></li><li>
 			<a href="#leaderboard">Leaderboard</a></li><li>
 			<a href="/ads">Advertise?</a></li><li>
-			<a href="#about">About us</a></li><li id="tcbut">
+			<a href="/about">About us</a></li><li id="tcbut">
 			<a href="/themechange" id="tcbuta">Change theme</a></li><li>
-			<a href="contact/contact.php">Contact us</a></li>
+			<a href="/contact">Contact us</a></li>
 
 		</ul>
 
