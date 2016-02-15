@@ -139,32 +139,27 @@ if ($found)
 					<a href="#mailmodal">Send us an email</a>
 
 						<div id="mailmodal" class="modal">
-							<a href="#"><div style="width: 100%; height: 100%; z-index: 9; position: fixed;"></div></a>
+							<a href="#"><div class="dark-bg"></div></a>
 
-  							<!--<div class="modal-dialog">-->
+    							<div class="modal-content">
 
-    								<div class="modal-content">
+      								<div class="container" id="modalheader"> 
+        								<a href="#" class="closebtn">x</a>
+        								<h2>Send us an email!</h2>
+      								</div>
 
-      									<div class="container" id="modalheader"> 
+								<div class="container" id="modalquery">
 
-        									<a href="#" class="closebtn">x</a>
-        									<h2>Send us an email!</h2>
+									<input type="text" placeholder="Your Name" id="name"/>
+									<input type="text" placeholder="Your Email" id="email"/>
+									<input type="text" placeholder="Subject" id="subject"/>
+									<textarea name="email" placeholder="Comment" id="contain"></textarea></br>
 
-      									</div>
+									<input type="button" value="Send email!" id="sendemail"/>
 
-									<div class="container" id="modalquery">
+      								</div>
 
-										<input type="text" placeholder="Your Name" id="name"/>
-										<input type="text" placeholder="Your Email" id="email"/>
-										<input type="text" placeholder="Subject" id="subject"/>
-										<textarea name="email" placeholder="Comment" id="contain"></textarea></br>
-
-										<input type="button" value="Send email!" id="sendemail"/>
-
-      									</div>
-
-   								 </div>
- 							<!--</div>-->
+   							 </div>
 						</div>
 
 					</div>
