@@ -24,31 +24,7 @@
 
 	</script>
 
-<nav>
-
-	<div class="title">
-
-		<a href="index.php">cso.com</a>
-
-	</div>
-
-	<div class="navcon">
-
-		<ul>
-
-			<li><a href="/index">Home</a></li><li>
-			<a href="#vote">Vote!</a></li><li>
-			<a href="#leaderboard">Leaderboard</a></li><li>
-			<a href="/ads">Advertise?</a></li><li>
-			<a href="/about">About us</a></li><li id="tcbut">
-			<a href="/themechange" id="tcbuta">Change theme</a></li><li>
-			<a href="/contact">Contact us</a></li>
-
-		</ul>
-
-	</div>
-
-</nav>
+<?php require 'inc.nav.php'; ?>
 
 <header>
 
@@ -515,27 +491,4 @@
 	</div>
 
 </div>
-
-<div class="footerrow">
-
-	<div class="headconbody">
-
-		<div class="row">
-			
-			<div class="description">
-
-				<div class="footer">
-
-				<a href="adverts/ads.html">Advertise Here! [TEXT ADS] MYLIKES.COM SOURCES</a>
-				</br>
-				<a href="#">Privacy Policy |</a><a href="#"> Terms and Conditions |</a><a href="#"> Hoster</a>
-
-				</div>			
-
-			</div>
-
-		</div>
-
-	</div>
-
-</div>
+<?php require 'inc.footer.php'; ?>

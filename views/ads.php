@@ -12,29 +12,7 @@ if (count($_POST) == 3 && !$found)
 ?>
 <meta name="description" content="countriesstandoff.com is a website where people can vote on their/or other countries during a standoff. Every six months the voting resets and new countries will be picked. The country that wins, will be honoured in a special rankinglist that keeps forever!" />
 
-<nav>
-
-	<div class="title">
-
-		<a href="../index.php">cso.com</a>
-
-	</div>
-
-	<div class="navcon">
-
-		<ul>
-
-			<li><a href="/index">Home</a></li><li>
-			<a href="/ads">Advertise?</a></li><li>
-			<a href="../about/aboutus.php">About us</a></li><li id="tcbut">
-			<a href="/themechange" id="tcbuta">Change theme</a></li><li>
-			<a href="../contact/contactus.php">Contact us</a></li>
-
-		</ul>
-
-	</div>
-
-</nav>
+<?php require 'inc.nav.php'; ?>
 
 <div class="header">
 
@@ -174,28 +152,4 @@ if ($found)
 
 </div>
 
-<div class="footerrow">
-
-	<div class="headconbody">
-
-		<div class="row">
-			
-			<div class="description">
-
-				<div class="footer">
-
-				<a href="adverts/ads.html">Advertise Here! [TEXT ADS] MYLIKES.COM SOURCES</a>
-				</br>
-				<a href="#">Privacy Policy |</a><a href="#"> Terms and Conditions |</a><a href="#"> Hoster</a>
-
-				</div>			
-
-			</div>
-
-		</div>
-
-	</div>
-
-</div>
-
-</div>
+<?php require 'inc.footer.php'; ?>
