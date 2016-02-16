@@ -49,7 +49,7 @@ if ($found)
 }
 ?>
 
-				<div class="par">
+				<div class="par parbut">
 
 					<a href="#mailmodal">Send us an email</a>
 
