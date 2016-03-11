@@ -822,5 +822,10 @@ input[type="text"]:focus {
 		padding: 3px;
 	}
 
+	.desinfo {
+		margin: 0px auto;
+		float: none;
+	}
+
 	
 }

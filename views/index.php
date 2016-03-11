@@ -62,7 +62,7 @@
 			
 			<div class="description">
 
-				<p><a href="adverts/ads.html">Advertise Here!</a></p>
+				<p><a href="#"><img src="/style/images/naamloos.png"></img></a></p>
 
 			</div>
 
