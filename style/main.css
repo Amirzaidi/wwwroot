@@ -814,5 +814,13 @@ input[type="text"]:focus {
 		padding: 7.5px 10px;
 	}
 
+	.title {
+		display: none;
+	}
+
+	nav {
+		padding: 3px;
+	}
+
 	
 }
