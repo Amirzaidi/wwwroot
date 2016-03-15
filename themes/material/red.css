@@ -1,0 +1,28 @@
+body, .light {
+	background: #ffcdd2 !important;
+}
+
+.medium {
+	background: #f44336 !important;
+}
+
+.medium a {
+	color: #fff !important;
+}
+
+::-webkit-scrollbar, ::-webkit-scrollbar-track {
+	background: #f44336 !important;
+}
+
+.dark {
+	background: #d32f2f !important;
+	color: #fff !important;
+}
+
+.dark a {
+	color: #fff !important;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #d32f2f !important;
+}
