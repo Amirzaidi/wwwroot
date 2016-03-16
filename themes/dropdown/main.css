@@ -1,0 +1,108 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:700,500,400,300);
+
+body {
+	margin: 0;
+	font: 14px Roboto;
+	font-weight: 400;
+	text-shadow: 0 1px rgba(255, 255, 255, 0.6);
+	min-width: 320px;
+	background: #eee;
+}
+
+body, html {
+	height: 100%;
+}
+
+a {
+	color: #888;
+	text-decoration: none;
+	transition: color 0.75s;
+}
+
+a:hover {
+	color: #000;
+}
+
+body > #dropdown {
+	position: fixed;
+	height: 0;
+	width: 100%;
+	min-width: 320px;
+	left: 0;
+	right: 0;
+	clear: both;
+	transition: height 0.75s ease-out;
+	top: 0;
+	overflow: show;
+	z-index: 2;
+}
+
+body > #dropdown:target {
+	height: 100%;
+	transition: height 0.75s ease-in;
+}
+
+body > #dropdown > #dropdownmenu {
+	background: rgba(38, 50, 56, 1);
+	box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+	max-height: 100%;
+	overflow: hidden;
+	width: 70%;
+	margin: 0 15%;
+	border-bottom-left-radius: 1px;
+	border-bottom-right-radius: 1px;
+	z-index: 2;
+	position: relative;
+}
+
+body > #dropdown > #dropdownmenu > a {
+	color: #fff;
+}
+
+body > #dropdown > #dropdownmenu > a > div {
+	padding: 13px 30px;
+	font-size: 17px;
+	text-decoration: none;
+	background: none;
+	transition: background 0.25s ease-out, border-bottom 0.25s ease-out;
+}
+
+body > #dropdown > #dropdownmenu > a:first-child > div {
+	background: rgba(56, 66, 72, 1);
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+body > #dropdown > #dropdownmenu > a > div:hover {
+	background: rgba(200, 200, 200, 0.2);
+}
+
+body > #dropdown > a > #shadow {
+	height: 100%;
+	width: 100%;
+	background: rgba(0,0,0,0.0);
+	transition: background 0.75s;
+	position: absolute;
+	top: 0;
+	z-index: 1;
+}
+
+body > #dropdown:target > a > #shadow {
+	background: rgba(0,0,0,0.2);
+}
+
+body > #content {
+	padding: 0 10%;
+	width: 80%;
+	height: 100%;
+	position: fixed;
+	overflow: auto;
+	z-index: 1;
+}
+
+body > #content > div {
+	box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+	margin: 20px 0;
+	padding: 20px;
+	background: #fff;
+	border-radius: 1px;
+}
