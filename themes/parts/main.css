@@ -1,0 +1,161 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:700,500,400,300);
+
+* {
+	transition: all 0.4s ease-out;
+}
+
+body {
+	margin: 0;
+	font: 14px Roboto;
+	font-weight: 400;
+	text-shadow: 0 1px rgba(230, 230, 230, 0.6);
+	min-width: 320px;
+	background: #ddd;
+}
+
+body, html {
+	height: 100%;
+}
+
+a {
+	color: #888;
+	text-decoration: none;
+	transition: color 1s;
+}
+
+a:hover {
+	color: #000;
+}
+
+body#select1 > div#select2 > div#select3 > div#select4 {
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	overflow: auto;
+}
+
+div.part {
+	position: fixed;
+	width: 50%;
+	height: 50%;
+}
+
+div.part > div {
+	padding: 10px;
+	margin: 10px;
+	height: calc(100% - 40px);
+	width: calc(100% - 40px);
+	box-shadow: 0 0 15px 0 #000;
+	background: #fff;
+	font-size: 24px;
+}
+
+body#select1 > div#select2 > div#select3 > div#select4 > div#part1 {
+	top: 0;
+	left: 0;
+}
+
+body#select1 > div#select2 > div#select3 > div#select4 > div#part2 {
+	top: 0;
+	left: 50%;
+}
+
+body#select1 > div#select2 > div#select3 > div#select4 > div#part3 {
+	top: 50%;
+	left: 0;
+}
+
+body#select1 > div#select2 > div#select3 > div#select4 > div#part4 {
+	top: 50%;
+	left: 50%;
+}
+
+:target div.part {
+	height: 33.3%;
+}
+
+
+body#select1:target > div#select2 > div#select3 > div#select4 > div#part1 {
+	height: 100%;
+}
+
+body#select1:target > div#select2 > div#select3 > div#select4 > div#part2 {
+	left: 50%;
+}
+
+body#select1:target > div#select2 > div#select3 > div#select4 > div#part3 {
+	top: 33.3%;
+	left: 50%;
+}
+
+body#select1:target > div#select2 > div#select3 > div#select4 > div#part4 {
+	top: 66.7%;
+}
+
+
+body#select1 > div#select2:target > div#select3 > div#select4 > div#part1 {
+	left: 50%;
+}
+
+body#select1 > div#select2:target > div#select3 > div#select4 > div#part2 {
+	height: 100%;
+	left: 0;
+}
+
+body#select1 > div#select2:target > div#select3 > div#select4 > div#part3 {
+	top: 33.3%;
+	left: 50%;
+}
+
+body#select1 > div#select2:target > div#select3 > div#select4 > div#part4 {
+	top: 66.7%;
+}
+
+
+body#select1 > div#select2 > div#select3:target > div#select4 > div#part1 {
+	left: 50%;
+}
+
+body#select1 > div#select2 > div#select3:target > div#select4 > div#part2 {
+	top: 33.3%;
+}
+
+body#select1 > div#select2 > div#select3:target > div#select4 > div#part3 {
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+
+body#select1 > div#select2 > div#select3:target > div#select4 > div#part4 {
+	top: 66.7%;
+}
+
+
+body#select1 > div#select2 > div#select3 > div#select4:target > div#part1 {
+	left: 50%;
+}
+
+body#select1 > div#select2 > div#select3 > div#select4:target > div#part2 {
+	top: 33.3%;
+}
+
+body#select1 > div#select2 > div#select3 > div#select4:target > div#part3 {
+	left: 50%;
+	top: 66.7%;
+}
+
+body#select1 > div#select2 > div#select3 > div#select4:target > div#part4 {
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+
+@media screen and (max-width: 540px) {
+	div.part {
+		position: relative;
+		width: 100% !important;
+		height: 50% !important;
+		top: 0 !important;
+		left: 0 !important;
+	}
+}

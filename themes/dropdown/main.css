@@ -63,7 +63,6 @@ body > #dropdown > #dropdownmenu {
 	border-bottom-right-radius: 1px;
 	z-index: 2;
 	position: relative;
-	overflow: hidden;
 	transition: width 0.25s ease-out, margin 0.25s ease-out;
 }
 
@@ -83,6 +82,7 @@ body > #dropdown:target > #dropdownmenu {
     	animation-name: scroll;
     	animation-duration: 0.75s;
 	animation-fill-mode: forwards;
+	overflow: auto;
 }
 
 body > #dropdown > #dropdownmenu::-webkit-scrollbar, body > #dropdown > #dropdownmenu::-webkit-scrollbar-track {
