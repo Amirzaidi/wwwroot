@@ -1,0 +1,321 @@
+﻿﻿<!DOCTYPE>
+<html>
+<head>
+
+<link rel="stylesheet" type="text/css" href="main.css">
+<title>Fan Website | [insert name]</title>
+
+<script src="http://code.jquery.com/jquery-1.10.2.min.js" type="text/javascript"></script>
+
+	<script type="text/javascript">
+
+	  $(window).load(function() {          
+	  var i =1;
+	  var images = ['bg0.jpg','bg1.jpg'];
+	  var image = $('header');
+
+	                //Initial Background image setup
+	  image.css('background-image', 'url(bg0.jpg)');
+	                //Change image at regular intervals
+
+	  setInterval(function(){  
+	   image.fadeOut(600, function () {
+	   image.css('background-image', 'url(' + images [i++] +')');
+	   image.fadeIn(600);
+	   });
+	   if(i == images.length)
+	    i = 0;
+	  }, 5000);           
+	 });
+
+	</script>
+
+</head>
+
+<body>
+
+<nav>
+
+	<div class="navcontainer">
+
+		<div class="logocontainer">
+
+			<h1> WEBSITE NAME HERE </h1>			
+
+		</div>
+
+		<div class="ulcontainer">
+
+		</div>
+
+	</div>
+
+</nav>
+
+<header>
+
+	<div class="stylelayer">
+
+		<div class="headcon">
+
+		<div class="webstar">
+
+			<img src="images/logo2.png" id="sidephoto"/>
+			<img src="images/logo.png"id="sidephoto"/>
+			<img src="images/logo3.png" id="sidephoto"/>
+			<h2> ENTER TITLE OF SITE HERE </br></h2>
+
+		</div>
+
+		<div class="webstarinfo">
+
+		<p>Enter here description of the website eventual buttons for about us etc.</p>
+		<p> <a href="#">[eventual]Source</a> </p>
+
+		</div>
+
+		</div>
+
+	</div>
+
+</header>
+
+<div class="bodycontent">
+
+<div class="whiterow">
+
+	<div class="headconbody">
+
+		<div class="row">
+			
+			<div class="description">
+
+			<h3> THIS IS TITLE </h3>
+			<p> enter description of subject here </p>
+
+			</div>
+
+			<div class="contentrow">
+
+				<div class="ex1" id="exfixed">
+
+					<img src="images/ex1.jpg"/>
+
+					<div class="imgtitle">
+
+						<h4> subjecttitle </h4>
+
+					</div>
+				
+					<div class="imgtext">
+
+						<p>THIS IS A TEST TEXT OLMTHIS IS A TEST TEXT OLMTHIS IS A TEST TEXT OLMTHIS IS A TEST TEXT OLMTHIS IS A TEST TEXT OLMTHIS IS A TEST TEXT OLM</p>
+
+					</div>
+
+					<div class="imglink">
+
+						<a href="#">testlink</a>
+
+					</div>
+
+				</div>
+
+				<div class="ex2" id="exfixed">
+
+					<img src="images/ex2.jpg"/>
+
+					<div class="imgtitle">
+
+						<h4> subjecttitle </h4>
+
+					</div>
+
+					<div class="imgtext">
+
+						<p>THIS IS A TEST TEXT OLMTHIS IS A TEST TEXT OLMTHIS IS A TEST TEXT OLMTHIS IS A TEST TEXT OLMTHIS IS A TEST TEXT OLMTHIS IS A TEST TEXT OLM</p>
+
+					</div>
+
+					<div class="imglink">
+
+						<a href="#">testlink</a>
+
+					</div>
+
+				</div>
+
+				<div class="ex3" id="exfixed">
+
+					<img src="images/ex3.jpg"/>
+
+					<div class="imgtitle">
+
+						<h4> subjecttitle </h4>
+
+					</div>
+
+					<div class="imgtext">
+
+						<p>THIS IS A TEST TEXT OLMTHIS IS A TEST TEXT OLMTHIS IS A TEST TEXT OLMTHIS IS A TEST TEXT OLMTHIS IS A TEST TEXT OLMTHIS IS A TEST TEXT OLM</p>
+
+					</div>
+
+					<div class="imglink">
+
+						<a href="#">testlink</a>
+
+					</div>
+
+				</div>
+
+				<div class="ex4" id="exfixed">
+
+					<img src="images/ex4.jpg"/>
+
+					<div class="imgtitle">
+
+						<h4> subjecttitle </h4>
+
+					</div>
+
+					<div class="imgtext">
+
+						<p>THIS IS A TEST TEXT OLMTHIS IS A TEST TEXT OLMTHIS IS A TEST TEXT OLMTHIS IS A TEST TEXT OLMTHIS IS A TEST TEXT OLMTHIS IS A TEST TEXT OLM</p>
+
+					</div>
+
+					<div class="imglink">
+
+						<a href="#">testlink</a>
+
+					</div>
+
+				</div>
+
+				<div class="ex5" id="exfixed">
+
+					<img src="images/ex5.jpg"/>
+
+					<div class="imgtitle">
+
+						<h4> subjecttitle </h4>
+
+					</div>
+
+					<div class="imgtext">
+
+						<p>THIS IS A TEST TEXT OLMTHIS IS A TEST TEXT OLMTHIS IS A TEST TEXT OLMTHIS IS A TEST TEXT OLMTHIS IS A TEST TEXT OLMTHIS IS A TEST TEXT OLM</p>
+
+					</div>
+
+					<div class="imglink">
+
+						<a href="#">testlink</a>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</div>
+
+
+<div class="greyrow">
+
+	<div class="headconbody">
+
+		<div class="row">
+
+			<div class="description">
+
+				<h3> About Us </h3>
+				<p> ayy lmao </p>
+
+			</div>
+
+			<div class="contentrow">
+
+				<div class="devinfo">
+
+					<div class="devsimg">
+
+						<img src="images/devs.png"/>
+
+					</div>
+
+					<div class="devstitle">
+
+						<h5> Developers </h5>
+
+					</div>
+
+					<div class="devstext">
+
+						<p>We, the developers of this site, do our utmost best to keep up the site updated and well organized. We check for eventual code bugs or problems with the site. Also we do our best as Website Administrator to keep the Costumer Service going. We would like to her your feedback about the site!</p>
+
+					</div>
+
+				</div>
+
+				<div class="desinfo">
+
+					<div class="devsimg">
+
+						<img src="images/design.png"/>
+
+					</div>
+
+					<div class="devstitle">
+
+						<h5> Designers </h5>
+
+					</div>
+
+					<div class="devstext">
+
+						<p>The designers of this website do the most tricky stuff. Mostly they code and design the website. They daily check the sources and see what they can code better so you can enter the site faster. These designers follow code and design courses so they can improve themselves and stay up-to-date.</p>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</div>
+
+
+<div class="albumrow">
+
+	<div class="headconbody">
+
+		<div class="row">
+
+			<div class="description">
+
+				<h6> albums </h6>
+				<p id="albump"> These are the best of the best albums we can offer you. Keep an eye on here, it gets weekly updated!</p>
+
+
+			</div>
+
+		</div>
+	
+	</div>
+
+</div>
+
+</div>
+
+</body>
+
+</html>
