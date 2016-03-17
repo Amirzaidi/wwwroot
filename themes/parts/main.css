@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:700,500,400,300);
 
 * {
-	transition: all 0.4s ease-out;
+	transition: all 0.3s ease-out;
 }
 
 body {
@@ -11,10 +11,6 @@ body {
 	text-shadow: 0 1px rgba(230, 230, 230, 0.6);
 	min-width: 320px;
 	background: #ddd;
-}
-
-body, html {
-	height: 100%;
 }
 
 a {
@@ -31,23 +27,59 @@ body#select1 > div#select2 > div#select3 > div#select4 {
 	position: fixed;
 	height: 100%;
 	width: 100%;
+	max-width: 1440px;
+	margin: 0 auto;
+	left: 0;
+	right: 0;
 	overflow: auto;
 }
 
 div.part {
-	position: fixed;
+	position: absolute;
 	width: 50%;
 	height: 50%;
 }
 
 div.part > div {
-	padding: 10px;
 	margin: 10px;
-	height: calc(100% - 40px);
-	width: calc(100% - 40px);
+	height: calc(100% - 20px);
+	width: calc(100% - 20px);
 	box-shadow: 0 0 15px 0 #000;
 	background: #fff;
 	font-size: 24px;
+	overflow: auto;
+}
+
+div.part > div > a {
+	position: absolute;
+	right: 30px;
+	bottom: 30px;
+}
+
+div.part > div > a > div {
+	background: #fff;
+	height: 40px;
+	line-height: 40px;
+	width: 40px;
+	border-radius: 999px;
+	box-shadow: 0 5px 30px -10px #000;
+	text-align: center;
+}
+
+div.part > div > a > div:hover {
+	background: #eee;
+}
+
+div.part > div::-webkit-scrollbar {
+	width: 11px;
+}
+
+div.part > div::-webkit-scrollbar-thumb {
+	background: #ddd !important;
+}
+
+div.part > div > div {
+	padding: 20px;
 }
 
 body#select1 > div#select2 > div#select3 > div#select4 > div#part1 {
@@ -152,10 +184,20 @@ body#select1 > div#select2 > div#select3 > div#select4:target > div#part4 {
 
 @media screen and (max-width: 540px) {
 	div.part {
-		position: relative;
+		position: relative !important;
 		width: 100% !important;
-		height: 50% !important;
+		#height: 50% !important;
+		height: auto !important;
 		top: 0 !important;
 		left: 0 !important;
+	}
+
+	div.part > div {
+		#height: calc(100% - 2px);
+		height: auto !important;
+		margin: 0;
+		width: 100%;
+		box-shadow: none;
+		border-bottom: 2px solid #ddd;
 	}
 }
