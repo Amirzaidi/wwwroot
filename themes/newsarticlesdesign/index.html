@@ -1,0 +1,191 @@
+﻿<!DOCTYPE>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+
+<link rel="stylesheet" type="text/css" href="main.css">
+<title>A-WebDesign | Template</title>
+
+<script src="http://code.jquery.com/jquery-1.10.2.min.js" type="text/javascript"></script>
+
+	<script type="text/javascript">
+
+	  $(window).load(function() {          
+	  var i =1;
+	  var images = ['images/bg0.jpg','images/bg1.jpg','images/bg2.jpg','images/bg3.jpg','images/bg4.jpg'];
+	  var image = $('header');
+
+	                //Initial Background image setup
+	  image.css('background-image', 'url(images/bg0.jpg)');
+	                //Change image at regular intervals
+
+	  setInterval(function(){  
+	   image.fadeOut(600, function () {
+	   image.css('background-image', 'url(' + images [i++] +')');
+	   image.fadeIn(600);
+	   });
+	   if(i == images.length)
+	    i = 0;
+	  }, 7500);           
+	 });
+
+	</script>
+
+</head>
+
+<body>
+
+<header>
+
+	<div class="headercontainer widthprop">
+
+	<div class="padding">
+
+		<div class="leftnav">
+
+			<ul>
+
+				<li><a href="#">Home</a></li><li>
+				<a href="#">About us</a></li><li>
+				<a href="#">Contact us</a></li><li>
+				<a href="#">Social Media</a></li>
+		
+			</ul>
+
+		</div>
+
+		<div class="hbodycon">
+
+			<div class="mainnewsimg">
+
+				<img src="images/mainnews.jpg"></img>
+
+			</div>
+
+			<div class="mainnewstxt">
+
+				<h2> Enemies failed in plots against Iran: Leader </h2>
+
+				<p>Leader of the Islamic Revolution Ayatollah Seyyed Ali Khamenei says the top world powers have opposed the Islamic Republic since its inception but have failed to achieve any of their objectives.</p>
+
+				<p>“Since the first day of the [1979] Revolution until today, the number one materialistic powers in the world have stood against the Islamic establishment but have failed to make any headway in this regard,” the Leader said in a meeting with the commanders and staff of the Islamic Republic of Iran Air Force on Monday. </p>
+
+				<p>Ayatollah Khamenei further urged Iranian officials to remain vigilant at all times against the plots targeting the country. "Be careful about what lies behind enemy smiles," the Leader said.</p>
+
+			<div class="mainnewsfooter">
+
+				<span class="moptions"><a href="#">Thumb</a></span>|
+				<span class="moptions"><a href="#">Share</a></span>|
+				<span class="moptions"><a href="#">Hide</a></span>|
+				<span class="moptions"><a href="#">Update</a></span>|
+				<span class="moptions"><a href="#">Source</a></span>|
+				<span class="moptions"><a href="#">Comments</a></span>|
+				<span class="moptions"><a href="#">Report</a></span>
+
+			</div>
+
+			</div>
+
+		</div>
+
+		<div class="thumbnails">
+
+			<div class="smthumbs floatprop">
+
+				<img src="images/thumb1.jpeg"></img>
+
+				<h3>Qom, Iran. Masumeh Shrine</h3>
+
+				<p>The shrine of Fatema Masumeh is located in Qom which is considered by Shia Muslims to be the second most sacred city in Iran after Mashhad.</p>
+
+				<a href="#">Read full article! </a>
+
+			</div>
+
+			<div class="smthumbs floatprop">
+
+				<img src="images/thumb2.jpg"></img>
+
+				<h3>Demonstrations at Azadi Monument</h3>
+
+				<p>The Azadi Monument is on a square where yearly thousands of people gather to demonstrate agains the tyranny in the World.</p>
+
+				<a href="#">Read full article! </a>
+
+			</div>
+
+			<div class="smthumbs floatprop">
+
+				<img src="images/thumb3.jpg"></img>
+
+				<h3>New tunnel opened mid Tehran</h3>
+
+				<p>A new tunnel has been opened in the middle of Tehran. It connects the south and north immediately. Traffic will be less on other roads from now on.</p>
+
+				<a href="#">Read full article! </a>
+
+			</div>
+
+			<div class="smthumbs floatprop">
+
+				<img src="images/thumb4.jpg"></img>
+
+				<h3>Qom, Iran. Masumeh Shrine</h3>
+
+				<p>The shrine of Fatema Masumeh is located in Qom which is considered by Shia Muslims to be the second most sacred city in Iran after Mashhad.</p>
+
+				<a href="#">Read full article! </a>
+
+			</div>
+
+			<div class="smthumbs floatprop">
+
+				<img src="images/thumb5.jpg"></img>
+
+				<h3>Happy New 1394!</h3>
+
+				<p>The shrine of Fatema Masumeh is located in Qom which is considered by Shia Muslims to be the second most sacred city in Iran after Mashhad.</p>
+
+				<a href="#">Read full article! </a>
+
+			</div>
+
+		</div>
+
+	</div>
+
+	</div>
+
+</header>
+
+<div class="bodycontainer">
+
+	<div class="row">
+
+		<div class="widthprop rowprop">
+
+
+			<div class="rowtitle">
+
+				<h1> Welcome on the [insert web name] </h1>
+				<h1> content </h1>
+				<h1> content </h1>
+				<h1> content </h1>
+				<h1> content </h1>
+				<h1> content </h1>
+				<h1> content </h1>
+				<h1> content </h1>
+				<h1> content </h1>
+
+			</div>
+
+		</div>
+	
+	</div>
+
+</div>
+
+</body>
+
+</html>

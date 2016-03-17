@@ -1,0 +1,178 @@
+* {
+	margin: 0;
+	padding: 0;
+	line-height: normal;
+	font-family: "Open Sans",sans-serif;
+	transition: all 0.75s;
+	font-size: 15px;
+	font-weight: normal;
+	box-sizing: border-box;
+}
+
+body, html {
+	height: 100%;
+}
+
+header {
+	background-image: url('bg0.jpg');
+	background-size: cover;
+	overflow: hidden;
+}
+
+.headercontainer {
+	background-color: rgba(0,0,0,0.75);
+	margin: 35px auto;
+}
+
+.widthprop {
+	width: 90%;
+}
+
+.padding {
+	padding: 40px;
+}
+
+li {
+	display: inline-block;
+	list-style-type: none;
+}
+
+.leftnav {
+	display: inline-block;
+}
+
+ul > li > a {
+	color: #fff;
+	text-decoration: none;
+	font-size: 20px;
+	font-variant: small-caps;
+	padding: 15px;
+	border-bottom: 4px solid transparent;
+	margin: 0px 3px;
+}
+
+ul > li > a:hover {
+	border-bottom: 4px solid #C20000;
+}
+
+.rowprop {
+	margin: 0px auto;
+	text-align: center;
+	padding: 60px 0px;
+}
+
+.row {
+	width: 100%;
+	background-color: #1b1b1b;
+}
+
+h1 {
+	color: #C20000;
+	font-size: 50px;
+}
+
+.hbodycon {
+	margin: 30px 0px;
+}
+
+.mainnewsimg {
+	display: inline-block;
+	width: 30%;
+}
+
+.mainnewsimg > img {
+	height: auto;
+	width: 100%;
+	border: 2px solid #C20000;
+	box-shadow: 0px 0px 10px #111;
+}
+
+.mainnewstxt {
+	width: 69%;
+	display: inline-block;
+	margin-left: 0.6%;
+	vertical-align: top;
+}
+
+h2 {
+	color: white;
+	font-size: 45px;
+	margin-bottom: 10px;
+	padding: 0px 5px;
+}
+
+.mainnewstxt > p {
+	color: white;
+	font-size: 19px;
+	margin: 10px 0px;
+	padding: 0px 5px;
+}
+
+a {
+	text-decoration: none;
+	color: white;
+}
+
+.mainnewsfooter {
+	text-align: center;
+}
+
+.mainnewsfooter > .moptions > a {
+	color: #999;
+}
+
+.mainnewsfooter > .moptions > a:hover {
+	color: #fff;
+}
+
+.moptions {
+	margin-right: 4px;
+}
+
+.smthumbs {
+	width: 19%;
+	margin: 0.34%;
+	text-align: left;
+	vertical-align: top;
+}
+
+.smthumbs > img {
+	width: 100%;
+	height: auto;
+	border: 1px solid #C20000;
+	opacity: 0.8;
+	box-shadow: 0px 0px 10px #111;
+}
+
+.smthumbs > img:hover {
+	opacity: 1;
+}
+
+.floatprop {
+	display: inline-block;
+}
+
+.thumbnails {
+	width: 99%;
+	margin: 0px auto;
+	text-align: center;
+}
+
+h3 {
+	font-size: 18px;
+	color: white;
+	padding: 5px;
+	font-weight: bold;
+}
+
+.smthumbs > p {
+	padding: 5px;
+	color: white;
+	font-size: 15px;
+}
+
+.smthumbs > a {
+	padding: 5px;
+	font-size: 14px;
+	font-weight: bold;
+}
