@@ -8,14 +8,17 @@
 	<div id="dropdown">
 		<div id="dropdownmenu">
 			<a href="#"><div>Frontpage</div></a>
-			<a href="#1"><div>Link 1</div></a>
-			<a href="#2"><div>Link 2</div></a>
-			<a href="#3"><div>Link 3</div></a>
-			<a href="#4"><div>Link 4</div></a>
-			<a href="#5"><div>Link 5</div></a>
-			<a href="#6"><div>Link 6</div></a>
-			<a href="#7"><div>Link 7</div></a>
-			<a href="#8"><div>Link 8</div></a>
+			<a href="../material/index.php"><div>Other Material</div></a>
+			<a href="./1"><div>Link 1</div></a>
+			<a href="./2"><div>Link 2</div></a>
+			<a href="#1"><div>ID 1</div></a>
+			<a href="#2"><div>ID 2</div></a>
+			<a href="#3"><div>ID 3</div></a>
+			<a href="#4"><div>ID 4</div></a>
+			<a href="#5"><div>ID 5</div></a>
+			<a href="#6"><div>ID 6</div></a>
+			<a href="#7"><div>ID 7</div></a>
+			<a href="#8"><div>ID 8</div></a>
 		</div>
 		<a href="#">
 			<div id="shadow">
@@ -25,10 +28,10 @@
 	<div id="bar">
 		<div>
 			<a href="#dropdown"><div style="padding: 8px 20px; font-size: 40px; float: left;">=</div></a>
-			<a href="#barextend"><div style="padding: 16px 20px; font-size: 26px; float: left;">Extend</div></a>
+			<a href="#barextend"><div style="padding: 17px 20px; font-size: 24px; float: left;">Extend</div></a>
 		</div>
 		<div>
-			<a href="#"><div style="padding: 16px 20px; font-size: 26px; float: left;">Close</div></a>
+			<a href="#"><div style="padding: 17px 20px; font-size: 24px; float: left;">Close</div></a>
 		</div>
 	</div>
 	<div id="content">

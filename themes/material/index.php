@@ -41,6 +41,12 @@ if (isset($_GET['color']))
 					<div>Changes the color to red</div>
 				</div>
 			</a>
+			<a href="../dropdown/index.php">
+				<div>
+					<div>DD</div>
+					<div>Another theme</div>
+				</div>
+			</a>
 			<a href="#1">
 				<div>
 					<div>Header</div>
