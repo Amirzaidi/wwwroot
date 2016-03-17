@@ -5,6 +5,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=0.85">
 </head>
 <body>
+	<div style="position: fixed; background: #fff; padding: 20px 0; z-index: 2; width: 100%;">
+		<a href="#dropdown">= Dropdown =</a>
+	</div>
 	<div id="dropdown">
 		<div id="dropdownmenu">
 			<a href="#"><div>Frontpage</div></a>
@@ -22,10 +25,7 @@
 			</div>
 		</a>
 	</div>
-	<div id="content">
-		<div>
-			<a href="#dropdown">Open Navigation</a>
-		</div>
+	<div id="content" style="margin-top: 50px;">
 		<div id="1" style="height: 200px">
 			Text
 		</div>

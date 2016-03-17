@@ -6,7 +6,7 @@ body {
 	font-weight: 400;
 	text-shadow: 0 1px rgba(255, 255, 255, 0.6);
 	min-width: 320px;
-	background: #eee;
+	background: #607D8B;
 }
 
 body, html {
@@ -31,7 +31,7 @@ body > #dropdown {
 	left: 0;
 	right: 0;
 	clear: both;
-	transition: height 0.75s ease-out;
+	transition: height 0.35s ease-out;
 	top: 0;
 	overflow: show;
 	z-index: 2;
@@ -53,6 +53,34 @@ body > #dropdown > #dropdownmenu {
 	border-bottom-right-radius: 1px;
 	z-index: 2;
 	position: relative;
+	overflow: hidden;
+}
+
+@keyframes scroll {
+	0% {
+		overflow: hidden;
+	}
+	99% {
+		overflow: hidden;
+	}
+	100% {
+		overflow: auto;
+	}
+}
+
+body > #dropdown:target > #dropdownmenu {
+    	animation-name: scroll;
+    	animation-duration: 0.75s;
+	animation-fill-mode: forwards;
+}
+
+body > #dropdown > #dropdownmenu::-webkit-scrollbar, ::-webkit-scrollbar-track {
+	width: 10px;
+	background: rgba(38, 50, 56, 1) !important;
+}
+
+body > #dropdown > #dropdownmenu::-webkit-scrollbar-thumb {
+	background: rgba(56, 66, 72, 1) !important;
 }
 
 body > #dropdown > #dropdownmenu > a {
@@ -76,18 +104,30 @@ body > #dropdown > #dropdownmenu > a > div:hover {
 	background: rgba(200, 200, 200, 0.2);
 }
 
+@keyframes shadow {
+	0% {
+		background: rgba(0, 0, 0, 0.0);
+	}
+	50% {
+		background: rgba(0, 0, 0, 0.0);
+	}
+	100% {
+		background: rgba(0, 0, 0, 0.3);
+	}
+}
+
 body > #dropdown > a > #shadow {
 	height: 100%;
 	width: 100%;
-	background: rgba(0,0,0,0.0);
-	transition: background 0.75s;
 	position: absolute;
 	top: 0;
 	z-index: 1;
 }
 
 body > #dropdown:target > a > #shadow {
-	background: rgba(0,0,0,0.2);
+    	animation-name: shadow;
+    	animation-duration: 2s;
+	animation-fill-mode: forwards;
 }
 
 body > #content {
@@ -105,4 +145,20 @@ body > #content > div {
 	padding: 20px;
 	background: #fff;
 	border-radius: 1px;
+}
+
+@media screen and (max-width: 320px) {
+	body > #dropdown > #dropdownmenu {
+		width: 90%;
+		margin: 0 5%;
+	}
+
+	body > #content {
+		width: 90%;
+		padding: 0 5%;
+	}
+
+	body > #content > div {
+		margin: 15px 0;
+	}
 }
