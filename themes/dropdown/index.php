@@ -4,10 +4,7 @@
 	<link rel="stylesheet" type="text/css" href="main.css" />
 	<meta name="viewport" content="width=device-width, initial-scale=0.85">
 </head>
-<body>
-	<div style="position: fixed; background: #fff; padding: 20px 0; z-index: 2; width: 100%;">
-		<a href="#dropdown">= Dropdown =</a>
-	</div>
+<body id="barextend">
 	<div id="dropdown">
 		<div id="dropdownmenu">
 			<a href="#"><div>Frontpage</div></a>
@@ -25,7 +22,16 @@
 			</div>
 		</a>
 	</div>
-	<div id="content" style="margin-top: 50px;">
+	<div id="bar">
+		<div>
+			<a href="#dropdown"><div style="padding: 8px 20px; font-size: 40px; float: left;">=</div></a>
+			<a href="#barextend"><div style="padding: 16px 20px; font-size: 26px; float: left;">Extend</div></a>
+		</div>
+		<div>
+			<a href="#"><div style="padding: 16px 20px; font-size: 26px; float: left;">Close</div></a>
+		</div>
+	</div>
+	<div id="content">
 		<div id="1" style="height: 200px">
 			Text
 		</div>
@@ -49,6 +55,9 @@
 		</div>
 		<div id="8" style="height: 175px">
 			Text
+		</div>
+		<div>
+			Footertext - Made by Amir Zaidi
 		</div>
 	</div>
 </body>
