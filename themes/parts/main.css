@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:700,500,400,300);
 
 * {
-	transition: all 0.3s ease-out;
+	transition: all 0.3s;
 }
 
 body {
@@ -16,7 +16,6 @@ body {
 a {
 	color: #888;
 	text-decoration: none;
-	transition: color 1s;
 }
 
 a:hover {
@@ -40,34 +39,69 @@ div.part {
 	height: 50%;
 }
 
+:target div.part {
+	height: 33.3%;
+}
+
 div.part > div {
 	margin: 10px;
 	height: calc(100% - 20px);
 	width: calc(100% - 20px);
-	box-shadow: 0 0 15px 0 #000;
+	box-shadow: 0 0 12px -2px #000;
 	background: #fff;
 	font-size: 24px;
 	overflow: auto;
 }
 
-div.part > div > a {
-	position: absolute;
-	right: 30px;
-	bottom: 30px;
+div.part > div:hover {
+	box-shadow: 0 0 15px -2px #000;
 }
 
-div.part > div > a > div {
+div.part > div > a {
+	position: absolute;
+	right: 40px;
+	bottom: 40px;
+}
+
+a.button > div {
 	background: #fff;
 	height: 40px;
 	line-height: 40px;
 	width: 40px;
 	border-radius: 999px;
-	box-shadow: 0 5px 30px -10px #000;
+	box-shadow: 0 5px 20px -2px #000;
 	text-align: center;
 }
 
-div.part > div > a > div:hover {
-	background: #eee;
+a.button > div:hover {
+	box-shadow: 0 8px 30px -4px #000;
+}
+
+@keyframes showclose {
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+a#close {
+	position: fixed;
+	z-index: 2;
+	bottom: 40px;
+	right: calc(50% + 40px);
+	display: none;
+}
+
+:target a#close {
+	display: inline;
+	animation-name: showclose;
+	animation-duration: 0.6s;
+	animation-fill-mode: forwards;
 }
 
 div.part > div::-webkit-scrollbar {
@@ -102,13 +136,12 @@ body#select1 > div#select2 > div#select3 > div#select4 > div#part4 {
 	left: 50%;
 }
 
-:target div.part {
-	height: 33.3%;
-}
-
-
 body#select1:target > div#select2 > div#select3 > div#select4 > div#part1 {
 	height: 100%;
+}
+
+body#select1:target > div#select2 > div#select3 > div#select4 > div#part1 > div > a.button {
+	display: none;
 }
 
 body#select1:target > div#select2 > div#select3 > div#select4 > div#part2 {
@@ -132,6 +165,10 @@ body#select1 > div#select2:target > div#select3 > div#select4 > div#part1 {
 body#select1 > div#select2:target > div#select3 > div#select4 > div#part2 {
 	height: 100%;
 	left: 0;
+}
+
+body#select1 > div#select2:target > div#select3 > div#select4 > div#part2 > div > a.button {
+	display: none;
 }
 
 body#select1 > div#select2:target > div#select3 > div#select4 > div#part3 {
@@ -158,6 +195,10 @@ body#select1 > div#select2 > div#select3:target > div#select4 > div#part3 {
 	left: 0;
 }
 
+body#select1 > div#select2 > div#select3:target > div#select4 > div#part3 > div > a.button {
+	display: none;
+}
+
 body#select1 > div#select2 > div#select3:target > div#select4 > div#part4 {
 	top: 66.7%;
 }
@@ -182,22 +223,32 @@ body#select1 > div#select2 > div#select3 > div#select4:target > div#part4 {
 	left: 0;
 }
 
+body#select1 > div#select2 > div#select3 > div#select4:target > div#part4 > div > a.button {
+	display: none;
+}
+
 @media screen and (max-width: 540px) {
 	div.part {
 		position: relative !important;
 		width: 100% !important;
-		#height: 50% !important;
 		height: auto !important;
 		top: 0 !important;
 		left: 0 !important;
 	}
 
 	div.part > div {
-		#height: calc(100% - 2px);
 		height: auto !important;
 		margin: 0;
 		width: 100%;
-		box-shadow: none;
+		box-shadow: none !important;
 		border-bottom: 2px solid #ddd;
+	}
+
+	div.part > div > a.button {
+		display: none;
+	}
+
+	a#close {
+		display: none !important;
 	}
 }
