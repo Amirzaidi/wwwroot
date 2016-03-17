@@ -42,13 +42,17 @@
 				Random Text<br/>
 				Random Text<br/>
 				Random Text<br/>
+				Random Text<br/>
+				Random Text<br/>
+				Random Text<br/>
+				Random Text<br/>
 			</div>
 		</div>
 	</div>
 	<div id="part3" class="part">
 		<div>
 			<a href="#select3" class="button"><div>+</div></a>
-			<div style="height: 500px">
+			<div>
 				<div style="height: 100px; width: 100%; background: url('http://www.wallpapermade.com/images/wallpapers/originals/bridge-over-the-river-autumn-landscape-wallpaper-5145.jpg') center; background-size: cover"></div>
 				Random Text<br/>
 				Random Text<br/>
@@ -71,7 +75,16 @@
 		<div>
 			<a href="#select4" class="button"><div>+</div></a>
 			<div>
+				<h1>Title</h1>
 				Random Text
+			</div>
+			<div>
+				<h1>Title</h1>
+				Random Text 2
+			</div>
+			<div>
+				<h1>Title</h1>
+				Random Text 3
 			</div>
 		</div>
 	</div>

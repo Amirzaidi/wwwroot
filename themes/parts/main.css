@@ -49,7 +49,6 @@ div.part > div {
 	width: calc(100% - 20px);
 	box-shadow: 0 0 12px -2px #000;
 	background: #fff;
-	font-size: 24px;
 	overflow: auto;
 }
 
@@ -71,6 +70,7 @@ a.button > div {
 	border-radius: 999px;
 	box-shadow: 0 5px 20px -2px #000;
 	text-align: center;
+	font-size: 22px;
 }
 
 a.button > div:hover {
@@ -97,6 +97,10 @@ a#close {
 	display: none;
 }
 
+a#close > div {
+	font-size: 15px;
+}
+
 :target a#close {
 	display: inline;
 	animation-name: showclose;
@@ -114,6 +118,16 @@ div.part > div::-webkit-scrollbar-thumb {
 
 div.part > div > div {
 	padding: 20px;
+	border-bottom: 1px solid #ddd;
+}
+
+div.part > div > div:last-child {
+	border-bottom: none;
+}
+
+div.part > div > div > h1 {
+	margin: 0 0 7px 0;
+	font-weight: 500;
 }
 
 body#select1 > div#select2 > div#select3 > div#select4 > div#part1 {
@@ -241,7 +255,7 @@ body#select1 > div#select2 > div#select3 > div#select4:target > div#part4 > div 
 		margin: 0;
 		width: 100%;
 		box-shadow: none !important;
-		border-bottom: 2px solid #ddd;
+		border-bottom: 2px solid #ccc;
 	}
 
 	div.part > div > a.button {
