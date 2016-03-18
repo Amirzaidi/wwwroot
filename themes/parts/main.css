@@ -266,6 +266,15 @@ body#select1 > div#select2 > div#select3 > div#select4:target > div#part4 > div 
 	display: none;
 }
 
+body > #scroll {
+	position: relative;
+	z-index: 2;
+	margin-top: 99.5vh;
+	width: 100%;
+	border-top: 0.5vh solid #ccc;
+	background: #fff;
+}
+
 @media screen and (max-width: 540px) {
 	body#select1 > div#select2 > div#select3 > div#select4 {
 		max-height: 100%;
