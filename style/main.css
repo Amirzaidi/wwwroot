@@ -684,6 +684,14 @@ input[type="text"]:focus {
 	padding: 10px 20px;
 }
 
+#mnavcon {
+	display: none;
+}
+
+#mnav {
+	display: none;
+}
+
 /* QUERY FOR THE PAGES */
 
 @media only screen and (max-width: 1024px) and (min-width: 910px) {
@@ -715,6 +723,10 @@ input[type="text"]:focus {
 
 	.navcon > ul > li > a {
 		font-size: 14px;
+	}
+
+	#mnavcon {
+		display: none;
 	}
 
 }
@@ -773,16 +785,20 @@ input[type="text"]:focus {
 		padding: 2px !important;
 	}
 
+	#mnavcon {
+		display: none;
+	}
+
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 800px) and (min-width: 750px) {
 	
 	.clearfix {
 		display: block;
 	}
 
 	.headconbody {
-		width: 765px;
+		width: 100%;
 		padding: 35px 0px;
 	}
 
@@ -826,6 +842,92 @@ input[type="text"]:focus {
 		margin: 0px auto;
 		float: none;
 	}
+	
+	#mnavcon {
+		display: none;
+	}
 
 	
+}
+
+@media only screen and (max-width: 750px) and (min-width: 730px) {
+
+	.clearfix {
+		display: block;
+	}
+
+	.headconbody {
+		width: 100%;
+		padding: 35px 0px;
+	}
+
+	.headcon {
+		width: 100%;
+	}
+
+	#mnavcon {
+		display: none;
+	}
+
+	h3 {
+		font-size: 40px;
+	}
+
+	.description > p {
+		font-size: 18px;
+	}
+
+	#exfixed {
+		width: 200px;
+	}
+
+	#exfixed > img {
+		width: 70%;
+	}
+
+	.navcon > ul > li {
+		padding: 5px 0px;
+	}
+
+	.navcon > ul > li > a {
+		padding: 7.5px 10px;
+	}
+
+	.title {
+		display: none;
+	}
+
+	nav {
+		padding: 3px;
+	}
+
+	.desinfo {
+		margin: 0px auto;
+		float: none;
+	}
+
+}
+
+@media only screen and (max-width: 730px) and (min-width: 650px) {
+
+	#mnav {
+		display: block;
+	}
+
+	#mnavcon {
+		display: block;
+	}
+
+	#wnavcon {
+		display: none;
+	}
+
+	#wnav {
+		display: none;
+	}
+
+	.headconbody {
+		width: 100%;
+	}
+
 }

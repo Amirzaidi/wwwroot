@@ -1,8 +1,8 @@
-<nav>
+<nav id="wnav">
 	<div class="title">
 		<a href="index.php">cso.com</a>
 	</div>
-	<div class="navcon">
+	<div class="navcon" id="wnavcon">
 		<ul>
 			<li><a href="/index">Home</a>
 			<?php if ($page == 'index') { ?>
@@ -16,3 +16,21 @@
 		</ul>
 	</div>
 </nav>
+
+<nav id="mnav">
+
+	<div class="navcon" id="mnavcon">
+		<div class="navbar">
+	
+			
+
+		</div>
+
+		<div class="title" id="mtitle">
+
+			<a href="index.php">cso.com</a>
+
+		</div>
+	</div>
+
+</nav
