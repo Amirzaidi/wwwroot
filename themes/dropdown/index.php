@@ -8,7 +8,8 @@
 	<div id="dropdown">
 		<div id="dropdownmenu">
 			<a href="#"><div>Frontpage</div></a>
-			<a href="../material/index.php"><div>Other Material</div></a>
+			<a href="../material/index.php"><div>Material</div></a>
+			<a href="../parts/index.php"><div>Parts</div></a>
 			<a href="./1"><div>Link 1</div></a>
 			<a href="./2"><div>Link 2</div></a>
 			<a href="#1"><div>ID 1</div></a>
