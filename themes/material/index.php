@@ -47,6 +47,12 @@ if (isset($_GET['color']))
 					<div>Another theme</div>
 				</div>
 			</a>
+			<a href="../parts/index.php">
+				<div>
+					<div>Parts</div>
+					<div>Another theme</div>
+				</div>
+			</a>
 			<a href="#1">
 				<div>
 					<div>Header</div>

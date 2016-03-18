@@ -75,16 +75,16 @@
 		<div>
 			<a href="#select4" class="button"><div>+</div></a>
 			<div>
-				<h1>Title</h1>
-				Random Text
+				<h1>Material</h1>
+				<a href="../material/index.php">Click Here</a>
 			</div>
 			<div>
-				<h1>Title</h1>
-				Random Text 2
+				<h1>Dropdown</h1>
+				<a href="../dropdown/index.php">Click Here</a>
 			</div>
 			<div>
-				<h1>Title</h1>
-				Random Text 3
+				<h1>Parts</h1>
+				You're here already lmao
 			</div>
 		</div>
 	</div>

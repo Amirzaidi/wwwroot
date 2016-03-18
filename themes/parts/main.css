@@ -1,9 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:700,500,400,300);
 
-* {
-	transition: all 0.3s;
-}
-
 body {
 	margin: 0;
 	font: 14px Roboto;
@@ -16,6 +12,7 @@ body {
 a {
 	color: #888;
 	text-decoration: none;
+	transition: color 0.25s ease-in;
 }
 
 a:hover {
@@ -26,10 +23,13 @@ body#select1 > div#select2 > div#select3 > div#select4 {
 	position: fixed;
 	height: 100%;
 	width: 100%;
-	max-width: 1440px;
-	margin: 0 auto;
+	max-height: 75vw;
+	max-width: 178vh;
+	margin: auto;
+	top: 0;
 	left: 0;
 	right: 0;
+	bottom: 0;
 	overflow: auto;
 }
 
@@ -37,6 +37,7 @@ div.part {
 	position: absolute;
 	width: 50%;
 	height: 50%;
+	transition: all 0.25s;
 }
 
 :target div.part {
@@ -50,16 +51,19 @@ div.part > div {
 	box-shadow: 0 0 12px -2px #000;
 	background: #fff;
 	overflow: auto;
+	font-size: 1em;
+	line-height: 1.5em;
+	transition: all 0.25s;
 }
 
 div.part > div:hover {
-	box-shadow: 0 0 15px -2px #000;
+	box-shadow: 0 0 20px -2px #000;
 }
 
 div.part > div > a {
 	position: absolute;
-	right: 40px;
-	bottom: 40px;
+	right: 30px;
+	bottom: 30px;
 }
 
 a.button > div {
@@ -71,6 +75,7 @@ a.button > div {
 	box-shadow: 0 5px 20px -2px #000;
 	text-align: center;
 	font-size: 22px;
+	transition: all 0.25s;
 }
 
 a.button > div:hover {
@@ -90,10 +95,10 @@ a.button > div:hover {
 }
 
 a#close {
-	position: fixed;
+	position: absolute;
 	z-index: 2;
-	bottom: 40px;
-	right: calc(50% + 40px);
+	bottom: 30px;
+	right: calc(50% + 30px);
 	display: none;
 }
 
@@ -104,7 +109,7 @@ a#close > div {
 :target a#close {
 	display: inline;
 	animation-name: showclose;
-	animation-duration: 0.6s;
+	animation-duration: 0.4s;
 	animation-fill-mode: forwards;
 }
 
@@ -117,7 +122,7 @@ div.part > div::-webkit-scrollbar-thumb {
 }
 
 div.part > div > div {
-	padding: 20px;
+	padding: 20px 25px;
 	border-bottom: 1px solid #ddd;
 }
 
@@ -154,6 +159,11 @@ body#select1:target > div#select2 > div#select3 > div#select4 > div#part1 {
 	height: 100%;
 }
 
+body#select1:target > div#select2 > div#select3 > div#select4 > div#part1 > div {
+	font-size: 1.3em;
+	line-height: 2em;
+}
+
 body#select1:target > div#select2 > div#select3 > div#select4 > div#part1 > div > a.button {
 	display: none;
 }
@@ -179,6 +189,11 @@ body#select1 > div#select2:target > div#select3 > div#select4 > div#part1 {
 body#select1 > div#select2:target > div#select3 > div#select4 > div#part2 {
 	height: 100%;
 	left: 0;
+}
+
+body#select1 > div#select2:target > div#select3 > div#select4 > div#part2 > div {
+	font-size: 1.3em;
+	line-height: 2em;
 }
 
 body#select1 > div#select2:target > div#select3 > div#select4 > div#part2 > div > a.button {
@@ -209,6 +224,11 @@ body#select1 > div#select2 > div#select3:target > div#select4 > div#part3 {
 	left: 0;
 }
 
+body#select1 > div#select2 > div#select3:target > div#select4 > div#part3 > div {
+	font-size: 1.3em;
+	line-height: 2em;
+}
+
 body#select1 > div#select2 > div#select3:target > div#select4 > div#part3 > div > a.button {
 	display: none;
 }
@@ -237,11 +257,21 @@ body#select1 > div#select2 > div#select3 > div#select4:target > div#part4 {
 	left: 0;
 }
 
+body#select1 > div#select2 > div#select3 > div#select4:target > div#part4 > div {
+	font-size: 1.3em;
+	line-height: 2em;
+}
+
 body#select1 > div#select2 > div#select3 > div#select4:target > div#part4 > div > a.button {
 	display: none;
 }
 
 @media screen and (max-width: 540px) {
+	body#select1 > div#select2 > div#select3 > div#select4 {
+		max-height: 100%;
+		max-width: 100%;
+	}
+
 	div.part {
 		position: relative !important;
 		width: 100% !important;
