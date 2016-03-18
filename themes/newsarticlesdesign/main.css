@@ -17,11 +17,12 @@ header {
 	background-image: url('bg0.jpg');
 	background-size: cover;
 	overflow: hidden;
+	position: fixed;
 }
 
 .headercontainer {
 	background-color: rgba(0,0,0,0.75);
-	margin: 35px auto;
+	margin: 0px auto;
 }
 
 .widthprop {
@@ -175,4 +176,11 @@ h3 {
 	padding: 5px;
 	font-size: 14px;
 	font-weight: bold;
+}
+
+.bodycontainer {
+	position: relative;
+	padding-top: 100vh;
+	background-color: transparent;
+	z-index: 1;
 }
