@@ -1,0 +1,41 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:700,500,400,300);
+
+body {
+	margin: 0;
+	font: 14px Roboto;
+	font-weight: 400;
+	text-shadow: 0 1px rgba(230, 230, 230, 0.6);
+	min-width: 320px;
+	background: #ddd;
+}
+
+a {
+	color: #888;
+	text-decoration: none;
+	transition: color 0.25s ease-in;
+}
+
+a:hover {
+	color: #000;
+}
+
+body > div#fixed {
+	background: #eee;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 1;
+}
+
+body > div#scroll {
+	position: relative;
+	z-index: 2;
+	margin-top: 99.5vh;
+	width: 100%;
+	border-top: 0.5vh solid #ccc;
+	background: #fff;
+}
