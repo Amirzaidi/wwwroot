@@ -3,6 +3,7 @@
 	padding: 0;
 	line-height: normal;
 	font-family: Optima,Segoe,Segoe UI,Candara,Calibri,Arial,sans-serif;
+	text-shadow: 1px 1px rgba(255,255,255, 0.8);
 }
 
 body, html {
