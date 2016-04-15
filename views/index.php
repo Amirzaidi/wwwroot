@@ -62,7 +62,7 @@
 			
 			<div class="description">
 
-				<p><a href="#"><img src="/style/images/naamloos.png"></img></a></p>
+				<p><a href="#">Advertise Here!</a></p>
 
 			</div>
 
@@ -344,6 +344,490 @@
 			<div class="description">
 
 				<p><a href="adverts/ads.html">Advertise Here!</a></p>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</div>
+
+<div class="whiterow">
+
+	<div class="headconbody">
+
+		<div class="row">
+			
+			<div class="description">
+
+			<h3> Why vote for [insert c]? </h3>
+			<p> We have listed some facts about why you should vote for [insert c]! </p>
+
+			</div>
+
+			<div class="contentrow">
+
+				<div class="ex1" id="exfixed">
+
+					<img src="/style/images/ex1.jpg"/>
+
+					<div class="imgtitle">
+
+						<h4> Civilization </h4>
+
+					</div>
+				
+					<div class="imgtext">
+
+						<p>China is often considered the longest continuous civilization, with some historians marking 6000 B.C. as the dawn of Chinese civilization. It also has the world’s longest continuously used written language</p>
+
+					</div>
+
+					<div class="imglink">
+
+						<a href="#">Learn More (PPC)</a>
+
+					</div>
+
+				</div>
+
+				<div class="ex2" id="exfixed">
+
+					<img src="/style/images/ex2.jpg"/>
+
+					<div class="imgtitle">
+
+						<h4> Inventions </h4>
+
+					</div>
+
+					<div class="imgtext">
+
+						<p>The Chinese invented paper, the compass, gunpowder, and printing. Toilet paper was also invented in China in the late 1300s. It was for emperors only.</p>
+
+					</div>
+
+					<div class="imglink">
+
+						<a href="#">Learn More (PPC)</a>
+
+					</div>
+
+				</div>
+
+	<div class="clearfix"></div>
+
+				<div class="ex3" id="exfixed">
+
+					<img src="/style/images/ex3.png"/>
+
+					<div class="imgtitle">
+
+						<h4> B.C. Tech </h4>
+
+					</div>
+
+					<div class="imgtext">
+
+						<p>By the fourth century B.C., the Chinese were drilling for natural gas and using it as a heat source, preceding Western natural gas drilling by about 2,300 years.</p>
+
+					</div>
+
+					<div class="imglink">
+
+						<a href="#">Learn More (PPC)</a>
+
+					</div>
+
+				</div>
+
+				<div class="ex4" id="exfixed">
+
+					<img src="/style/images/ex4.jpg"/>
+
+					<div class="imgtitle">
+
+						<h4> Weaponry </h4>
+
+					</div>
+
+					<div class="imgtext">
+
+						<p>The crossbow was invented and first used by the Chinese. They were also the first in the world to use chemical and gas weapons, 2,000 years before gas was used in Europe during WWI.</p>
+
+					</div>
+
+					<div class="imglink">
+
+						<a href="#">Learn More (PPC)</a>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</div>
+
+<div class="greyrow">
+
+	<div class="headconbody">
+
+		<div class="row">
+			
+			<div class="description">
+
+			<h3> Why vote for [insert c]? </h3>
+			<p> We have listed some facts about why you should vote for [insert c]! </p>
+
+			</div>
+
+			<div class="contentrow">
+
+				<div class="ex1" id="exfixed">
+
+					<img src="/style/images/ex1.jpg"/>
+
+					<div class="imgtitle">
+
+						<h4> Civilization </h4>
+
+					</div>
+				
+					<div class="imgtext">
+
+						<p>China is often considered the longest continuous civilization, with some historians marking 6000 B.C. as the dawn of Chinese civilization. It also has the world’s longest continuously used written language</p>
+
+					</div>
+
+					<div class="imglink">
+
+						<a href="#">Learn More (PPC)</a>
+
+					</div>
+
+				</div>
+
+				<div class="ex2" id="exfixed">
+
+					<img src="/style/images/ex2.jpg"/>
+
+					<div class="imgtitle">
+
+						<h4> Inventions </h4>
+
+					</div>
+
+					<div class="imgtext">
+
+						<p>The Chinese invented paper, the compass, gunpowder, and printing. Toilet paper was also invented in China in the late 1300s. It was for emperors only.</p>
+
+					</div>
+
+					<div class="imglink">
+
+						<a href="#">Learn More (PPC)</a>
+
+					</div>
+
+				</div>
+
+	<div class="clearfix"></div>
+
+				<div class="ex3" id="exfixed">
+
+					<img src="/style/images/ex3.png"/>
+
+					<div class="imgtitle">
+
+						<h4> B.C. Tech </h4>
+
+					</div>
+
+					<div class="imgtext">
+
+						<p>By the fourth century B.C., the Chinese were drilling for natural gas and using it as a heat source, preceding Western natural gas drilling by about 2,300 years.</p>
+
+					</div>
+
+					<div class="imglink">
+
+						<a href="#">Learn More (PPC)</a>
+
+					</div>
+
+				</div>
+
+				<div class="ex4" id="exfixed">
+
+					<img src="/style/images/ex4.jpg"/>
+
+					<div class="imgtitle">
+
+						<h4> Weaponry </h4>
+
+					</div>
+
+					<div class="imgtext">
+
+						<p>The crossbow was invented and first used by the Chinese. They were also the first in the world to use chemical and gas weapons, 2,000 years before gas was used in Europe during WWI.</p>
+
+					</div>
+
+					<div class="imglink">
+
+						<a href="#">Learn More (PPC)</a>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</div>
+
+<div class="whiterow">
+
+	<div class="headconbody">
+
+		<div class="row">
+			
+			<div class="description">
+
+			<h3> Why vote for [insert c]? </h3>
+			<p> We have listed some facts about why you should vote for [insert c]! </p>
+
+			</div>
+
+			<div class="contentrow">
+
+				<div class="ex1" id="exfixed">
+
+					<img src="/style/images/ex1.jpg"/>
+
+					<div class="imgtitle">
+
+						<h4> Civilization </h4>
+
+					</div>
+				
+					<div class="imgtext">
+
+						<p>China is often considered the longest continuous civilization, with some historians marking 6000 B.C. as the dawn of Chinese civilization. It also has the world’s longest continuously used written language</p>
+
+					</div>
+
+					<div class="imglink">
+
+						<a href="#">Learn More (PPC)</a>
+
+					</div>
+
+				</div>
+
+				<div class="ex2" id="exfixed">
+
+					<img src="/style/images/ex2.jpg"/>
+
+					<div class="imgtitle">
+
+						<h4> Inventions </h4>
+
+					</div>
+
+					<div class="imgtext">
+
+						<p>The Chinese invented paper, the compass, gunpowder, and printing. Toilet paper was also invented in China in the late 1300s. It was for emperors only.</p>
+
+					</div>
+
+					<div class="imglink">
+
+						<a href="#">Learn More (PPC)</a>
+
+					</div>
+
+				</div>
+
+	<div class="clearfix"></div>
+
+				<div class="ex3" id="exfixed">
+
+					<img src="/style/images/ex3.png"/>
+
+					<div class="imgtitle">
+
+						<h4> B.C. Tech </h4>
+
+					</div>
+
+					<div class="imgtext">
+
+						<p>By the fourth century B.C., the Chinese were drilling for natural gas and using it as a heat source, preceding Western natural gas drilling by about 2,300 years.</p>
+
+					</div>
+
+					<div class="imglink">
+
+						<a href="#">Learn More (PPC)</a>
+
+					</div>
+
+				</div>
+
+				<div class="ex4" id="exfixed">
+
+					<img src="/style/images/ex4.jpg"/>
+
+					<div class="imgtitle">
+
+						<h4> Weaponry </h4>
+
+					</div>
+
+					<div class="imgtext">
+
+						<p>The crossbow was invented and first used by the Chinese. They were also the first in the world to use chemical and gas weapons, 2,000 years before gas was used in Europe during WWI.</p>
+
+					</div>
+
+					<div class="imglink">
+
+						<a href="#">Learn More (PPC)</a>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</div>
+
+<div class="greyrow">
+
+	<div class="headconbody">
+
+		<div class="row">
+			
+			<div class="description">
+
+			<h3> Why vote for [insert c]? </h3>
+			<p> We have listed some facts about why you should vote for [insert c]! </p>
+
+			</div>
+
+			<div class="contentrow">
+
+				<div class="ex1" id="exfixed">
+
+					<img src="/style/images/ex1.jpg"/>
+
+					<div class="imgtitle">
+
+						<h4> Civilization </h4>
+
+					</div>
+				
+					<div class="imgtext">
+
+						<p>China is often considered the longest continuous civilization, with some historians marking 6000 B.C. as the dawn of Chinese civilization. It also has the world’s longest continuously used written language</p>
+
+					</div>
+
+					<div class="imglink">
+
+						<a href="#">Learn More (PPC)</a>
+
+					</div>
+
+				</div>
+
+				<div class="ex2" id="exfixed">
+
+					<img src="/style/images/ex2.jpg"/>
+
+					<div class="imgtitle">
+
+						<h4> Inventions </h4>
+
+					</div>
+
+					<div class="imgtext">
+
+						<p>The Chinese invented paper, the compass, gunpowder, and printing. Toilet paper was also invented in China in the late 1300s. It was for emperors only.</p>
+
+					</div>
+
+					<div class="imglink">
+
+						<a href="#">Learn More (PPC)</a>
+
+					</div>
+
+				</div>
+
+	<div class="clearfix"></div>
+
+				<div class="ex3" id="exfixed">
+
+					<img src="/style/images/ex3.png"/>
+
+					<div class="imgtitle">
+
+						<h4> B.C. Tech </h4>
+
+					</div>
+
+					<div class="imgtext">
+
+						<p>By the fourth century B.C., the Chinese were drilling for natural gas and using it as a heat source, preceding Western natural gas drilling by about 2,300 years.</p>
+
+					</div>
+
+					<div class="imglink">
+
+						<a href="#">Learn More (PPC)</a>
+
+					</div>
+
+				</div>
+
+				<div class="ex4" id="exfixed">
+
+					<img src="/style/images/ex4.jpg"/>
+
+					<div class="imgtitle">
+
+						<h4> Weaponry </h4>
+
+					</div>
+
+					<div class="imgtext">
+
+						<p>The crossbow was invented and first used by the Chinese. They were also the first in the world to use chemical and gas weapons, 2,000 years before gas was used in Europe during WWI.</p>
+
+					</div>
+
+					<div class="imglink">
+
+						<a href="#">Learn More (PPC)</a>
+
+					</div>
+
+				</div>
 
 			</div>
 

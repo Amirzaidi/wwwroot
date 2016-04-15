@@ -339,52 +339,16 @@ input[type="submit"]:hover {
 }
 
 .specialrow {
-	background-color: teal;
-	background-image: url('images/explain.png');
+	background-color: #222;
+	background-image: url('images/explain.svg');
 	background-repeat: no-repeat;
 	background-position: center center;
+	background-size: 150%;
+	box-shadow: 0px 0px 10px inset;
 }
 
 #specialdesc > p {
 	color: #fff;
-}
-
-#col-md-i {
-	display: inline-block;
-	vertical-align: middle;
-}
-
-.col-md-3 {
-	width: 247px;
-	text-align: left;
-	background-color: rgba(0, 0, 0, 0.4);
-	padding: 7px;
-	box-shadow: 0px 0px 2px black;
-}
-
-#col-md-i > p {
-	color: #fff;
-	margin: 0px 5px 5px 5px;
-}
-
-#explt {
-	color: #e1e1e1;
-	font-variant: small-caps;
-	font-size: 23px;
-	text-shadow: none;
-}
-
-.col-md-6 {
-	width: 300px;
-}
-
-.col-md-6 > img {
-	height: auto;
-	width: 100%;
-}
-
-#explp {
-	text-shadow: 0px 0px 5px #333;
 }
 
 #advertwhite {
