@@ -1,16 +1,21 @@
 <?php
-error_reporting(E_ALL);
-ini_set('display_errors', 'On');
+$debug = true;
+if ($debug)
+{
+	error_reporting(E_ALL);
+	ini_set('display_errors', 'On');
+}
 
 define('start', microtime(true));
 define('root', __DIR__ . '/');
+define('classes', root . 'classes/');
 
-require root . 'classes/cron.php';
-require root . 'classes/language.php';
-require root . 'classes/mysql.php';
-require root . 'classes/router.php';
-require root . 'classes/session.php';
-require root . 'classes/template.php';
+require classes . 'cron.php';
+require classes . 'language.php';
+require classes . 'mysql.php';
+require classes . 'router.php';
+require classes . 'session.php';
+require classes . 'template.php';
 
 // start permanent session
 $session = new session();
@@ -23,20 +28,20 @@ if (!$session->started())
 }
 
 // connect to localhost:3306/root
-mysql::$models = 'models/';
-mysql::connect('adm78', 'cso');
+mysql::$models = root . 'models/';
+mysql::connect('adm78', 'csodb');
 
 // check cron but block spam
-if ($session->cronCheck < (time() - 1))
+if ($debug || $session->cronCheck < (time() - 3))
 {
-	cron::$crondir = 'cron/';
+	cron::$crondir = root . 'cron/';
 	cron::$maxRuns = 16;
 	cron::checkAll();
 	$session->cronCheck = time();
 }
 
 // url routing
-router::$views = 'views/';
+router::$views = root . 'views/';
 router::$index = 'index';
 router::$error = '404';
 
@@ -53,13 +58,13 @@ $js = ['http://code.jquery.com/jquery-1.10.2.min.js'];
 $favicon = '/style/favicon.ico';
 
 // translate with vars
-language::$dir = 'lang/';
+language::$dir = root . 'lang/';
 
 $language = new language($session->language);
 $language->load($page);
 $language->translate($tpl);
 
-require root . router::$views . $page . '.php';
+require router::$views . $page . '.php';
 
 $tpl->end($css, $js, $favicon);
 

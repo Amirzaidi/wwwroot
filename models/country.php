@@ -1,27 +1,16 @@
 <?php
 class country extends mysql
 {
-	protected function table()
+	public static function stateSortVotes($state, $rows = '*')
 	{
-		return 'countries';
+		$stmt = parent::$conn->prepare('SELECT ' . $rows . ' FROM country WHERE country_state = ? ORDER BY country_votes DESC');
+		$stmt->bind_param('s', $state);
+		return new self($stmt);
 	}
 
-	public static function finalSortVotes()
+	public static function randQueued($count)
 	{
-		$stmt = parent::$conn->prepare("SELECT * FROM `countries` WHERE `state` = 'won' ORDER BY `votes` DESC");
-		return new country($stmt);
-	}
-
-	public static function activeSortVotes()
-	{
-		$stmt = parent::$conn->prepare("SELECT * FROM `countries` WHERE `state` = 'active' ORDER BY `votes` DESC");
-		return new country($stmt);
-	}
-
-	public static function fiveQueued()
-	{
-		$stmt = parent::$conn->prepare("SELECT `id` FROM `countries` WHERE `state` = 'queue'");
-		$countries = new country($stmt);
+		$countries = self::stateSortVotes('queued', 'country_id');
 
 		$ids = [];
 		while ($countries->found())
@@ -30,7 +19,7 @@ class country extends mysql
 		}
 
 		$useIds = [];
-		for ($i = 0; $i < 5 && $i < $countries->count(); $i++)
+		for ($i = 0; $i < $count && $i < $countries->count(); $i++)
 		{
 			$useIdKey = rand(0, count($ids) - 1);
 			$useIds[] = "`id` = '" . $ids[$useIdKey] . "'";
@@ -54,14 +43,13 @@ class country extends mysql
 
 	public static function resetVotes()
 	{
-		parent::execute("UPDATE `countries` SET `votes` = 0, `state` = 'queue'");
+		parent::execute("UPDATE country SET country_votes = 0, country_state = 'queued'");
 	}
 
 	public function medals()
 	{
-		$stmt = parent::$conn->prepare("SELECT * FROM `medals` WHERE `country` = ? ORDER BY rank ASC");
-		$country_id = $this->id;
-		$stmt->bind_param('i', $country_id);
+		$stmt = parent::$conn->prepare("SELECT * FROM medal WHERE country = ? ORDER BY medal_type ASC");
+		$stmt->bind_param('i', $this->id);
 
 		return new medal($stmt);
 	}

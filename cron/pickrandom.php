@@ -1,7 +1,7 @@
 <?php
 function pickFromQueue()
 {
-	$queuedCountries = country::fiveQueued();
+	$queuedCountries = country::randQueued(4);
 
 	while ($queuedCountries->found())
 	{
@@ -9,46 +9,50 @@ function pickFromQueue()
 	}
 }
 
-function pickrandom()
+function pickrandom($time)
 {
 	$active = contest::active();
-
-	$activeCountries = country::activeSortVotes();
+	$activeCountries = country::stateSortVotes('active');
 	if ($activeCountries->count() == 0) // finale has finished
 	{
-		$final = country::finalSortVotes();
+		$final = country::stateSortVotes('finale');
 		$finalCount = $final->count();
+
+		$ranks = [
+			1 => 'gold',
+			2 => 'silver',
+			3 => 'bronze'
+		];
 
 		for ($i = 1; $i <= 3 && $i <= $finalCount; $i++)
 		{
 			$final->found();
 
 			new medal([
-				'contest' => $active->id,
-				'country' => $final->id,
+				'type' => $ranks[$i]
 				'votes' => $final->votes,
-				'rank' => strval($i)
+				'contest#' => $active->id,
+				'country#' => $final->id
 			]);
 		}
 
 		country::resetVotes();
-		$active->end = time();
+		$active->end = $time;
 
 		$new = contest::nextActive();
-		$new->active = '1';
-		$new->start = time();
+		$new->start = $time;
 		$new->update();
 
 		pickFromQueue();
 	}
 	else
 	{
-		$activeCountries->state = 'won';
+		$activeCountries->state = 'finale';
 		$activeCountries->votes = 0;
 
 		while ($activeCountries->found())
 		{
-			$activeCountries->state = 'lost';
+			$activeCountries->state = 'eliminated';
 		}
 
 		pickFromQueue();

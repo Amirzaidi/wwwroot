@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-	<title>Dropdown</title>
+	<title>Parts</title>
 	<link rel="stylesheet" type="text/css" href="main.css" />
 	<meta name="viewport" content="width=device-width, initial-scale=0.85">
 </head>

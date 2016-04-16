@@ -15,7 +15,7 @@ class router
 			$uri[0] = self::$index;
 		}
 
-		if (!file_exists(root . self::$views . $uri[0] . '.php'))
+		if (!file_exists(self::$views . $uri[0] . '.php'))
 		{
 			$file = self::$error;
 		}

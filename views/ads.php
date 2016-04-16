@@ -1,13 +1,14 @@
 <?php
 $ip = router::Ip();
 
-$found = new contact($ip);
-$found = $found->found();
+$contact = new contact($ip);
+$found = $contact->found();
 
-if (count($_POST) == 3 && !$found)
+if (count($_POST) == 4 && !$found)
 {
 	$_POST['ip'] = $ip;
 	new contact($_POST);
+	$found = true;
 }
 ?>
 <meta name="description" content="countriesstandoff.com is a website where people can vote on their/or other countries during a standoff. Every six months the voting resets and new countries will be picked. The country that wins, will be honoured in a special rankinglist that keeps forever!" />
@@ -127,14 +128,15 @@ if ($found)
       								</div>
 
 								<div class="container" id="modalquery">
+								<form action="/ads" method="post">
 
-									<input type="text" placeholder="Your Name" id="name"/>
-									<input type="text" placeholder="Your Email" id="email"/>
-									<input type="text" placeholder="Subject" id="subject"/>
-									<textarea name="email" placeholder="Comment" id="contain"></textarea></br>
+									<input type="text" placeholder="Your Name" id="name" name="name" />
+									<input type="text" placeholder="Your Email" id="email" name="mail"/>
+									<input type="text" placeholder="Subject" id="subject" name="subject"/>
+									<textarea placeholder="Comment" id="contain" name="content"></textarea></br>
 
-									<input type="button" value="Send email!" id="sendemail"/>
-
+									<input type="submit" value="Send email!" id="sendemail"/>
+								</form>
       								</div>
 
    							 </div>

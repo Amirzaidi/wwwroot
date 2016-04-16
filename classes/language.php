@@ -12,7 +12,7 @@ class language
 
 	public function __construct($lang)
 	{
-		require root . self::$dir . $lang . '.php';
+		require self::$dir . $lang . '.php';
 	}
 
 	public function load($page)

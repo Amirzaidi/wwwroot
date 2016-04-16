@@ -1,11 +1,6 @@
 <?php
-class ipvote extends mysql
+class vote extends mysql
 {
-	protected function table()
-	{
-		return 'ipvotes';
-	}
-
 	protected function stringKey()
 	{
 		return 'ip';
@@ -16,7 +11,7 @@ class ipvote extends mysql
 		//parent::execute('TRUNCATE TABLE ipvotes');
 		//Truncate is extremely slow
 
-		parent::execute('DELETE FROM ipvotes');
+		parent::execute('DELETE FROM vote');
 	}
 }
 ?>

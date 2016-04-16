@@ -12,14 +12,17 @@ class cron
 			$runs = floor((time() - $job->lastrun) / $job->interval);
 			if ($runs > 0)
 			{
+				$lastrun = $job->lastrun;
+
+				//Update quickly to prevent cron reruns
 				$job->lastrun += ($runs * $job->interval);
 				$job->update();
 
-				require root . self::$crondir . $job->name . '.php';
+				require self::$crondir . $job->name . '.php';
 
-				for ($i = 0; $i < $runs && $i < self::$maxRuns; $i++)
+				for ($i = 1; $i <= $runs && $i <= self::$maxRuns; $i++)
 				{
-					call_user_func($job->name);
+					call_user_func($job->name, $lastrun + $runs * $job->interval);
 				}
 			}
 		}
