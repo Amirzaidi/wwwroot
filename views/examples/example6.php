@@ -1,12 +1,10 @@
 <?php
+$ip = router::ip();
 
-$ip = router::visitorIp();
-
-$ipvote = new ipvote($ip);
+$ipvote = new vote($ip);
 if ($ipvote->found())
 {
-	$country = new country($ipvote->country);
-	echo 'you have previously voted for ', $country->name;
+	echo 'you have previously voted for ', $ipvote->country->name;
 }
 else if (isset($uri[1]) && $uri[0] == 'vote')
 {
@@ -14,9 +12,9 @@ else if (isset($uri[1]) && $uri[0] == 'vote')
 
 	if ($country->found())
 	{
-		new ipvote([
+		new vote([
 			'ip' => $ip,
-			'country' => $country->id
+			'country#' => $country->id
 		]);
 
 		echo 'you have now voted for ', $country->name;
@@ -30,5 +28,4 @@ else
 {
 	echo 'not voted yet';
 }
-
 ?>
