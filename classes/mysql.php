@@ -42,15 +42,31 @@ abstract class mysql
 		}
 		else
 		{
+			$stringKey = $this->resolve($this->stringKey());
+
 			if (is_array($value))
 			{
 				$this->insert($value);
-				$value = $this->stmt->insert_id;
+				if ($this->stmt->insert_id == 0)
+				{
+					if (isset($value[$stringKey]))
+					{
+						$value = $value[$stringKey];
+					}
+					else
+					{
+						return;
+					}
+				}
+				else
+				{
+					$value = $this->stmt->insert_id;
+				}
 			}
 
 			if (is_string($value))
 			{
-				$this->pkey = $this->resolve($this->stringKey());
+				$this->pkey = $stringKey;
 				$this->pkeytype = 's';
 			}
 			else if (!is_int($value))
@@ -166,7 +182,7 @@ abstract class mysql
 		}
 		else
 		{
-			echo 'warning: key ', $key, 'not found in ', $this->table;
+			echo 'warning: key ', $key, ' not found in ', $this->table;
 			$result = null;
 		}
 
@@ -220,6 +236,17 @@ abstract class mysql
 				$type = gettype($value);
 				$values[0] .= $type[0];
 				$values[] = &$value;
+			}
+
+			if (!isset($this->row[$this->pkey]))
+			{
+				$this->pkey = $this->resolve($this->stringKey());
+				$this->pkeytype = 's';
+
+				if (!isset($this->row[$this->pkey]))
+				{
+					exit('No primary keys for table ' . $this->table);
+				}
 			}
 
 			$values[0] .= $this->pkeytype;

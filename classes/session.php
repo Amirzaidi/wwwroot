@@ -5,7 +5,8 @@ class session
 	
 	public function __construct()
 	{
-		session_start();
+		//Session lasts a week
+		@session_start(['cookie_lifetime' => 7 * 24 * 60 * 60]);
 	}
 
 	public function setDefault($key, $value)

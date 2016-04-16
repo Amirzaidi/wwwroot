@@ -1,6 +1,6 @@
 <?php
 function clearvotes($time)
 {
-	ipvote::clear();
+	vote::clear();
 }
 ?>

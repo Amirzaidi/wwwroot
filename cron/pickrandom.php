@@ -29,7 +29,7 @@ function pickrandom($time)
 			$final->found();
 
 			new medal([
-				'type' => $ranks[$i]
+				'type' => $ranks[$i],
 				'votes' => $final->votes,
 				'contest#' => $active->id,
 				'country#' => $final->id

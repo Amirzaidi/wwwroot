@@ -22,23 +22,23 @@ class country extends mysql
 		for ($i = 0; $i < $count && $i < $countries->count(); $i++)
 		{
 			$useIdKey = rand(0, count($ids) - 1);
-			$useIds[] = "`id` = '" . $ids[$useIdKey] . "'";
+			$useIds[] = 'country_id = ' . $ids[$useIdKey];
 
 			unset($ids[$useIdKey]);
 			$ids = array_values($ids);
 		}
 
-		$implode = implode(' OR ', $useIds);
-		if (empty($implode))
+		if (!isset($useIds[0]))
 		{
 			$implode = 'LIMIT 0';
 		}
 		else
 		{
-			$implode = 'WHERE ' . $implode;
+			$implode = 'WHERE ' . implode(' OR ', $useIds);
 		}
 
-		return new country(parent::$conn->prepare('SELECT * FROM `countries` ' . $implode));
+		$stmt = parent::$conn->prepare('SELECT * FROM country ' . $implode);
+		return new country($stmt);
 	}
 
 	public static function resetVotes()

@@ -22,7 +22,7 @@ class cron
 
 				for ($i = 1; $i <= $runs && $i <= self::$maxRuns; $i++)
 				{
-					call_user_func($job->name, $lastrun + $runs * $job->interval);
+					call_user_func($job->name, $lastrun + $i * $job->interval);
 				}
 			}
 		}
