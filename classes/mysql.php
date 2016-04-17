@@ -55,6 +55,7 @@ abstract class mysql
 					}
 					else
 					{
+						//No primary key found
 						return;
 					}
 				}
@@ -156,12 +157,23 @@ abstract class mysql
 			return false;
 		}
 
+		if ($this->row === null)
+		{
+			//If the last result was null, restart from 0
+			$this->result->data_seek(0);
+		}
+
 		$this->row = $this->result->fetch_assoc();
 		return ($this->row !== null);
 	}
 
-	public function count()
+	public function count($sub = null)
 	{
+		if ($sub !== null)
+		{
+			return $this->$sub()->count();
+		}
+
 		return $this->result->num_rows;
 	}
 
@@ -211,6 +223,53 @@ abstract class mysql
 
 		$this->updates[$key] = $value;
 		$this->row[$key] = $value;
+	}
+
+	private $callCache = [];
+
+	public function __call($type, $args)
+	{
+		if ($this->row === false)
+		{
+			$this->found();
+		}
+
+		$cacheKey = serialize([$type, $args]);
+		if (!isset($this->callCache[$cacheKey]))
+		{
+			$query = 'SELECT * FROM ' . $type . ' WHERE ' . $this->table . ' = ?';
+
+			$intKey = $this->resolve($this->intKey());
+			if (isset($this->row[$intKey]))
+			{
+				$argrefs = ['i'];
+				$argrefs[1] = &$this->row[$intKey];
+			}
+			else
+			{
+				$argrefs = ['s'];
+				$argrefs[1] = &$this->row[$this->pkey];
+			}
+
+			if (isset($args[0]))
+			{
+				$query .= ' ' . array_shift($args);
+
+				foreach ($args as &$value)
+				{
+					$type = gettype($value);
+					$argrefs[0] .= $type[0];
+					$argrefs[] = &$value;
+				}
+			}
+
+			$stmt = self::$conn->prepare($query);
+			call_user_func_array([$stmt, 'bind_param'], $argrefs);
+
+			$this->callCache[$cacheKey] = new $type($stmt);
+		}
+
+		return $this->callCache[$cacheKey];
 	}
 
 	public function delete()

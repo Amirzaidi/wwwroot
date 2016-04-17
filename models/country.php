@@ -45,13 +45,5 @@ class country extends mysql
 	{
 		parent::execute("UPDATE country SET country_votes = 0, country_state = 'queued'");
 	}
-
-	public function medals()
-	{
-		$stmt = parent::$conn->prepare("SELECT * FROM medal WHERE country = ? ORDER BY medal_type ASC");
-		$stmt->bind_param('i', $this->id);
-
-		return new medal($stmt);
-	}
 }
 ?>

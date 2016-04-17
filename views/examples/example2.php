@@ -1,7 +1,7 @@
 <?php
 
 $europe = new continent('Europe');
-$country = $europe->countries();
+$country = $europe->country();
 
 while ($country->found())
 {

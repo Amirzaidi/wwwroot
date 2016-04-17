@@ -9,11 +9,6 @@ class session
 		@session_start(['cookie_lifetime' => 7 * 24 * 60 * 60]);
 	}
 
-	public function setDefault($key, $value)
-	{
-		$this->defaults[$key] = $value;
-	}
-
 	public function started()
 	{
 		return isset($_COOKIE['PHPSESSID']);
@@ -28,14 +23,7 @@ class session
 	{
 		if (!isset($_SESSION[$key]))
 		{
-			if (isset($this->defaults[$key]))
-			{
-				$_SESSION[$key] = $this->defaults[$key];
-			}
-			else
-			{
-				return null;
-			}
+			return null;
 		}
 
 		return $_SESSION[$key];
@@ -43,13 +31,19 @@ class session
 
 	public function __set($key, $value)
 	{
-		if ($value === null)
+		$_SESSION[$key] = $value;
+	}
+
+	public function __isset($key)
+	{
+		return isset($_SESSION[$key]);
+	}
+
+	public function __unset($key)
+	{
+		if (isset($_SESSION[$key]))
 		{
 			unset($_SESSION[$key]);
-		}
-		else
-		{
-			$_SESSION[$key] = $value;
 		}
 	}
 }

@@ -8,5 +8,5 @@ else
 	$session->theme = 'light';
 }
 
-router::redirect('/index');
+router::redirect($session->lastpage);
 ?>

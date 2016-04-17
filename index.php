@@ -24,6 +24,7 @@ if (!$session->started())
 	$session->cronCheck = 0;
 	$session->language = 'en';
 	$session->theme = 'light';
+	$session->lastpage = '';
 	router::refresh();
 }
 
@@ -51,7 +52,7 @@ $page = router::path($uri);
 // auto-html template
 $tpl = new template();
 $tpl->title = 'CSO - ' . ucfirst($page);
-$tpl->url = '127.0.0.1';
+$tpl->url = $_SERVER['REQUEST_URI'];
 
 $css = ['/style/main.css', '/style/' . $session->theme . '.css'];
 $js = ['http://code.jquery.com/jquery-1.10.2.min.js'];
@@ -67,6 +68,7 @@ $language->translate($tpl);
 require router::$views . $page . '.php';
 
 $tpl->end($css, $js, $favicon);
+$session->lastpage = $_SERVER['REQUEST_URI'];
 
 // millisecond counter (view source)
 exit('<!--' . (round(microtime(true) - start, 5) * 1000) . 'ms-->');
