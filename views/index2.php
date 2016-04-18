@@ -4,7 +4,7 @@ $ipvote = new vote($ip);
 
 if ($ipvote->found())
 {
-	$msg = '[previousvote] ' . $ipvote->country->name;
+	$msg = '[previousvote] ' . $ipvote->country->name . ' (' . cron::timeUntil('clearvotes') . ' [timetovote])';
 }
 else if (isset($uri[0]))
 {
@@ -46,7 +46,7 @@ while ($country->found())
 	$img = '/style/images/bg' . $country->id . '.jpg';
 	if (file_exists(root . $img))
 	{
-		//$imgs[] = "'" . $img . "'";
+		$imgs[] = "'" . $img . "'";
 	}
 }
 
@@ -71,7 +71,7 @@ $color = ['whiterow', 'greyrow'];
 	  var image = $('header');
 
 	                //Initial Background image setup
-	  image.css('background-image', "url(<?php echo $imgs[0]; ?>)");
+	  //image.css('background-image', "url(<?php echo $imgs[0]; ?>)");
 	                //Change image at regular intervals
 
 	  setInterval(function(){  
@@ -88,7 +88,7 @@ $color = ['whiterow', 'greyrow'];
 
 <?php require 'inc.nav.php'; ?>
 
-<header>
+<header style="background-image: url(<?php echo $imgs[0]; ?>">
 	<div class="stylelayer">
 		<div class="headcon" id="headerfixedcon">
 

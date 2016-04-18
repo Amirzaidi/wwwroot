@@ -29,6 +29,7 @@ function lang_index2(&$t)
 	$t['infinale'] = 'In Finale';
 	$t['preround'] = 'Preliminaries';
 	$t['previousvote'] = 'You have previously voted for';
+	$t['timetovote'] = 'seconds until you can vote again';
 	$t['newvote'] = 'You have now voted for';
 	$t['invalidvote'] = 'You can\'t vote for this';
 	$t['endat'] = 'Voting ends at';

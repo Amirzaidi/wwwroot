@@ -29,6 +29,7 @@ function lang_index2(&$t)
 	$t['infinale'] = 'In Finale';
 	$t['preround'] = 'Voorrondes';
 	$t['previousvote'] = 'You hebt al gestemd voor';
+	$t['timetovote'] = 'seconde tot je weer kan stemmen';
 	$t['newvote'] = 'Je hebt nu gestemd voor';
 	$t['invalidvote'] = 'Je kan hier niet op stemmen';
 	$t['endat'] = 'Stemmen eindigt op';
