@@ -8,6 +8,17 @@ class country extends mysql
 		return new self($stmt);
 	}
 
+	public static function voteable($rows = '*')
+	{
+		$activeCountries = self::stateSortVotes('active');
+		if ($activeCountries->count() == 0) // finale has finished
+		{
+			return country::stateSortVotes('finale');
+		}
+
+		return $activeCountries;
+	}
+
 	public static function randQueued($count)
 	{
 		$countries = self::stateSortVotes('queued', 'country_id');
