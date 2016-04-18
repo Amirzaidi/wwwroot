@@ -5,7 +5,7 @@ class language
 
 	public static function exists($lang)
 	{
-		return file_exists(root . self::$dir . $lang . '.php');
+		return file_exists(self::$dir . $lang . '.php');
 	}
 
 	private $t;
