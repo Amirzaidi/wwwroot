@@ -62,11 +62,11 @@ while ($voteable->found())
 {
 	echo '<a href="/vote/', $voteable->id, '">', $voteable->name, ': ', $voteable->desc, '</a> ', $voteable->votes, ' (medals:';
 	//$medals = $voteable->medals();
-	$medals = $voteable->medal('ORDER BY medal_type ASC');
+	$medal = $voteable->medal('ORDER BY medal_type ASC');
 
-	while ($medals->found())
+	while ($medal->found())
 	{
-		echo ' ', $medals->contest->name, ' ', $medals->contest->id, ':', $medals->type, ';';
+		echo ' ', $medal->contest->name, ' ', $medal->contest->id, ':', $medal->type, ';';
 	}
 
 	echo ')<br/>';
