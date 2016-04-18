@@ -23,7 +23,7 @@ abstract class mysql
 		}
 	}
 
-	protected $table, $pkey, $pkeytype, $stmt, $result = false, $row = false, $updates = [];
+	protected $table, $pkey, $pkeytype, $stmt, $result = false, $row = null, $updates = [], $callCache = [];
 
 	public function __construct($value = false)
 	{
@@ -147,39 +147,41 @@ abstract class mysql
 		return strtolower(get_class($this));
 	}
 
+	public function reset()
+	{
+		$this->result->data_seek(0);
+		$this->row = false;
+	}
+
 	public function found()
 	{
 		$this->update();
+		$this->callCache = [];
 
 		if ($this->result === false)
 		{
-			echo 'NO RESULT';
+			echo 'warning: no result in ', $this->table;
 			return false;
 		}
 
 		if ($this->row === null)
 		{
 			//If the last result was null, restart from 0
-			$this->result->data_seek(0);
+			$this->reset();
 		}
 
 		$this->row = $this->result->fetch_assoc();
 		return ($this->row !== null);
 	}
 
-	public function count($sub = null)
+	public function count()
 	{
-		if ($sub !== null)
-		{
-			return $this->$sub()->count();
-		}
-
 		return $this->result->num_rows;
 	}
 
 	public function &__get($key)
 	{
-		if ($this->row === false)
+		if ($this->row === null)
 		{
 			$this->found();
 		}
@@ -203,7 +205,7 @@ abstract class mysql
 
 	public function __set($key, $value)
 	{
-		if ($this->row === false)
+		if ($this->row === null)
 		{
 			$this->found();
 		}
@@ -224,8 +226,6 @@ abstract class mysql
 		$this->updates[$key] = $value;
 		$this->row[$key] = $value;
 	}
-
-	private $callCache = [];
 
 	public function __call($type, $args)
 	{
