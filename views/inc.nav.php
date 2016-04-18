@@ -4,15 +4,15 @@
 	</div>
 	<div class="navcon" id="wnavcon">
 		<ul>
-			<li><a href="/index">Home</a>
+			<li><a href="/index">[nav_home]</a>
 			<?php if ($page == 'index') { ?>
-			</li><li><a href="#vote">Vote</a>
-			</li><li><a href="#leaderboard">Leaderboard</a>
+			</li><li><a href="#vote">[nav_vote]</a>
+			</li><li><a href="#leaderboard">[nav_leaderboard]</a>
 			<?php } ?>
-			</li><li><a href="/ads">Advertise</a>
-			</li><li><a href="/about">About us</a>
-			</li><li id="tcbut"><a href="/themechange" id="tcbuta">Change theme</a>
-			</li><li><a href="/contact">Contact us</a></li>
+			</li><li><a href="/ads">[nav_adv]</a>
+			</li><li><a href="/about">[nav_about]</a>
+			</li><li id="tcbut"><a href="/themechange" id="tcbuta">[nav_themechange]</a>
+			</li><li><a href="/contact">[nav_contact]</a></li>
 		</ul>
 	</div>
 </nav>
@@ -33,4 +33,4 @@
 		</div>
 	</div>
 
-</nav
+</nav>
