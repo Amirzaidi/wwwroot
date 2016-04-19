@@ -29,10 +29,10 @@ else if (isset($uri[0]))
 		$votecountry->update();
 		$msg = '[newvote] ' . $votecountry->name;
 	}
-	/*else
+	else
 	{
 		$msg = '[invalidvote]';
-	}*/
+	}
 }
 ?>
 <script src="http://code.jquery.com/jquery-1.10.2.min.js" type="text/javascript"></script>
@@ -40,6 +40,7 @@ else if (isset($uri[0]))
 $state = null;
 $country = country::voteable();
 $imgs = [];
+
 while ($country->found())
 {
 	$state = $country->state;
@@ -53,11 +54,6 @@ while ($country->found())
 if (!isset($imgs[0]))
 {
 	$imgs[0] = '/style/images/bg0.jpg';
-}
-
-if (!isset($msg))
-{
-	$msg = ($state == 'finale') ? '[infinale]' : '[preround]';
 }
 
 $c = 0;
@@ -94,14 +90,14 @@ $color = ['whiterow', 'greyrow'];
 
 		<div class="webstar">
 
-			<h2> <a href="#"><?php echo $msg; ?></a> </br></h2>
+			<h2> <a href="#"><?php echo ($state == 'finale') ? '[infinale]' : '[preround]'; ?></a> </br></h2>
 
 		</div>
 
 		<div class="webstarinfo">
 
 		<p style="color: red;">([endat] <?php echo date('d M H:i:s', time() + cron::timeUntil('pickrandom')); ?>)</p> </br>
-		<p style="font-weight: bold; font-variant: small-caps;"> --- </p>
+		<p style="font-weight: bold; font-variant: small-caps;"> <?php if (isset($msg)) echo $msg; ?> </p>
 		<a href="/ads">[advertisehere]</a>
 
 		</div>

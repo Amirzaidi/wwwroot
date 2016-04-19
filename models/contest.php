@@ -7,6 +7,7 @@ class contest extends mysql
 		return new contest($stmt);
 	}
 
+	//CRONJOB
 	public static function nextActive()
 	{
 		$stmt = parent::$conn->prepare("SELECT * FROM contest WHERE contest_start = 0 ORDER BY contest_id ASC LIMIT 1");

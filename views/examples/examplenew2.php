@@ -1,8 +1,8 @@
 <?php
 $europe = new continent('Europe');
-
-echo $europe->name, ' has ', $europe->count('country'), ' countries<br/>';
 $country = $europe->country();
+
+echo $europe->name, ' has ', $country->count(), ' countries<br/>';
 for ($i = 0; $i < 3; $i++)
 {
 	while ($country->found())
