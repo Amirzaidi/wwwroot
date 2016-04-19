@@ -1,24 +1,25 @@
 <?php
 class country extends mysql
 {
-	public static function stateSortVotes($state, $rows = '*')
+	public static function stateSortVotes($state, $columns = '*')
 	{
-		$stmt = parent::$conn->prepare('SELECT ' . $rows . ' FROM country WHERE country_state = ? ORDER BY country_votes DESC');
+		$stmt = parent::$conn->prepare('SELECT ' . $columns . ' FROM country WHERE country_state = ? ORDER BY country_votes DESC');
 		$stmt->bind_param('s', $state);
 		return new self($stmt);
 	}
 
-	public static function voteable($rows = '*')
+	public static function voteable($columns = '*')
 	{
-		$activeCountries = self::stateSortVotes('active');
+		$activeCountries = self::stateSortVotes('active', $columns);
 		if ($activeCountries->count() == 0) // finale has finished
 		{
-			return country::stateSortVotes('finale');
+			return self::stateSortVotes('finale', $columns);
 		}
 
 		return $activeCountries;
 	}
 
+	//CRONJOB
 	public static function randQueued($count)
 	{
 		$countries = self::stateSortVotes('queued', 'country_id');
