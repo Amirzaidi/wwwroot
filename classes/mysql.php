@@ -229,7 +229,7 @@ abstract class mysql
 
 	public function __call($type, $args)
 	{
-		if ($this->row === false)
+		if ($this->row === null)
 		{
 			$this->found();
 		}
@@ -263,6 +263,7 @@ abstract class mysql
 				}
 			}
 
+			//var_dump($query, $argrefs);
 			$stmt = self::$conn->prepare($query);
 			call_user_func_array([$stmt, 'bind_param'], $argrefs);
 
