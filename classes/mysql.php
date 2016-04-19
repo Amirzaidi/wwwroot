@@ -188,11 +188,16 @@ abstract class mysql
 
 		if (isset($this->row[$key]))
 		{
-			$result = new $key($this->row[$key]);
+			if (!is_object($this->row[$key]))
+			{
+				$this->row[$key] = new $key($this->row[$key]);
+			}
+
+			$result = &$this->row[$key];
 		}
 		else if (isset($this->row[$this->table . '_' . $key]))
 		{
-			$result = $this->row[$this->table . '_' . $key];
+			$result = &$this->row[$this->table . '_' . $key];
 		}
 		else
 		{

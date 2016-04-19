@@ -6,8 +6,11 @@ if (count($_POST) == 2)
 }
 
 $nl = new slang('nl');
-//var_dump($nl->country->continent->country());
-echo $nl->country->continent->country()->count(), ' landen in nl continent';
+//echo $nl->country->continent->country()->name, '<br/>';
+while ($nl->country->continent->country()->found())
+{
+	echo $nl->country->continent->country()->name, '<br/>';
+}
 ?>
 
 <form action="[url]" method="post">
