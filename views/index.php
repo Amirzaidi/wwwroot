@@ -246,31 +246,7 @@
 
 				<div class="contentrow">
 			
-					<div class="col-md-3" id="col-md-i">
-
-						<h4 id="explt"> How to play </h4>
-						<p>An easier game doesn't exists! The name of the website reveals the game. countriesstandoff.com is a game where people can vote for the country they think should win. You can base this on the countries's recent performence, or just because you like that country! Vote below!</p>
-
-						<h4 id="explt"> Entertainment </h4>
-						<p>This game is so easy and is pretty fun to play. You support your countries's name and fame to be the winner. Vote! The winning country will get the price of being honoured forever on our rankinglist! When the timer resets, new countries will standoff against each other! 
-
-					</div>
-
-					<div class="col-md-6" id="col-md-i">
-
-						
-
-					</div>
-
-					<div class="col-md-3" id="col-md-i">
-
-						<h4 id="explt"> Worldwide game </h4>
-						<p>This game is based on worldwide viewers. The more votes, the bigger the conquest. Be prepared to demolish waves of people voting. All that matters, is that your chosen country recieves the honourable price! Be prepared to go ham!</p>
-
-						<h4 id="explt"> Honourable ranking! </h4>
-						<p>We have said it already a lot, but the price to be in a worldwide ranking is fun. Imagine your country to be #1 every contest. It will keep up in the ranking and shows the world that no one can overthrow it. Every year, the country with the most wins, will be honoured throughout the website!</p>
-
-					</div>		
+					
 
 
 				</div>
