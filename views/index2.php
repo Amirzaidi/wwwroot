@@ -88,7 +88,7 @@ $color = ['whiterow', 'greyrow'];
 
 <?php require 'inc.nav.php'; ?>
 
-<header style="background-image: url(<?php echo $imgs[0]; ?>">
+<header style="background-image: url(<?php echo $imgs[0]; ?>)">
 	<div class="stylelayer">
 		<div class="headcon" id="headerfixedcon">
 
