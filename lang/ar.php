@@ -5,4 +5,9 @@ function lang(&$t)
 {
 	$t['lang'] = '*insert arabisch handschrift*';
 }
+
+function lang_contact(&$t) 
+{
+
+}
 ?>
