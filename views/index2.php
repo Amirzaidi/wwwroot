@@ -96,7 +96,7 @@ $color = ['whiterow', 'greyrow'];
 
 		<div class="webstarinfo">
 
-		<p style="color: red;">([endat] <?php echo date('d M H:i:s', time() + cron::timeUntil('pickrandom')); ?>)</p> </br>
+		<p style="color: red;">([endat] <?php echo date('d/m H:i:s', time() + cron::timeUntil('pickrandom')); ?>)</p> </br>
 		<p style="font-weight: bold; font-variant: small-caps;"> <?php if (isset($msg)) echo $msg; ?> </p>
 		<a href="/ads">[advertisehere]</a>
 

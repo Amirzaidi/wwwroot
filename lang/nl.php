@@ -1,4 +1,6 @@
 <?php
+date_default_timezone_set('Europe/Amsterdam');
+
 function lang(&$t)
 {
 	$t['lang'] = 'Nederlands';
