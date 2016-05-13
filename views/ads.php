@@ -130,12 +130,12 @@ if ($found)
 								<div class="container" id="modalquery">
 								<form action="/ads" method="post">
 
-									<input type="text" placeholder="Your Name" id="name" name="name" />
-									<input type="text" placeholder="Your Email" id="email" name="mail"/>
-									<input type="text" placeholder="Subject" id="subject" name="subject"/>
-									<textarea placeholder="Comment" id="contain" name="content"></textarea></br>
+									<input type="text" placeholder="[your_name]" id="name" name="name" />
+									<input type="text" placeholder="[your_mail]" id="email" name="mail"/>
+									<input type="text" placeholder="[subject]" id="subject" name="subject"/>
+									<textarea placeholder="[comment]" id="contain" name="content"></textarea></br>
 
-									<input type="submit" value="Send email!" id="sendemail"/>
+									<input type="submit" value="[send_mail]" id="sendemail"/>
 								</form>
       								</div>
 

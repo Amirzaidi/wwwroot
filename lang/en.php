@@ -1,4 +1,6 @@
 <?php
+date_default_timezone_set('America/New_York');
+
 function lang(&$t)
 {
 	$t['lang'] = 'English';
@@ -54,5 +56,14 @@ function lang_langtest(&$t)
 	$t['welcome'] = 'Welcome to page!';
 	$t['exit'] = 'Leave page';
 	$t['change'] = 'Change language';
+}
+
+function lang_ads(&$t)
+{
+	$t['your_name'] = 'Your Name';
+	$t['your_mail'] = 'Your Email';
+	$t['subject'] = 'Subject';
+	$t['comment'] = 'Comment';
+	$t['send_mail'] = 'Send Email';
 }
 ?>
