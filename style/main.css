@@ -366,10 +366,6 @@ input[type="submit"]:hover {
 	vertical-align: top;
 }
 
-.col-md-12 {
-	padding-top: 30px;
-}
-
 h1 > img {
 	vertical-align: top;
 	height: auto;
@@ -424,6 +420,34 @@ p > img {
 	display: none;
 }
 
+#explp {
+	text-shadow: 0px 0px 3px #444;
+}
+
+.col-md-18 {
+	background-color: rgba(0,0,0,0.8);
+	padding: 10px;
+	margin: 4px;
+	display: inline-block;
+	width: 49%;
+	vertical-align: middle;
+}
+
+.exptxt > p {
+	color: white;
+	text-align: left;
+}
+
+.exptxt > h1 {
+	color: teal;
+	font-size: 25px;
+}
+
+#dpexp {
+	width: 5%;
+	vertical-align: middle;
+	margin-bottom: 6px;
+}
 
 /* OTHER PAGES */
 

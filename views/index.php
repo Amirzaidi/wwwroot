@@ -246,7 +246,77 @@
 
 				<div class="contentrow">
 			
+					<div class="col-md-18">
 					
+						<div class="exptxt">
+							
+							<h1> [qwhatisthis] <img id="dpexp" src="/style/images/dpimg.png"></img></h1>
+
+							<p> [exp_whatisthis] </p>
+
+						</div>
+
+					</div>	
+
+					<div class="col-md-18">
+					
+						<div class="exptxt">
+							
+							<h1> [qhowdoesthiswork] <img id="dpexp" src="/style/images/dpimg.png"></img></h1>
+
+							<p> [exp_howdoesthiswork]  </p>
+
+						</div>
+
+					</div>	
+
+					<div class="col-md-18">
+					
+						<div class="exptxt">
+							
+							<h1> [qwhatisthegoalofthis] <img id="dpexp" src="/style/images/dpimg.png"></img></h1>
+
+							<p> [exp_whatisthegoalofthis] </p>
+
+						</div>
+
+					</div>	
+
+					<div class="col-md-18">
+					
+						<div class="exptxt">
+							
+							<h1> [qhowdoestheleaderboardwork] <img id="dpexp" src="/style/images/dpimg.png"></img></h1>
+
+							<p> [exp_howdoestheleaderboardwork] </p>
+
+						</div>
+
+					</div>	
+
+					<div class="col-md-18">
+					
+						<div class="exptxt">
+							
+							<h1> [qhowdoesvotingwork] <img id="dpexp" src="/style/images/dpimg.png"></img></h1>
+
+							<p> [exp_howdoesvotingwork] </p>
+
+						</div>
+
+					</div>	
+
+					<div class="col-md-18">
+					
+						<div class="exptxt">
+							
+							<h1> What is this? <img id="dpexp" src="/style/images/dpimg.png"></img></h1>
+
+							<p> This is a website that lets you vote on the country you like or you think should win the contest. </p>
+
+						</div>
+
+					</div>				
 
 
 				</div>
