@@ -174,6 +174,14 @@ abstract class mysql
 		return ($this->row !== null);
 	}
 
+	private function optionalNextRow()
+	{
+		if ($this->row === null)
+		{
+			$this->found();
+		}
+	}
+
 	public function count()
 	{
 		return $this->result->num_rows;
@@ -181,10 +189,7 @@ abstract class mysql
 
 	public function &__get($key)
 	{
-		if ($this->row === null)
-		{
-			$this->found();
-		}
+		$this->optionalNextRow();
 
 		if (isset($this->row[$key]))
 		{
@@ -210,10 +215,7 @@ abstract class mysql
 
 	public function __set($key, $value)
 	{
-		if ($this->row === null)
-		{
-			$this->found();
-		}
+		$this->optionalNextRow();
 
 		if (!isset($this->row[$key]))
 		{
@@ -232,6 +234,33 @@ abstract class mysql
 		$this->row[$key] = $value;
 	}
 
+	public function add($key, $num = 1)
+	{
+		$this->optionalNextRow();
+
+		if (!isset($this->row[$key]))
+		{
+			if (isset($this->row[$this->table . '_' . $key]))
+			{
+				$key = $this->table . '_' . $key;
+			}
+			else
+			{
+				echo 'warning: key ', $key, 'not found in ', $this->table;
+				return;
+			}
+		}
+
+		$primaryKey =& $this->primaryKey();
+		exit($primaryKey);
+
+		$update = self::$conn->prepare('UPDATE ' . $this->table . ' SET ' . $key . ' = ' . $key . ' + ? WHERE ' . $this->pkey . ' = ? LIMIT 1');
+		$update->bind_param($this->pkeytype + 'i', $primaryKey, $num);
+		$update->execute();
+
+		$this->row[$key] += $num;
+	}
+
 	public function __call($type, $args)
 	{
 		if ($this->row === null)
@@ -244,17 +273,9 @@ abstract class mysql
 		{
 			$query = 'SELECT * FROM ' . $type . ' WHERE ' . $this->table . ' = ?';
 
-			$intKey = $this->resolve($this->intKey());
-			if (isset($this->row[$intKey]))
-			{
-				$argrefs = ['i'];
-				$argrefs[1] = &$this->row[$intKey];
-			}
-			else
-			{
-				$argrefs = ['s'];
-				$argrefs[1] = &$this->row[$this->pkey];
-			}
+			$this->checkPrimaryKey();
+			$argrefs = ['', $this->primaryKey()];
+			$argrefs[0] .= $this->pkeytype;
 
 			if (isset($args[0]))
 			{
@@ -303,19 +324,8 @@ abstract class mysql
 				$values[] = &$value;
 			}
 
-			if (!isset($this->row[$this->pkey]))
-			{
-				$this->pkey = $this->resolve($this->stringKey());
-				$this->pkeytype = 's';
-
-				if (!isset($this->row[$this->pkey]))
-				{
-					exit('No primary keys for table ' . $this->table);
-				}
-			}
-
+			$values[] = &$this->primaryKey();
 			$values[0] .= $this->pkeytype;
-			$values[] = &$this->row[$this->pkey];
 
 			$update = self::$conn->prepare('UPDATE ' . $this->table . ' SET ' . implode($keys, ', ') . ' WHERE ' . $this->pkey . ' = ? LIMIT 1');
 			call_user_func_array([$update, 'bind_param'], $values);
@@ -323,6 +333,22 @@ abstract class mysql
 
 			$this->updates = [];
 		}
+	}
+
+	private function &primaryKey()
+	{
+		if (!isset($this->row[$this->pkey]))
+		{
+			$this->pkey = $this->resolve($this->stringKey());
+			$this->pkeytype = 's';
+
+			if (!isset($this->row[$this->pkey]))
+			{
+				exit('No primary keys for table ' . $this->table);
+			}
+		}
+
+		return $this->row[$this->pkey];
 	}
 
 	public function __destruct()
