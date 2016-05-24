@@ -13,6 +13,8 @@
 			</li><li><a href="/about">[nav_about]</a>
 			</li><li id="tcbut"><a href="/themechange" id="tcbuta">[nav_themechange]</a>
 			</li><li><a href="/contact">[nav_contact]</a></li>
+			</li><li><a href="/langchange/nl">NL</a></li>
+			</li><li><a href="/langchange/en">EN</a></li>
 		</ul>
 	</div>
 </nav>
