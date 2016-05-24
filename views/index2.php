@@ -25,7 +25,8 @@ else if (isset($uri[0]))
 			'country#' => $votecountry->id
 		]);
 
-		$votecountry->votes++;
+		//$votecountry->votes++;
+		$votecountry->add('votes');
 		$votecountry->update();
 		$msg = '[newvote] ' . $votecountry->name;
 	}
