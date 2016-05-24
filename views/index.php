@@ -310,9 +310,9 @@
 					
 						<div class="exptxt">
 							
-							<h1> What is this? <img id="dpexp" src="/style/images/dpimg.png"></img></h1>
+							<h1> [qwhatnow] <img id="dpexp" src="/style/images/dpimg.png"></img></h1>
 
-							<p> This is a website that lets you vote on the country you like or you think should win the contest. </p>
+							<p> [exp_whatnow] </p>
 
 						</div>
 

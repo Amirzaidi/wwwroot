@@ -34,6 +34,9 @@ function lang_index(&$t)
 	$t['exp_howdoestheleaderboardwork'] = 'Whenever a country wins a voting (i.e. the one-week voting), it autmatically receives a medal for winning a competition. When a country wins a medal, it will be displayed next to the country\'s name. Winning a season (six weeks), the country will receive a trophy. All medals/trophies or other awards will be displayed next to the country\'s name.';
 	$t['qhowdoesvotingwork'] = 'How does voting work?';
 	$t['exp_howdoesvotingwork'] = 'Voting is pretty easy. Scroll down till you see the rows of the countries in which you can read the reasons why you should vote on that country. Or you can just vote on your own country. If you wish to vote, click on the country\'s name you want to vote on. The vote will be counted, added to the total, and displayed next to the name.';
+	$t['qwhatnow'] = 'What now?';
+	$t['exp_whatnow'] = 'Now you understand how this voting game works you can now go and vote on the country you think deserves the medals or in future trophies! If you don\'t understand something or still have a question, be sure to read the FAQ or contact us via e-mail.';
+
 
 }
 
