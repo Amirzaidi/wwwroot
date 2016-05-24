@@ -24,6 +24,23 @@
 
 	</script>
 
+	<script>
+	function expDisplay() {
+  	  	document.getElementById("pexp").style.display = "block";
+	}
+	</script>
+
+	<script>
+
+		function toggleDisplay() {
+			var tD = document.getElementById("pexp");
+			tD.style.display = (tD.style.display == "block") ? "none" : "block";			
+
+		}
+
+
+	</script>
+
 <?php require 'inc.nav.php'; ?>
 
 <header>
@@ -250,9 +267,9 @@
 					
 						<div class="exptxt">
 							
-							<h1> [qwhatisthis] <img id="dpexp" src="/style/images/dpimg.png"></img></h1>
+							<h1> [qwhatisthis] <img id="dpexp" onclick="toggleDisplay()" src="/style/images/dpimg.png"></img></h1>
 
-							<p> [exp_whatisthis] </p>
+							<p id="pexp"> [exp_whatisthis] </p>
 
 						</div>
 
