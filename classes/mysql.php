@@ -263,18 +263,15 @@ abstract class mysql
 
 	public function __call($type, $args)
 	{
-		if ($this->row === null)
-		{
-			$this->found();
-		}
+		$this->optionalNextRow();
 
 		$cacheKey = serialize([$type, $args]);
 		if (!isset($this->callCache[$cacheKey]))
 		{
 			$query = 'SELECT * FROM ' . $type . ' WHERE ' . $this->table . ' = ?';
 
-			$this->checkPrimaryKey();
-			$argrefs = ['', $this->primaryKey()];
+			$argrefs = [''];
+			$argrefs[1] = &$this->primaryKey();
 			$argrefs[0] .= $this->pkeytype;
 
 			if (isset($args[0]))

@@ -6,12 +6,13 @@ class session
 	public function __construct()
 	{
 		//Session lasts a week
-		@session_start(['cookie_lifetime' => 7 * 24 * 60 * 60]);
+		@session_start(['cookie_lifetime' => 24 * 60 * 60]);
+		session_cache_expire(24 * 60);
 	}
 
 	public function started()
 	{
-		return isset($_COOKIE['PHPSESSID']);
+		return isset($_COOKIE['PHPSESSID']) && count($_SESSION) !== 0;
 	}
 
 	public function close()
