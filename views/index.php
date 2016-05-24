@@ -25,12 +25,6 @@
 	</script>
 
 	<script>
-	function expDisplay() {
-  	  	document.getElementById("pexp").style.display = "block";
-	}
-	</script>
-
-	<script>
 
 		function toggleDisplay() {
 			var tD = document.getElementById("pexp");
