@@ -252,10 +252,9 @@ abstract class mysql
 		}
 
 		$primaryKey =& $this->primaryKey();
-		exit($primaryKey);
 
 		$update = self::$conn->prepare('UPDATE ' . $this->table . ' SET ' . $key . ' = ' . $key . ' + ? WHERE ' . $this->pkey . ' = ? LIMIT 1');
-		$update->bind_param($this->pkeytype + 'i', $primaryKey, $num);
+		$update->bind_param('i' . $this->pkeytype, $num, $primaryKey);
 		$update->execute();
 
 		$this->row[$key] += $num;
