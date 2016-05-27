@@ -15,16 +15,18 @@ class router
 			$uri[0] = self::$index;
 		}
 
-		if (!file_exists(self::$views . $uri[0] . '.php'))
+		for ($i = count($uri); $i > 0; $i--)
 		{
-			$file = self::$error;
-		}
-		else
-		{
-			$file = array_shift($uri);
+			$page = implode('/', array_slice($uri, 0, $i));
+			if (file_exists(self::$views . $page . '.php'))
+			{
+				$uri = array_slice($uri, $i);
+				return $page;
+			}
+
 		}
 
-		return $file;
+		return self::$error;
 	}
 
 	public static function ip()

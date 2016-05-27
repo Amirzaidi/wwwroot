@@ -20,7 +20,7 @@ class language
 		$t = [];
 		lang($t);
 
-		$method = 'lang_' . $page;
+		$method = 'lang_' . str_replace('/', '_', $page);
 		if (is_callable($method))
 		{
 			$method($t);
