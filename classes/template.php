@@ -29,6 +29,7 @@ class template
 			$data .= $t . '<link rel="stylesheet" type="text/css" href="' . $css[$i] . '" />' . $b;
 		for ($i = 0; $i < $jsCount; $i++)
 			$data .= $t . '<script src="' . $js[$i] . '" type="text/javascript"></script>' . $b;
+			$data .= $t . '<meta name="description" value="[metadesc]" />';
 		$data .= '</head>' . $b;
 		$data .= '<body>' . $b;
 			$data .= str_replace($b, $b . $t, ob_get_clean()) . $b;

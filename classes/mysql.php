@@ -127,7 +127,11 @@ abstract class mysql
 		}
 
 		array_unshift($values, $types);
-		call_user_func_array([$this->stmt, 'bind_param'], $values);
+		if (isset($values[1]))
+		{
+			call_user_func_array([$this->stmt, 'bind_param'], $values);
+		}
+
 		$this->stmt->execute();
 	}
 
@@ -297,8 +301,11 @@ abstract class mysql
 
 	public function delete()
 	{
+		$this->optionalNextRow();
+		$primaryKey =& $this->primaryKey();
+
 		$delete = self::$conn->prepare('DELETE FROM ' . $this->table . ' WHERE ' . $this->pkey . ' = ? LIMIT 1');
-		$delete->bind_param($this->pkeytype, $this->row[$this->pkey]);
+		$delete->bind_param($this->pkeytype, $primaryKey);
 		$delete->execute();
 
 		$this->row = null;
@@ -340,6 +347,7 @@ abstract class mysql
 
 			if (!isset($this->row[$this->pkey]))
 			{
+				var_dump($this->stmt, $this->row);
 				exit('No primary keys for table ' . $this->table);
 			}
 		}
