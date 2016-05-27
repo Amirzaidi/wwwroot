@@ -3,8 +3,10 @@ date_default_timezone_set('America/New_York');
 
 function lang(&$t)
 {
+	$t['metadesc'] = 'countriesstandoff.com is a website where people can vote on their/or other countries during a standoff. Every six months the voting resets and new countries will be picked. The country that wins, will be honoured in a special rankinglist that keeps forever!';
 	$t['lang'] = 'English';
 	$t['advertisehere'] = 'Advertise Here';
+	$t['timezone'] = 'DST';
 
 	$t['nav_home'] = 'Home';
 	$t['nav_adv'] = 'Advertise';
@@ -37,11 +39,6 @@ function lang_index(&$t)
 	$t['qwhatnow'] = 'What now?';
 	$t['exp_whatnow'] = 'Now you understand how this voting game works you can now go and vote on the country you think deserves the medals or in future trophies! If you don\'t understand something or still have a question, be sure to read the FAQ or contact us via e-mail.';
 
-
-}
-
-function lang_index2(&$t)
-{
 	$t['infinale'] = 'In Finals';
 	$t['preround'] = 'Preliminaries';
 	$t['previousvote'] = 'You have previously voted for';
@@ -53,7 +50,7 @@ function lang_index2(&$t)
 	$t['whyvote'] = 'We have listed some facts about why you should vote for this country';
 }
 
-function lang_langtest(&$t)
+function lang_example_langtest(&$t)
 {
 	$t['currlang'] = 'Current language';
 	$t['welcome'] = 'Welcome to page!';

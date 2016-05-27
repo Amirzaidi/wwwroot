@@ -66,9 +66,12 @@ $language->load($page);
 $language->translate($tpl);
 
 require router::$views . $page . '.php';
-
 $tpl->end($css, $js, $favicon);
-$session->lastpage = $_SERVER['REQUEST_URI'];
+
+if ($page != router::$error)
+{
+	$session->lastpage = $_SERVER['REQUEST_URI'];
+}
 
 // millisecond counter (view source)
 exit('<!--' . (round(microtime(true) - start, 5) * 1000) . 'ms-->');

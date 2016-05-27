@@ -5,6 +5,7 @@ function lang(&$t)
 {
 	$t['lang'] = 'Nederlands';
 	$t['advertisehere'] = 'Adverteer Hier';
+	$t['timezone'] = 'GMT+1';
 
 	$t['nav_home'] = 'Startpagina';
 	$t['nav_adv'] = 'Adverteer';
@@ -24,10 +25,7 @@ function lang_index(&$t)
 
 	$t['nav_leaderboard'] = 'Stemstatus';
 	$t['indexmsg'] = 'Welkom op CSO!';
-}
 
-function lang_index2(&$t)
-{
 	$t['infinale'] = 'In Finale';
 	$t['preround'] = 'Voorrondes';
 	$t['previousvote'] = 'You hebt al gestemd voor';
@@ -39,7 +37,7 @@ function lang_index2(&$t)
 	$t['whyvote'] = 'We hebben wat redenen waarom je op dit land moet stemmen';
 }
 
-function lang_langtest(&$t)
+function lang_example_langtest(&$t)
 {
 	$t['currlang'] = 'Huidige taal';
 	$t['welcome'] = 'Welkom op de pagina!';

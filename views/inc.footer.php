@@ -11,7 +11,7 @@
 		</div>
 	</div>
 </div>
-<div id="google_translate_element" style="position: fixed; bottom: 0; right: 0;"></div><script type="text/javascript">
+<div id="google_translate_element" style="position: fixed; bottom: 0; right: 0; display:none"></div><script type="text/javascript">
 function googleTranslateElementInit() {
   new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.FloatPosition.BOTTOM_RIGHT, multilanguagePage: true}, 'google_translate_element');
 }
