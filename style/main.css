@@ -447,6 +447,11 @@ p > img {
 	width: 5%;
 	vertical-align: middle;
 	margin-bottom: 6px;
+	cursor: pointer;
+}
+
+.exptxt > p {
+	display: none;
 }
 
 /* OTHER PAGES */
