@@ -63,9 +63,10 @@ language::$dir = root . 'lang/';
 
 $language = new language($session->language);
 $language->load($page);
-$language->translate($tpl);
 
 require router::$views . $page . '.php';
+
+$language->translate($tpl);
 $tpl->end($css, $js, $favicon);
 
 if ($page != router::$error)
