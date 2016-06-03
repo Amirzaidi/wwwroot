@@ -923,4 +923,27 @@ input[type="text"]:focus {
 		width: 100%;
 	}
 
+	.title {
+		padding-right: 0;
+		padding-bottom: 4px;
+		border-right: 0;
+		border-radius: 0;
+		padding-right: 54px;
+	}
+
+	.navbar {
+		display: inline-block;
+		vertical-align: middle;
+		float: left;
+	}
+
+	#mnavcon > .navbar > a > img {
+		width: auto;
+		height: 25px;
+		vertical-align: middle;
+		padding-left: 10px;
+	}
+
+	
+
 }

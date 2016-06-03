@@ -26,6 +26,9 @@
 <nav id="mnav">
 	<div class="navcon" id="mnavcon">
 		<div class="navbar">
+			<a href="#"><img src="/style/images/mnavimg.png"></img></a>
+
+
 		</div>
 
 		<div class="title" id="mtitle">
