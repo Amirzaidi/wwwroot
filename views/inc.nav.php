@@ -17,9 +17,9 @@
 			--><li id="tcbut"><a href="/themechange" id="tcbuta">[nav_themechange]</a></li><!--
 			--><li><a href="/contact">[nav_contact]</a></li><!--
 			<?php if ($session->language != 'en') { ?>
-			--><li><a href="/language/en">English</a></li><!--
+			--><li><a href="/language/en">Engels</a></li><!--
 			<?php } if ($session->language != 'nl') { ?>
-			--><li><a href="/language/nl">Nederlands</a></li><!--
+			--><li><a href="/language/nl">Dutch</a></li><!--
 			<?php } ?>
 			-->
 		</ul>

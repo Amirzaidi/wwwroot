@@ -59,12 +59,33 @@ function lang_example_langtest(&$t)
 	$t['change'] = 'Change language';
 }
 
+function lang_about(&$t)
+{
+	$t['learnmore'] = 'Learn more about the makers of cso.com!'; 
+	$t['developers'] = 'Developers';
+	$t['devtext'] = 'We, the developers of this site, do our utmost best to keep up the site updated and well coded. We check for eventual code bugs or problems with the site. We always learn new ways to code things, that is why we always keep on making the site faster. We would like to her your feedback about the site!';
+	$t['designers'] = 'Designers';
+	$t['destext'] = 'The designers of this website do the styling part. Mostly they design the website or change/add/optimize the CSS. They daily check the sources and see what they can code better so you can enter the site faster. The designers try to find new design styles so they can work on making the site more stylish. Design is very important. Leave us your feedback through mail!';
+}
+
 function lang_ads(&$t)
 {
-	$t['your_name'] = 'Your Name';
-	$t['your_mail'] = 'Your Email';
+	$t['advertiseon'] = 'Advertise on cso.com';
+	$t['advertiser'] = 'Are you an advertiser?';
+	$t['advertisertext'] = 'And are you willing to advertise on our website? Then you are on the right page! We are always searching for new advertisers that would like to advertise on our website. We have a wide viewing population throughout the world. This website is basically an internet "game". Well actually better described as an international voting system where you can vote for the country you think is better. This site is time consuming since you are always wondering who will win.';
+	$t['adskind'] = 'What kind of ads are we searching for?';
+	$t['adskindtext'] = 'We first would like to negotiate about the type of ad you would like to show on cso.com. This way we can sure understand both sides better and make a good deal. We do have a few rules about the containments of the ad. We do not accept any NSFW, gore, sexual, or any sort of 18+ ad. We would like to keep our website clean from sexual interference with our viewers. Please do not come over with these sort of ads. We will not accept the offer.';
+	$t['adskindtext2'] = 'On the other hand, we accept ads that are or text or banner form. If you have a video ad and still would like to advertise on cso.com, be sure to contact us about it. There is room for negiotiation about video ads.';
+	$t['adplacement'] = 'Ads placement on cso.com';
+	$t['adplacetext'] = 'Since we accept different forms of ads, we also offer you places for the ads based on their form. Banner ads will be placed between the grey/white boxes that contain information. See the example below. If you see a row like this with "Advertise here!", there is a big chance we are still searching for an advertiser who can put his banner form ad there.';
+	$t['adplacetext2'] = 'However, if you only have text-based ads, then you still are on the right address! We also offer places for text ads. You can put your text ad in the header (under "Must see also:"). Or there is space on the bottom of the page where you can find "Privacy policy" etc. Please contact us about the form of ad, how many you would like to have on cso.com, pricing, type of ad (PPC, CPM) etc.';
+
+	$t['sendmailtitle'] = 'Send us an email!';
+	$t['sendmailtext'] = 'Send us an email about it!';
+	$t['your_name'] = 'Your name';
+	$t['your_mail'] = 'Your email';
 	$t['subject'] = 'Subject';
 	$t['comment'] = 'Comment';
-	$t['send_mail'] = 'Send';
+	$t['send'] = 'Send';
 }
 ?>

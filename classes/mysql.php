@@ -238,7 +238,7 @@ abstract class mysql
 		$this->row[$key] = $value;
 	}
 
-	public function add($key, $num = 1)
+	public function add($key, $num)
 	{
 		$this->optionalNextRow();
 

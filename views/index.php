@@ -8,15 +8,7 @@ if ($ipvote->found())
 }
 else if (isset($uri[0]))
 {
-	$slang = new slang($uri[0]);
-	if ($slang->found())
-	{
-		$votecountry = $slang->country;
-	}
-	else
-	{
-		$votecountry = new country(intval($uri[0]));
-	}
+	$votecountry = new country(intval($uri[0]));
 
 	if ($votecountry->found() && $votecountry->state == country::voteable()->state)
 	{
@@ -25,8 +17,7 @@ else if (isset($uri[0]))
 			'country#' => $votecountry->id
 		]);
 
-		//$votecountry->votes++;
-		$votecountry->add('votes');
+		$votecountry->add('votes', 1);
 		$votecountry->update();
 		$msg = '[newvote] ' . $votecountry->name;
 	}

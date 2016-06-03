@@ -59,10 +59,19 @@ function lang_example_langtest(&$t)
 	$t['change'] = 'Taal veranderen';
 }
 
+function lang_about(&$t)
+{
+	$t['learnmore'] = ''; 
+	$t['developers'] = '';
+	$t['devtext'] = '';
+	$t['designers'] = '';
+	$t['destext'] = '';
+}
+
 function lang_ads(&$t)
 {
-	$t['your_name'] = 'Je Naam';
-	$t['your_mail'] = 'Je Email';
+	$t['your_name'] = 'Je naam';
+	$t['your_mail'] = 'Je email';
 	$t['subject'] = 'Onderwerp';
 	$t['comment'] = 'Bericht';
 	$t['send_mail'] = 'Verzend';
