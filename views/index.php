@@ -146,7 +146,7 @@ while ($country->found())
 				<div class="ex4" id="exfixed">
 					<img src="/style/images/reason_.jpg" />
 					<div class="imgtitle">
-						<h4>Won <?php echo $country->medal()->count(); ?> Medals</h4>
+						<h4><?php echo $country->medal()->count(); ?> [medals]</h4>
 					</div>
 				
 					<div class="imgtext">

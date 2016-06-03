@@ -48,6 +48,7 @@ function lang_index(&$t)
 	$t['endat'] = 'Voting ends at';
 	$t['votes'] = 'votes';
 	$t['whyvote'] = 'We have listed some facts about why you should vote for this country';
+	$t['medals'] = 'Medals';
 }
 
 function lang_example_langtest(&$t)
@@ -64,6 +65,6 @@ function lang_ads(&$t)
 	$t['your_mail'] = 'Your Email';
 	$t['subject'] = 'Subject';
 	$t['comment'] = 'Comment';
-	$t['send_mail'] = 'Send Email';
+	$t['send_mail'] = 'Send';
 }
 ?>
