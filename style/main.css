@@ -944,6 +944,20 @@ input[type="text"]:focus {
 		padding-left: 10px;
 	}
 
+
+	h3 {
+		font-size: 46px;
+		
+	}
+
+	.description > p {
+		font-size: 19px;
+	}
+
+	.specialrow {
+		background-size: 175%;
+	}
+
 	
 
 }
