@@ -16,9 +16,12 @@
 			--><li><a href="/about">[nav_about]</a></li><!--
 			--><li id="tcbut"><a href="/themechange" id="tcbuta">[nav_themechange]</a></li><!--
 			--><li><a href="/contact">[nav_contact]</a></li><!--
-			--><li><a href="/language/en">en</a></li><!--
-			--><li><a href="/language/nl">nl</a></li><!--
-			--><li><a href="/language/ar">ar</a></li>
+			<?php if ($session->language != 'en') { ?>
+			--><li><a href="/language/en">English</a></li><!--
+			<?php } if ($session->language != 'nl') { ?>
+			--><li><a href="/language/nl">Nederlands</a></li><!--
+			<?php } ?>
+			-->
 		</ul>
 	</div>
 </nav>
