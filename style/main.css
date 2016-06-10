@@ -685,6 +685,79 @@ input[type="text"]:focus {
 	display: none;
 }
 
+/* DROPDOWN LIST EXPLANATION */
+
+#dpp {
+	color: white;
+}
+
+#dp1 {
+	opacity: 0;
+	max-height: 0px;
+}
+
+#dp1:target {
+	opacity: 1;
+	max-height: 1000px;
+	transition: all ease-in-out 2s;
+}
+
+#dp2 {
+	opacity: 0;
+	max-height: 0px;
+}
+
+#dp2:target {
+	opacity: 1;
+	max-height: 1000px;
+	transition: all ease-in-out 2s;
+}
+
+#dp3 {
+	opacity: 0;
+	max-height: 0px;
+}
+
+#dp3:target {
+	opacity: 1;
+	max-height: 1000px;
+	transition: all ease-in-out 2s;
+}
+
+#dp4 {
+	opacity: 0;
+	max-height: 0px;
+}
+
+#dp4:target {
+	opacity: 1;
+	max-height: 1000px;
+	transition: all ease-in-out 2s;
+}
+
+
+#dp5 {
+	opacity: 0;
+	max-height: 0px;
+}
+
+#dp5:target {
+	opacity: 1;
+	max-height: 1000px;
+	transition: all ease-in-out 2s;
+}
+
+#dp6 {
+	opacity: 0;
+	max-height: 0px;
+}
+
+#dp6:target {
+	opacity: 1;
+	max-height: 1000px;
+	transition: all ease-in-out 2s;
+}
+
 /* QUERY FOR THE PAGES */
 
 @media only screen and (max-width: 1024px) and (min-width: 910px) {

@@ -264,21 +264,9 @@ $language->load('index');
 					
 						<div class="exptxt">
 							
-							<h1> [qwhatisthis] <img id="dpexp" onclick="toggleDisplay()" src="/style/images/dpimg.png"></img></h1>
+							<h1> [qwhatisthis] <a href="#dp1"><img id="dpexp" src="/style/images/dpimg.png"></img></a></h1>
 
-							<p id="pexp"> [exp_whatisthis] </p>
-
-						</div>
-
-					</div>	
-
-					<div class="col-md-18">
-					
-						<div class="exptxt">
-							
-							<h1> [qhowdoesthiswork] <img id="dpexp" src="/style/images/dpimg.png"></img></h1>
-
-							<p> [exp_howdoesthiswork]  </p>
+							<div id="dp1"><p id="dpp"> [exp_whatisthis] </p></div>
 
 						</div>
 
@@ -288,21 +276,9 @@ $language->load('index');
 					
 						<div class="exptxt">
 							
-							<h1> [qwhatisthegoalofthis] <img id="dpexp" src="/style/images/dpimg.png"></img></h1>
+							<h1> [qhowdoesthiswork] <a href="#dp2"><img id="dpexp" src="/style/images/dpimg.png"></img></a></h1>
 
-							<p> [exp_whatisthegoalofthis] </p>
-
-						</div>
-
-					</div>	
-
-					<div class="col-md-18">
-					
-						<div class="exptxt">
-							
-							<h1> [qhowdoestheleaderboardwork] <img id="dpexp" src="/style/images/dpimg.png"></img></h1>
-
-							<p> [exp_howdoestheleaderboardwork] </p>
+							<div id="dp2"><p id="dpp"> [exp_howdoesthiswork] </p></div>
 
 						</div>
 
@@ -312,9 +288,9 @@ $language->load('index');
 					
 						<div class="exptxt">
 							
-							<h1> [qhowdoesvotingwork] <img id="dpexp" src="/style/images/dpimg.png"></img></h1>
+							<h1> [qwhatisthegoalofthis] <a href="#dp3"><img id="dpexp" src="/style/images/dpimg.png"></img></a></h1>
 
-							<p> [exp_howdoesvotingwork] </p>
+							<div id="dp3"><p id="dpp"> [exp_whatisthegoalofthis] </p></div>
 
 						</div>
 
@@ -324,9 +300,33 @@ $language->load('index');
 					
 						<div class="exptxt">
 							
-							<h1> [qwhatnow] <img id="dpexp" src="/style/images/dpimg.png"></img></h1>
+							<h1> [qhowdoestheleaderboardwork] <a href="#dp4"><img id="dpexp" src="/style/images/dpimg.png"></img></a></h1>
 
-							<p> [exp_whatnow] </p>
+							<div id="dp4"><p id="dpp"> [exp_howdoestheleaderboardwork] </p></div>
+
+						</div>
+
+					</div>	
+
+					<div class="col-md-18">
+					
+						<div class="exptxt">
+							
+							<h1> [qhowdoesvotingwork] <a href="#dp5"><img id="dpexp" src="/style/images/dpimg.png"></img></a></h1>
+
+							<div id="dp5"><p id="dpp"> [exp_howdoesvotingwork] </p></div>
+
+						</div>
+
+					</div>	
+
+					<div class="col-md-18">
+					
+						<div class="exptxt">
+							
+							<h1> [qwhatnow] <a href="#dp6"><img id="dpexp" src="/style/images/dpimg.png"></img></a></h1>
+
+							<div id="dp6"><p id="dpp"> [exp_whatnow] </p></div>
 
 						</div>
 
@@ -361,39 +361,6 @@ $language->load('index');
 
 </div>
 
-<div class="albumrow">
-
-<div class="stylelayer" id="stylelayervote">
-
-	<div class="headconbody">
-
-		<div class="row">
-
-			<div class="description">
-
-				<h6> VOTE TO WIN! </h6>
-				<p id="albump"> Here it is! This is the ultimate stand off between these two BRIC countries! Vote now!</p></br>
-
-					<form action="index.php" method="post" style="padding: 40px; background-color: rgba(0, 0, 0, 0.4);">
-
-					<p id="formp">Choose one of the two countries and click on vote!</p></br>
-
-					<div class="ch" id="vl"><input type="radio" name="formChina"> China</div>
-					<div class="in" id="vl"><input type="radio" name="formIndia"> India</div></br></br>
-
-					<input type="submit" name="submitbut" value="Vote!">
-
-					</form>
-
-			</div>
-
-		</div>
-	
-	</div>
-
-</div>
-
-</div>
 
 <div class="greyrow">
 
