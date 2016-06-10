@@ -1,0 +1,41 @@
+INSERT INTO `csodb`.`country` (`country_name`, `country_desc`, `country_state`, `country_votes`, `continent`) VALUES ('China', 'The best country to fabricate stuff!', 'eliminated', '0', '5');
+
+INSERT INTO `csodb`.`country` (`country_name`, `country_desc`, `country_state`, `country_votes`, `continent`) VALUES ('India', 'Colourful culture', 'eliminated', '0', '5');
+
+INSERT INTO `csodb`.`country` (`country_name`, `country_desc`, `country_state`, `country_votes`, `continent`) VALUES ('United States', 'Everything should be big', 'eliminated', '0', '3');
+
+INSERT INTO `csodb`.`country` (`country_name`, `country_desc`, `country_state`, `country_votes`, `continent`) VALUES ('Indonesia', 'The kings of the jungle', 'eliminated', '0', '5');
+
+INSERT INTO `csodb`.`country` (`country_name`, `country_desc`, `country_state`, `country_votes`, `continent`) VALUES ('Brazil', 'It is carnival yet?', 'eliminated', '0', '4');
+
+
+INSERT INTO `csodb`.`country` (`country_name`, `country_desc`, `country_state`, `country_votes`, `continent`) VALUES ('Pakistan', 'Hot spices that will burn you', 'eliminated', '0', '5');
+
+INSERT INTO `csodb`.`country` (`country_name`, `country_desc`, `country_state`, `country_votes`, `continent`) VALUES ('Bangladesh', 'We can make everything with electronics', 'eliminated', '0', '5');
+
+
+INSERT INTO `csodb`.`country` (`country_name`, `country_desc`, `country_state`, `country_votes`, `continent`) VALUES ('Russian Federation', 'Comrade, we do what we want!', 'eliminated', '0', '5');
+
+INSERT INTO `csodb`.`country` (`country_name`, `country_desc`, `country_state`, `country_votes`, `continent`) VALUES ('Japan', 'We love technology', 'eliminated', '0', '5');
+
+INSERT INTO `csodb`.`country` (`country_name`, `country_desc`, `country_state`, `country_votes`, `continent`) VALUES ('Vietnam', 'Get into the choppa!', 'eliminated', '0', '5');
+
+INSERT INTO `csodb`.`country` (`country_name`, `country_desc`, `country_state`, `country_votes`, `continent`) VALUES ('Egypt', 'The land of the Pharaohs, Emperors and Kings', 'eliminated', '0', '2');
+
+INSERT INTO `csodb`.`country` (`country_name`, `country_desc`, `country_state`, `country_votes`, `continent`) VALUES ('Iran', 'The country where nothing is allowed, but everything still happens', 'eliminated', '0', '5');
+
+INSERT INTO `csodb`.`country` (`country_name`, `country_desc`, `country_state`, `country_votes`, `continent`) VALUES ('Germany', 'Just give me beer dude', 'eliminated', '0', '1');
+
+INSERT INTO `csodb`.`country` (`country_name`, `country_desc`, `country_state`, `country_votes`, `continent`) VALUES ('Turkey', 'Want to wrestle with me?', 'eliminated', '0', '1');
+
+INSERT INTO `csodb`.`country` (`country_name`, `country_desc`, `country_state`, `country_votes`, `continent`) VALUES ('France', 'You cannot compete with our cheese and wine', 'eliminated', '0', '1');
+
+INSERT INTO `csodb`.`country` (`country_name`, `country_desc`, `country_state`, `country_votes`, `continent`) VALUES ('United Kingdom', 'Tea, the Queen and London. Nothing more', 'eliminated', '0', '1');
+
+INSERT INTO `csodb`.`country` (`country_name`, `country_desc`, `country_state`, `country_votes`, `continent`) VALUES ('Italy', 'If you touch my pancetta, I will hurt you', 'eliminated', '0', '1');
+
+INSERT INTO `csodb`.`country` (`country_name`, `country_desc`, `country_state`, `country_votes`, `continent`) VALUES ('South Korea', 'Kimchi masterrace', 'eliminated', '0', '5');
+
+INSERT INTO `csodb`.`country` (`country_name`, `country_desc`, `country_state`, `country_votes`, `continent`) VALUES ('Spain', 'GRAB YOUR TOMATOES', 'eliminated', '0', '1');
+
+INSERT INTO `csodb`.`country` (`country_name`, `country_desc`, `country_state`, `country_votes`, `continent`) VALUES ('Afghanistan', 'We produce top quality drugs', 'eliminated', '0', '5');
