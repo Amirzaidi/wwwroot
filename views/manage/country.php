@@ -14,14 +14,23 @@ require 'inc.manage.php';
 	<?php
 	if (count($_POST) == 2)
 	{
-		new contest($_POST);
-		echo '<div class="green">Contest ', $_POST['name'], ' has been added</div>';
+		new country($_POST);
+		echo '<div class="green">Country ', $_POST['name'], ' has been added</div>';
 	}
 	?>
 	<div>
-		<form action="/manage/contest" method="post">
+		<form action="/manage/country" method="post">
 			<div><input type="text" name="name" placeholder="Name" /></div>
 			<div><textarea name="desc" placeholder="Description"></textarea></div>
+			<div><select name="continent">
+			<?php
+			$continent = new continent(false);
+			while ($continent->found())
+			{
+				echo '<option value="', $continent->id, '">', $continent->name, '</option>';
+			}
+			?>
+			</select></div>
 			<div><input type="submit" value="Add"/></div>
 		</form>
 	</div>

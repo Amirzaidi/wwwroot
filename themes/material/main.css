@@ -173,7 +173,7 @@ body > div#container > div.green {
 	background: green !important;
 }
 
-input[type="text"], textarea {
+input[type="text"], textarea, select {
 	border: none;
 	background: none;
 	width: calc(100% - 20px);
