@@ -1,4 +1,8 @@
 body, .light {
+	background: #fff !important;
+}
+
+.container {
 	background: #eee !important;
 }
 
@@ -11,7 +15,7 @@ body, .light {
 }
 
 .dark {
-	background: #aaa !important;
+	background: #bbb !important;
 	color: #fff;
 }
 

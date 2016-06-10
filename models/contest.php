@@ -1,6 +1,11 @@
 <?php
 class contest extends mysql
 {
+	protected function clauses()
+	{
+		return 'ORDER BY contest_id DESC';
+	}
+
 	public static function active()
 	{
 		$stmt = parent::$conn->prepare('SELECT * FROM contest WHERE contest_start <> 0 AND contest_end = 0 ORDER BY contest_id ASC LIMIT 1');

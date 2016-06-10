@@ -2,6 +2,9 @@
 
 body {
 	margin: 0;
+}
+
+body, input, textarea {
 	font: 14px Roboto;
 	font-weight: 400;
 	text-shadow: 0 1px rgba(255, 255, 255, 0.6);
@@ -20,7 +23,8 @@ body div.main {
 }
 
 body div.main:hover {
-	box-shadow: 0 0 30px 0 rgba(145, 145, 145, 0.8);
+	//box-shadow: 0 0 30px 0 rgba(145, 145, 145, 0.8);
+	//box-shadow: 0 0 10000px 0 #000;
 }
 
 body > div#nav {
@@ -132,28 +136,71 @@ body > div#container > div {
 	position: relative;
 	padding: 18px 20px;
 	line-height: 23px;
-	#cursor: pointer;
 	transition: all 0.25s;
 }
 
-body > div#container > div.top {
+body > div#container > div:nth-of-type(odd) {
 	background: #fff;
 	z-index: 2;
 }
 
-body > div#container > div.top:hover {
+body > div#container > div:nth-of-type(odd):hover {
 	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
 }
 
-body > div#container > div.bottom {
+body > div#container > div:nth-of-type(even) {
 	background: #eee;
 	z-index: 1;
 	box-shadow: 0 6px 6px -6px rgba(0, 0, 0, 0.5) inset, 0 -6px 6px -6px rgba(0, 0, 0, 0.5) inset;
 }
 
-body > div#container > div.bottom:hover {
+body > div#container > div:nth-of-type(even):hover {
 	background: #eee;
 	box-shadow: 0 3px 6px -6px rgba(0, 0, 0, 0.5) inset, 0 -3px 6px -6px rgba(0, 0, 0, 0.5) inset;
+}
+
+body > div#container > div > form > div {
+	width: 100%;
+	border-bottom: 1px solid #ddd;
+	text-align: center;
+}
+
+body > div#container > div > form > div:last-child {
+	border-bottom: none;
+}
+
+body > div#container > div.green {
+	background: green !important;
+}
+
+input[type="text"], textarea {
+	border: none;
+	background: none;
+	width: calc(100% - 20px);
+	resize: none;
+	font-size: 16px;
+	line-height: 22px;
+	padding: 10px;
+}
+
+textarea {
+	height: 200px;
+}
+
+input[type="submit"] {
+	background: #fff;
+	border: none;
+	border-radius: 12px;
+	font-size: 17px;
+	padding: 12px 25px;
+	margin-top: 15px;
+	box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.3);
+	cursor: pointer;
+	transition: box-shadow 0.175s;
+}
+
+input[type="submit"]:hover {
+	box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.3);
 }
 
 @media screen and (min-width: 1080px) and (min-height: 700px) {

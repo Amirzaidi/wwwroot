@@ -38,7 +38,7 @@ abstract class mysql
 		}
 		else if ($value === false)
 		{
-			$this->stmt = self::$conn->prepare('SELECT * FROM ' . $this->table);
+			$this->stmt = self::$conn->prepare('SELECT * FROM ' . $this->table . ' ' . $this->clauses());
 		}
 		else
 		{
@@ -145,7 +145,11 @@ abstract class mysql
 		return 'name';
 	}
 
-	//Singleton-like
+	protected function clauses()
+	{
+		return '';
+	}
+
 	protected function table()
 	{
 		return strtolower(get_class($this));

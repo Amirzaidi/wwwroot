@@ -25,6 +25,7 @@ if (!$session->started())
 	$session->language = 'en';
 	$session->theme = 'light';
 	$session->lastpage = '';
+	$session->admin = false;
 	router::refresh();
 }
 
