@@ -782,6 +782,20 @@ input[type="text"]:focus {
 	width: 100%;
 }
 
+.sidebarmenu > ul > a > li:hover {
+	background-color: white;
+}
+
+#sidebartoggler {
+	display: none;
+}
+
+#sidebartoggler:checked + #mnav .navcon .navbar .sidebarmenu { 
+	margin-left: 0px;
+	opacity: 1;
+	border-right: 3px solid #dfdfdf;
+}
+
 @media only screen and (max-width: 1024px) and (min-width: 910px) {
 
 	.headconbody {
@@ -1058,22 +1072,4 @@ input[type="text"]:focus {
 	}
 
 }
-
-
-#sidebartoggler {
-	display: none;
-}
-
-#sidebartoggler:checked + #mnav .navcon .navbar .sidebarmenu { 
-	margin-left: 0px;
-	opacity: 1;
-	border-right: 3px solid #dfdfdf;
-}
-
-
-
-
-
-
-
 
