@@ -38,7 +38,10 @@ $language->load('index');
 
 	</script>
 
+
 <?php require 'inc.nav.php'; ?>
+
+<body id="page-content">
 
 <header>
 
@@ -1002,4 +1005,5 @@ $language->load('index');
 	</div>
 
 </div>
+
 <?php require 'inc.footer.php'; ?>

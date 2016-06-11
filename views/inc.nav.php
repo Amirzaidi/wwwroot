@@ -26,12 +26,22 @@
 	</div>
 </nav>
 
+<input type="checkbox" id="sidebartoggler"/>
+
 <nav id="mnav">
 	<div class="navcon" id="mnavcon">
 		<div class="navbar">
-			<a href="#"><img src="/style/images/mnavimg.png"></img></a>
+			<label for="sidebartoggler" class="toggle"><img src="/style/images/mnavimg.png"></img></label>
 
-
+			<div class="sidebarmenu">
+				<ul>
+					<a href=""><li style="border-top: 0;">Home</li></a>
+					<a href=""><li>Suchi</li></a>
+					<a href=""><li>Anime</li></a>
+					<a href=""><li>Come at me</li></a>
+					<a href=""><li style="border-bottom: 0;">Banter</li></a>
+				</ul>
+			</div>
 		</div>
 
 		<div class="title" id="mtitle">
@@ -39,3 +49,8 @@
 		</div>
 	</div>
 </nav>
+
+
+
+
+

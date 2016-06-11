@@ -760,6 +760,28 @@ input[type="text"]:focus {
 
 /* QUERY FOR THE PAGES */
 
+.sidebarmenu {
+	display: none;
+	z-index: 5;
+	position: fixed;
+	background-color: #f1f1f1;
+	height: 100%;
+	width: 250px;
+	font-size: 20px;
+	text-align: center;
+	margin-left: -250px;
+	opacity: 0.7;
+}
+
+.sidebarmenu > ul > a > li {
+	list-style-type: none;
+	padding: 10px;
+	border: 1px solid #dfdfdf;
+	border-left: 0;
+	border-right: 0;
+	width: 100%;
+}
+
 @media only screen and (max-width: 1024px) and (min-width: 910px) {
 
 	.headconbody {
@@ -1010,7 +1032,7 @@ input[type="text"]:focus {
 		float: left;
 	}
 
-	#mnavcon > .navbar > a > img {
+	#mnavcon > .navbar > label[for=sidebartoggler] > img {
 		width: auto;
 		height: 25px;
 		vertical-align: middle;
@@ -1031,6 +1053,27 @@ input[type="text"]:focus {
 		background-size: 175%;
 	}
 
-	
+	.sidebarmenu {
+		display: block;
+	}
 
 }
+
+
+#sidebartoggler {
+	display: none;
+}
+
+#sidebartoggler:checked + #mnav .navcon .navbar .sidebarmenu { 
+	margin-left: 0px;
+	opacity: 1;
+	border-right: 3px solid #dfdfdf;
+}
+
+
+
+
+
+
+
+
