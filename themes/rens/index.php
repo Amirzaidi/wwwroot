@@ -6,8 +6,15 @@
 <body id="draw">
 	<div id="navbar">
 		<div>
-			<a href="#draw">Menu</a>
+			<a href="#draw"><div>=</div></a>
+			<a href="#navbar"><div>Extend</div></a>
 		</div>
+		<div>
+			<a href="#"><div>Moar</div></a>
+			<a href="#"><div>Stuff</div></a>
+		</div>
+		<div>
+			<a href="#"><div>Close</div></a>
 		</div>
 	</div>
 	<div id="header">
@@ -16,15 +23,46 @@
 	</div>
 	<div id="content">
 		<div id="nav">
+			<a href="#a"><div>Main</div></a>
+			<a href="#b"><div>Test 1</div></a>
+			<a href="#c"><div>Test 2</div></a>
+			<a href="#d"><div>Test 3</div></a>
+			<a href="#a"><div>Main</div></a>
+			<a href="#b"><div>Test 1</div></a>
+			<a href="#c"><div>Test 2</div></a>
+			<a href="#d"><div>Test 3</div></a>
+			<a href="#a"><div>Main</div></a>
+			<a href="#b"><div>Test 1</div></a>
+			<a href="#c"><div>Test 2</div></a>
+			<a href="#d"><div>Test 3</div></a>
 		</div>
 		<div id="cards">
-			<div>kekz<br/><br/>kekz<br/><br/>kekz<br/><br/>kekz<br/><br/>
-			</div>
-			
-			<div>kekz<br/><br/>kekz<br/><br/>kekz<br/><br/>kekz<br/><br/>
+			<div class="column">
+			<div class="card">kekz
 			</div>
 
-			<div>kekz<br/><br/>kekz<br/><br/>kekz<br/><br/>kekz<br/><br/>
+			<div class="card">kekz<br/><br/>kekz<br/><br/>kekz<br/><br/>kekz<br/><br/>kekz
+			</div>
+			
+			<div class="card">kekzkekz<br/><br/>kekz<br/><br/>kekz<br/><br/>kekz
+			</div>
+
+			<div class="card">kekz<br/><br/>kekz<br/><br/>kekz<br/><br/>kekz<br/><br/>kekz
+			</div>
+			</div>
+
+			<div class="column">
+			<div class="card">kekz<br/><br/>kekz<br/><br/>kekz<br/><br/>kekz<br/><br/>kekz
+			</div>
+			
+			<div class="card">kekz<br/><br/>kekz<br/><br/>kekz<br/><br/>kekz<br/><br/>kekz
+			</div>
+
+			<div class="card">kekz<br/><br/>kekz<br/>kekz<br/><br/>kekz<br/><br/>kekz
+			</div>
+			</div>
+
+			<div class="card" id="clearfix" style="text-align: center">By Amir Zaidi
 			</div>
 		</div>
 	</div>
