@@ -67,8 +67,6 @@ require 'inc.manage.php';
 	</div>
 	<?php
 	}
+	require 'inc.footer.php';
 	?>
-	<div id="4">
-		<center>Made by Amir Zaidi<br/>Web Design Template</center>
-	</div>
 </div>
