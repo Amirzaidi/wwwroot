@@ -89,23 +89,22 @@ require 'inc.manage.php';
 	<div>
 		<?php
 		echo '[', $country->continent->name, '] <a href="/manage/country/', $country->id, '">', $country->name, '</a> - ', $country->desc;
-		$reason = $country->reason();
-		while ($reason->found())
+		while ($country->reason()->found())
 		{
-			echo '<br/>Remove reason: <a href="/manage/reason/remove/', $reason->id, '">', $reason->name, '</a> - ', $reason->desc;
+			echo '<br/>Remove reason: <a href="/manage/reason/remove/', $country->reason()->id, '">', $country->reason()->name, '</a> - ', $country->reason()->desc;
 		}
 
-		$slang = $country->slang();
-		while ($slang->found())
+		while ($country->slang()->found())
 		{
-			echo '<br/>Remove slang: <a href="/manage/slang/remove/', $slang->name, '">', $slang->name, '</a>';
+			echo '<br/>Remove slang: <a href="/manage/slang/remove/', $country->slang()->name, '">', $country->slang()->name, '</a>';
 		}
 		?>
-	</div>
+	</div>	
+	<?php
+	}
+	?>
 	<div>
 		<form action="/manage/reason/add" method="post">
-			<div><input type="text" name="name" placeholder="Name" /></div>
-			<div><textarea name="desc" placeholder="Description"></textarea></div>
 			<div><select name="country">
 			<?php
 			$country = new country(false);
@@ -115,12 +114,13 @@ require 'inc.manage.php';
 			}
 			?>
 			</select></div>
+			<div><input type="text" name="name" placeholder="Reason" /></div>
+			<div><textarea name="desc" placeholder="Description"></textarea></div>
 			<div><input type="submit" value="Add Reason"/></div>
 		</form>
 	</div>
 	<div>
 		<form action="/manage/slang/add" method="post">
-			<div><input type="text" name="name" placeholder="Name" /></div>
 			<div><select name="country">
 			<?php
 			$country = new country(false);
@@ -130,11 +130,11 @@ require 'inc.manage.php';
 			}
 			?>
 			</select></div>
+			<div><input type="text" name="name" placeholder="Slang" /></div>
 			<div><input type="submit" value="Add Slang"/></div>
 		</form>
 	</div>
 	<?php
-	}
 	require 'inc.footer.php';
 	?>
 </div>
