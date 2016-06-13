@@ -29,8 +29,8 @@ class contest extends mysql
 		if (!$randcontest->found())
 		{
 			return new contest([
-				'name' => '',
-				'desc' => ''
+				'name' => 'Placeholder',
+				'desc' => '-'
 			]);
 		}
 

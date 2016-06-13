@@ -42,7 +42,7 @@ require 'inc.manage.php';
 			<input type="hidden" name="id" value="<?php echo $continent->id; ?>" />
 			<div><input type="text" name="name" placeholder="Name" value="<?php echo $continent->name; ?>" /></div>
 			<div><textarea name="desc" placeholder="Description"><?php echo $continent->desc; ?></textarea></div>
-			<div><input type="submit" value="Edit"/></div>
+			<div><input type="submit" value="Edit Continent"/></div>
 					<?php
 				}
 			}
@@ -52,7 +52,7 @@ require 'inc.manage.php';
 			?>
 			<div><input type="text" name="name" placeholder="Name" /></div>
 			<div><textarea name="desc" placeholder="Description"></textarea></div>
-			<div><input type="submit" value="Add"/></div>
+			<div><input type="submit" value="Add Continent"/></div>
 			<?php
 			}
 			?>
@@ -60,17 +60,12 @@ require 'inc.manage.php';
 	</div>
 	<?php
 	$continent = new continent(false);
-	?>
-	<div id="continents">
-		<?php echo $continent->count(); ?> continents found
-	</div>
-	<?php
 	while ($continent->found())
 	{
 	?>
 	<div>
 		<?php
-		echo '[', $continent->country()->count(), ' countries] <a href="/manage/continent/', $continent->id, '">', $continent->name, '</a> - ', $continent->desc;
+		echo '[', $continent->country()->count(), '] <a href="/manage/continent/', $continent->id, '">', $continent->name, '</a> - ', $continent->desc;
 		?>
 	</div>
 	<?php

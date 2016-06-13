@@ -56,7 +56,7 @@ require 'inc.manage.php';
 			}
 			?>
 			</select></div>
-			<div><input type="submit" value="Edit"/></div>
+			<div><input type="submit" value="Edit Country"/></div>
 					<?php
 				}
 			}
@@ -75,7 +75,7 @@ require 'inc.manage.php';
 			}
 			?>
 			</select></div>
-			<div><input type="submit" value="Add"/></div>
+			<div><input type="submit" value="Add Country"/></div>
 			<?php
 			}
 			?>
@@ -83,18 +83,55 @@ require 'inc.manage.php';
 	</div>
 	<?php
 	$country = new country(false);
-	?>
-	<div id="countries">
-		<?php echo $country->count(); ?> countries found
-	</div>
-	<?php
 	while ($country->found())
 	{
 	?>
 	<div>
 		<?php
 		echo '[', $country->continent->name, '] <a href="/manage/country/', $country->id, '">', $country->name, '</a> - ', $country->desc;
+		$reason = $country->reason();
+		while ($reason->found())
+		{
+			echo '<br/>Remove reason: <a href="/manage/reason/remove/', $reason->id, '">', $reason->name, '</a> - ', $reason->desc;
+		}
+
+		$slang = $country->slang();
+		while ($slang->found())
+		{
+			echo '<br/>Remove slang: <a href="/manage/slang/remove/', $slang->name, '">', $slang->name, '</a>';
+		}
 		?>
+	</div>
+	<div>
+		<form action="/manage/reason/add" method="post">
+			<div><input type="text" name="name" placeholder="Name" /></div>
+			<div><textarea name="desc" placeholder="Description"></textarea></div>
+			<div><select name="country">
+			<?php
+			$country = new country(false);
+			while ($country->found())
+			{
+				echo '<option value="', $country->id, '">', $country->name, '</option>';
+			}
+			?>
+			</select></div>
+			<div><input type="submit" value="Add Reason"/></div>
+		</form>
+	</div>
+	<div>
+		<form action="/manage/slang/add" method="post">
+			<div><input type="text" name="name" placeholder="Name" /></div>
+			<div><select name="country">
+			<?php
+			$country = new country(false);
+			while ($country->found())
+			{
+				echo '<option value="', $country->id, '">', $country->name, '</option>';
+			}
+			?>
+			</select></div>
+			<div><input type="submit" value="Add Slang"/></div>
+		</form>
 	</div>
 	<?php
 	}
