@@ -18,12 +18,11 @@
 		</div>
 	</div>
 	<div id="header">
-		<div id="button">
-		</div>
+		<a href="#"><div id="button">&#215;</div></a>
 	</div>
 	<div id="content">
 		<div id="nav">
-			<a href="#a"><div>Main</div></a>
+			<a href="#a" style="color: #fff"><div style="background: #512DA8">Navigation</div></a>
 			<a href="#b"><div>Test 1</div></a>
 			<a href="#c"><div>Test 2</div></a>
 			<a href="#d"><div>Test 3</div></a>

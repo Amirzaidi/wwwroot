@@ -70,22 +70,29 @@ body > div#header {
 	z-index: 2;
 }
 
-body > div#header > div#button {
+body > div#header > a > div#button {
 	background: #F06292;
 	border-radius: 200px;
-	width: 130px;
-	height: 130px;
-	font-size: 20px;
+	width: 60px;
+	text-align: center;
+	padding: 16px 0;
+	line-height: 28px;
+	font-size: 28px;
 	float: left;
 	position: absolute;
 	z-index: 2;
-	bottom: -65px;
-	left: -130px;
-	transition: left 0.5s ease-out;
+	bottom: -30px;
+	left: -60px;
+	transition: left 0.5s ease-out, box-shadow 0.5s ease-out;
+	box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.4);
 }
 
-body:target > div#header > div#button {
-	left: 185px;
+body:target > div#header > a > div#button {
+	left: 220px;
+}
+
+body > div#header > a > div#button:hover {
+	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.4);
 }
 
 body > div#content {
@@ -115,8 +122,8 @@ body:target > div#content > div#nav {
 }
 
 body > div#content > div#nav > a > div {
-	padding: 11px 22px;
-	font-size: 18px;
+	padding: 13px 22px;
+	font-size: 17px;
 	transition: box-shadow 0.25s ease-out;
 }
 
