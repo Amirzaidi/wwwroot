@@ -29,34 +29,41 @@ if (count($_POST) == 3 && !$found)
 				<p>Insert comp. details here (country, phone number etc.)</p>
 				<p>Insert comp. details here (country, phone number etc.)</p>
 				<p>Insert comp. details here (country, phone number etc.)</p></br>
-<?php
-if ($found)
-{
-	echo '(Not possible, already submitted)';
-}
-?>
+			</div>
+		</div>
+	</div>
+</div>
+
+<?php if (!$found) { ?>
+
+<div class="whiterow">
+	<div class="headconbody">
+		<div class="row">
+			<div class="description" id="opg">
+				<h3>[sendmailtext]</h3>
+
 				<div class="par parbut">
-					<a href="#mailmodal">Send us an email</a>
+					<a href="#mailmodal">[sendmailtitle]</a>
 						<div id="mailmodal" class="modal">
-							<a href="#"><div style="width: 100%; height: 100%; z-index: 9; position: fixed;"></div></a>
-  							<!--<div class="modal-dialog">-->
-    								<div class="modal-content">
-      									<div class="container" id="modalheader"> 
+							<a href="#"><div class="dark-bg"></div></a>
+    							<div class="modal-content">
+      								<div class="container" id="modalheader"> 
+        								<a href="#" class="closebtn">x</a>
+        									<h2>[sendmailtitle]</h2>
+      								</div>
 
-        									<a href="#" class="closebtn">x</a>
-        									<h2>Send us an email!</h2>
+								<div class="container" id="modalquery">
+								<form action="/ads" method="post">
+									<input type="text" placeholder="[your_name]" id="name" name="name" />
+									<input type="text" placeholder="[your_mail]" id="email" name="mail"/>
+									<input type="text" placeholder="[subject]" id="subject" name="subject"/>
+									<textarea placeholder="[comment]" id="contain" name="content"></textarea></br>
 
-      									</div>
+									<input type="submit" value="[send]" id="sendemail"/>
+								</form>
+      								</div>
 
-									<div class="container" id="modalquery">
-										<input type="text" placeholder="Your Name" id="name"/>
-										<input type="text" placeholder="Your Email" id="email"/>
-										<input type="text" placeholder="Subject" id="subject"/>
-										<textarea name="email" placeholder="Comment" id="contain"></textarea></br>
-										<input type="button" value="Send email!" id="sendemail"/>
-      									</div>
-   								 </div>
- 							<!--</div>-->
+   							 </div>
 						</div>
 					</div>
 				</div>
@@ -64,5 +71,7 @@ if ($found)
 		</div>
 	</div>
 </div>
+
+<?php } ?>
 
 <?php require 'inc.footer.php'; ?>
