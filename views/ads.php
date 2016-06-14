@@ -56,7 +56,7 @@ if (count($_POST) == 4 && !$found)
 	</div>
 </div>
 
-<?php if (!$found) { ?>
+<?php if (!$found && false) { ?>
 
 <div class="whiterow">
 	<div class="headconbody">
@@ -96,4 +96,4 @@ if (count($_POST) == 4 && !$found)
 
 <?php } ?>
 
-<?php require router::$views . 'inc.footer.php'; ?>
+<?php require 'inc.footer.php'; ?>
