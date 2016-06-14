@@ -4,12 +4,23 @@
 	<link rel="stylesheet" type="text/css" href="main.css" />
 </head>
 <body id="draw">
+	<div id="toast">
+		<div><a href="#">&#215;</a> You were logged in as Kyou-kun</div>
+	</div>
 	<div id="navbar">
 		<div>
 			<a href="#draw"><div>=</div></a>
 			<a href="#navbar"><div>Extend</div></a>
 		</div>
 		<div>
+			<a href="#toast"><div>Popup</div></a>
+			<a href="#"><div>Stuff</div></a>
+		</div>
+		<div>
+			<a href="#"><div>Moar</div></a>
+			<a href="#"><div>Stuff</div></a>
+			<a href="#"><div>Moar</div></a>
+			<a href="#"><div>Stuff</div></a>
 			<a href="#"><div>Moar</div></a>
 			<a href="#"><div>Stuff</div></a>
 		</div>
@@ -36,8 +47,16 @@
 			<a href="#d"><div>Test 3</div></a>
 		</div>
 		<div id="cards">
-			<div class="column">
-			<div class="card">kekz
+			<div class="column">			
+			<div class="card">
+				<form action="index.php" method="post">
+					<div><input type="text" name="name" placeholder="Username" /></div>
+					<div><input type="password" name="pass" placeholder="Password" /></div>
+					<div><textarea placeholder="Comment"></textarea></div>
+					<div><select><option class="option">Test</option><option class="option">Kek</option></select></div>
+					<div><input type="submit" value="Submit" /><a href="#" class="button"><div>Cancel</div></a></div>
+				</form>
+				<div class="clearfix"></div>
 			</div>
 
 			<div class="card">kekz<br/><br/>kekz<br/><br/>kekz<br/><br/>kekz<br/><br/>kekz
