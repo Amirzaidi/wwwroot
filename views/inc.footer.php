@@ -16,3 +16,4 @@ function googleTranslateElementInit() {
   new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.FloatPosition.BOTTOM_RIGHT, multilanguagePage: true}, 'google_translate_element');
 }
 </script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<style type="text/css">body { top: 0 !important; } .skiptranslate { display: none !important; }</style>

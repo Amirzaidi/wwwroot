@@ -40,7 +40,7 @@ body > div#navbar:hover {
 }
 
 body > div#navbar:target {
-	max-height: 500px;
+	max-height: 350px;
 }
 
 body > div#navbar > div {
@@ -168,6 +168,12 @@ body > div#content > div#cards div.card {
 	border-radius: 1px;
 }
 
+body > div#content > div#cards div.card > img {
+	margin: -15px -20px;
+	width: calc(100% + 40px);
+	vertical-align: middle;
+}
+
 body > div#content > div#cards div.card:hover {
 	box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.4);
 }
@@ -191,6 +197,10 @@ input[type="text"], input[type="password"], textarea, select {
 	padding: 10px 1px;
 	margin: 0;
 	transition: border-bottom 0.5s ease-out;
+}
+
+select {
+	width: 100%;
 }
 
 input[type="text"]:focus, input[type="password"]:focus, textarea:focus, select:focus {

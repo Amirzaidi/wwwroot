@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-	<title>Rens MD</title>
+	<title>Rens Material Design Idea</title>
 	<link rel="stylesheet" type="text/css" href="main.css" />
 </head>
 <body id="draw">
@@ -57,6 +57,11 @@
 					<div><input type="submit" value="Submit" /><a href="#" class="button"><div>Cancel</div></a></div>
 				</form>
 				<div class="clearfix"></div>
+			</div>
+
+			<div class="card"><img src="http://www.planwallpaper.com/static/images/ZhGEqAP.jpg" /></div>
+
+			<div class="card">Information about picture, not &copy; Amir Zaidi
 			</div>
 
 			<div class="card">kekz<br/><br/>kekz<br/><br/>kekz<br/><br/>kekz<br/><br/>kekz
