@@ -1,7 +1,7 @@
 <?php
 function pickFromQueue()
 {
-	$queuedCountries = country::randQueued(4);
+	$queuedCountries = country::randQueued(5);
 
 	while ($queuedCountries->found())
 	{
