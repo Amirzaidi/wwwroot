@@ -114,11 +114,11 @@ while ($country->found())
 			<?php
 			$i = 0;
 			$reason = $country->reason();
-			while ($reason->found() && $i++ < 3)
+			while ($reason->found() && $i++ < 4)
 			{
 			?>
 				<div class="ex<?php echo $i; ?>" id="exfixed">
-					<img src="/style/images/reason_<?php echo $reason->name; ?>.jpg"/>
+					<img src="/style/images/reason_<?php echo strtolower(str_replace(' ', '', $reason->name)); ?>.jpg"/>
 					<div class="imgtitle">
 						<h4><?php echo ucwords($reason->name); ?></h4>
 					</div>
@@ -128,26 +128,12 @@ while ($country->found())
 					</div>
 
 					<div class="imglink">
-						<a href="#">---</a>
+						<a href="/ads">Advertise for your country</a>
 					</div>
 				</div>
 			<?php
 			}
 			?>
-				<div class="ex4" id="exfixed">
-					<img src="/style/images/reason_.jpg" />
-					<div class="imgtitle">
-						<h4><?php echo $country->medal()->count(); ?> [medals]</h4>
-					</div>
-				
-					<div class="imgtext">
-						<p></p>
-					</div>
-
-					<div class="imglink">
-						<a href="#">---</a>
-					</div>
-				</div>
 			</div>
 		</div>
 	</div>
