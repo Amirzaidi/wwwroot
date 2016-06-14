@@ -14,6 +14,8 @@ require 'inc.manage.php';
 	<?php
 	if (count($_POST) == 3)
 	{
+		$_POST['continent#'] = intval($_POST['continent']);
+		unset($_POST['continent']);
 		new country($_POST);
 		echo '<div class="green">Country ', $_POST['name'], ' has been added</div>';
 	}
