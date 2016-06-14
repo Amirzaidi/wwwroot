@@ -34,26 +34,37 @@ $language->load('index');
 				<p>Here you will be informed about the amount of medals each countries has won!</p>
 
 				<div class="contentrow">
+					<?php
+					$country = new country(false);
+					while ($country->found())
+					{
+					?>
 
 					<div class="col-md-4">
 
 						<div class="conx">
-							<h1><?php $country = new country(1); echo $country->name; ?> </h1>
+							<h1><?php echo $country->name; ?> </h1>
 
 							<div class="medals">
-								<p><?php $country = new country(1); 
-									echo $country->medal()->count(); ?> medals in total</p>
+								<p><?php echo $country->medal()->count(); ?> medals in total</p>
 
 								<p id="topmdld">Of Which</p>
 
 							<div class="medaldetails">
 								<p><?php
-									$country = new country(1);
-									$medal = $country->medal();
-										while ($medal->found())
-										{
-											echo '<img src="/style/images/medal_', $medal->type, '.png" />';
-										}
+								$medalCounts = $country->medal()->typeCounts();
+								if ($medalCounts[0] > 0)
+								{
+									echo '<img src="/style/images/medal_gold.png" />', $medalCounts[0];
+								}
+								if ($medalCounts[1] > 0)
+								{
+									echo '<img src="/style/images/medal_silver.png" />', $medalCounts[1];
+								}
+								if ($medalCounts[2] > 0)
+								{
+									echo '<img src="/style/images/medal_bronze.png" />', $medalCounts[2];
+								}
 								?></p>
 							</div>
 
@@ -62,159 +73,9 @@ $language->load('index');
 					
 					</div>
 
-					<div class="col-md-4">
-						
-						<div class="conx">
-							<h1><?php $country = new country(2); echo $country->name; ?> </h1>
-						</div>
-						
-					</div>
-
-					<div class="col-md-4">
-
-						<div class="conx">
-							<h1><?php $country = new country(3); echo $country->name; ?> </h1>
-						</div>
-
-					</div>
-
-					<div class="col-md-4">
-						
-						<div class="conx">
-							<h1><?php $country = new country(4); echo $country->name; ?> </h1>
-						</div>
-						
-					</div>
-
-					<div class="col-md-4">
-
-						<div class="conx">
-							<h1><?php $country = new country(5); echo $country->name; ?> </h1>
-						</div>
-
-					</div>
-
-					<div class="col-md-4">
-						
-						<div class="conx">
-							<h1><?php $country = new country(6); echo $country->name; ?> </h1>
-						</div>
-						
-					</div>
-
-					<div class="col-md-4">
-
-						<div class="conx">
-							<h1><?php $country = new country(7); echo $country->name; ?> </h1>
-						</div>
-
-					</div>
-
-					<div class="col-md-4">
-
-						<div class="conx">
-							<h1><?php $country = new country(8); echo $country->name; ?> </h1>
-						</div>
-
-					</div>
-
-					<div class="col-md-4">
-
-						<div class="conx">
-							<h1><?php $country = new country(9); echo $country->name; ?> </h1>
-						</div>
-					
-					</div>
-
-					<div class="col-md-4">
-						
-						<div class="conx">
-							<h1><?php $country = new country(10); echo $country->name; ?> </h1>
-						</div>
-						
-					</div>
-
-					<div class="col-md-4">
-
-						<div class="conx">
-							<h1><?php $country = new country(11); echo $country->name; ?> </h1>
-						</div>
-
-					</div>
-
-					<div class="col-md-4">
-						
-						<div class="conx">
-							<h1><?php $country = new country(12); echo $country->name; ?> </h1>
-						</div>
-						
-					</div>
-
-					<div class="col-md-4">
-
-						<div class="conx">
-							<h1><?php $country = new country(13); echo $country->name; ?> </h1>
-						</div>
-
-					</div>
-
-					<div class="col-md-4">
-						
-						<div class="conx">
-							<h1><?php $country = new country(14); echo $country->name; ?> </h1>
-						</div>
-						
-					</div>
-
-					<div class="col-md-4">
-
-						<div class="conx">
-							<h1><?php $country = new country(15); echo $country->name; ?> </h1>
-						</div>
-
-					</div>
-
-					<div class="col-md-4">
-
-						<div class="conx">
-							<h1><?php $country = new country(16); echo $country->name; ?> </h1>
-						</div>
-
-					</div>
-
-					<div class="col-md-4">
-
-						<div class="conx">
-							<h1><?php $country = new country(17); echo $country->name; ?> </h1>
-						</div>
-
-					</div>
-
-					<div class="col-md-4">
-						
-						<div class="conx">
-							<h1><?php $country = new country(18); echo $country->name; ?> </h1>
-						</div>
-						
-					</div>
-
-					<div class="col-md-4">
-
-						<div class="conx">
-							<h1><?php $country = new country(19); echo $country->name; ?> </h1>
-						</div>
-
-					</div>
-
-					<div class="col-md-4">
-
-						<div class="conx">
-							<h1><?php $country = new country(20); echo $country->name; ?> </h1>
-						</div>
-
-					</div>
-
-
+					<?php
+					}
+					?>
 
 					<div class="col-md-12">
 
