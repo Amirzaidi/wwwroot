@@ -44,7 +44,7 @@ require 'inc.manage.php';
 			<input type="hidden" name="id" value="<?php echo $country->id; ?>" />
 			<div><input type="text" name="name" placeholder="Name" value="<?php echo $country->name; ?>" /></div>
 			<div><textarea name="desc" placeholder="Description"><?php echo $country->desc; ?></textarea></div>
-			<div><select name="continent#">
+			<div><select name="continent">
 			<option value="<?php echo $country->continent->id; ?>"><?php echo $country->continent->name; ?></option>
 			<?php
 			$continent = new continent(false);
