@@ -5,7 +5,7 @@ body {
 	background: #ddd;
 }
 
-body, input, textarea {
+body, input, textarea, select, option {
 	font: 14px Roboto;
 	font-weight: 400;
 	text-shadow: 0 1px rgba(230, 230, 230, 0.6);

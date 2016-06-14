@@ -4,7 +4,7 @@ body {
 	margin: 0;
 }
 
-body, input, textarea {
+body, input, textarea, select, option {
 	font: 14px Roboto;
 	font-weight: 400;
 	text-shadow: 0 1px rgba(255, 255, 255, 0.6);
@@ -161,12 +161,7 @@ body > div#container > div:nth-of-type(even):hover {
 
 body > div#container > div > form > div {
 	width: 100%;
-	border-bottom: 1px solid #ddd;
 	text-align: center;
-}
-
-body > div#container > div > form > div:last-child {
-	border-bottom: none;
 }
 
 body > div#container > div.green {
@@ -175,16 +170,29 @@ body > div#container > div.green {
 
 input[type="text"], textarea, select {
 	border: none;
+	border-bottom: 1px solid #ddd;
 	background: none;
-	width: calc(100% - 20px);
+	width: calc(100% - 4px);
 	resize: none;
 	font-size: 16px;
 	line-height: 22px;
-	padding: 10px;
+	padding: 10px 2px;
+	margin: 0;
+	transition: border-bottom 0.5s ease-out;
+}
+
+input[type="text"]:focus, textarea:focus, select:focus {
+	outline: none;
+	border-bottom: 1px solid #9e9e9e;
+}
+
+select {
+	width: 100%;
+	padding: 10px 0;
 }
 
 textarea {
-	height: 200px;
+	height: 300px;
 }
 
 input[type="submit"] {

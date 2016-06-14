@@ -46,5 +46,11 @@ $css = ['/themes/material/main.css', '/themes/material/white.css'];
 				<div>Show, add and edit continents</div>
 			</div>
 		</a>
+		<a href="/">
+			<div>
+				<div>Return</div>
+				<div>Show, add and edit continents</div>
+			</div>
+		</a>
 	</div>
 </div>
