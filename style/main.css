@@ -659,6 +659,42 @@ input[type="text"]:focus {
 	padding: 10px 20px;
 }
 
+.errorheader {
+	height: 100%;
+	background-color: teal;
+	display: table;
+	width: 100%;
+}
+
+.errorimg {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.errortxt {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.errortxt > p > a {
+	color: rgb(231, 255, 0);
+}
+
+.errorcontainer {
+	text-align: center;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.errorimg > img {
+	height: auto;
+	width: 250px;
+}
+
+#errtxt {
+	font-family: profontwindowsregular,profontiix,profont,profontx,ProFontWindows,Menlo,Courier,Monaco,Consolas,"Andale Mono","DejaVu Sans Mono",monospace;
+}
+
 #mnavcon {
 	display: none;
 }
@@ -1054,4 +1090,3 @@ input[type="text"]:focus {
 	}
 
 }
-
