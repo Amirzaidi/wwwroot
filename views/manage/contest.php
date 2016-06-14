@@ -28,18 +28,19 @@ require 'inc.manage.php';
 	</div>
 	<?php
 	$contest = new contest(false);
-	?>
-	<div id="contests">
-		<?php echo $contest->count(); ?> contests found (10 newest shown)
-	</div>
-	<?php
 	$i = 0;
 	$max = 10;
 	if (isset($uri[0]) && $uri[0] == 'all')
 	{
 		$max = 10000;
 	}
+	?>
 
+	<div id="contests">
+		<?php echo $contest->count(); ?> contests found <?php if ($max == 10) { ?>(10 newest shown - <a href="/manage/contest/all">click here to show all</a>)<?php } ?>
+	</div>
+
+	<?php
 	while ($contest->found() && $i++ < $max)
 	{
 	?>

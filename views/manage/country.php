@@ -82,6 +82,7 @@ require 'inc.manage.php';
 			?>
 		</form>
 	</div>
+	<p id="countries" style="margin: 0"></p>
 	<?php
 	$country = new country(false);
 	while ($country->found())

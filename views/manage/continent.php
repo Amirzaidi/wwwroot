@@ -58,6 +58,7 @@ require 'inc.manage.php';
 			?>
 		</form>
 	</div>
+	<p id="continents" style="margin: 0"></p>
 	<?php
 	$continent = new continent(false);
 	while ($continent->found())
