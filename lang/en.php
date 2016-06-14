@@ -79,7 +79,10 @@ function lang_ads(&$t)
 	$t['adplacement'] = 'Ads placement on cso.com';
 	$t['adplacetext'] = 'Since we accept different forms of ads, we also offer you places for the ads based on their form. Banner ads will be placed between the grey/white boxes that contain information. See the example below. If you see a row like this with "Advertise here!", there is a big chance we are still searching for an advertiser who can put his banner form ad there.';
 	$t['adplacetext2'] = 'However, if you only have text-based ads, then you still are on the right address! We also offer places for text ads. You can put your text ad in the header (under "Must see also:"). Or there is space on the bottom of the page where you can find "Privacy policy" etc. Please contact us about the form of ad, how many you would like to have on cso.com, pricing, type of ad (PPC, CPM) etc.';
+}
 
+function lang_contact(&$t)
+{
 	$t['sendmailtitle'] = 'Send us an email!';
 	$t['sendmailtext'] = 'Send us an email about it!';
 	$t['your_name'] = 'Your name';
