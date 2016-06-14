@@ -1,7 +1,1 @@
-<?php
-
-print_r($uri);
-
-?>
-<br/>
-not found :(
+here comes dat boi
