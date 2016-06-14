@@ -180,10 +180,6 @@ div.card > form > div {
 	margin-bottom: 5px;
 }
 
-option {
-	font-size: 30px;
-}
-
 input[type="text"], input[type="password"], textarea, select {
 	border: none;
 	border-bottom: 1px solid #ddd;

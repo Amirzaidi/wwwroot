@@ -53,7 +53,7 @@
 					<div><input type="text" name="name" placeholder="Username" /></div>
 					<div><input type="password" name="pass" placeholder="Password" /></div>
 					<div><textarea placeholder="Comment"></textarea></div>
-					<div><select><option class="option">Test</option><option class="option">Kek</option></select></div>
+					<div><select><option>Test</option><option>Kek</option></select></div>
 					<div><input type="submit" value="Submit" /><a href="#" class="button"><div>Cancel</div></a></div>
 				</form>
 				<div class="clearfix"></div>
