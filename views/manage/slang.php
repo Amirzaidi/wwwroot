@@ -12,6 +12,7 @@ if (isset($uri[1]))
 }
 else if (isset($uri[0]) && count($_POST) == 2)
 {
+	$_POST['country#'] = intval($_POST['country#']);
 	new slang($_POST);
 }
 

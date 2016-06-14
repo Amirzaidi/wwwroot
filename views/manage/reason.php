@@ -12,6 +12,7 @@ if (isset($uri[1]) && is_numeric($uri[1]))
 }
 else if (isset($uri[0]) && count($_POST) == 3)
 {
+	$_POST['country#'] = intval($_POST['country#']);
 	new reason($_POST);
 }
 

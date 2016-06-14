@@ -9,13 +9,12 @@ require 'inc.manage.php';
 	<div class="top dark">
 		<center><h1>[title]</h1></center>
 	</div>
-	<div id="add" style="height: 160px; padding: 0; background: url('http://thumbs.dreamstime.com/t/seamless-background-forest-green-summer-birch-trees-bushes-38722994.jpg') repeat-x">
-	</div>
+	<!--<div id="add" style="height: 160px; padding: 0; background: url('http://thumbs.dreamstime.com/t/seamless-background-forest-green-summer-birch-trees-bushes-38722994.jpg') repeat-x">
+	</div>-->
 	<?php
 	if (count($_POST) == 3)
 	{
-		$_POST['continent#'] = intval($_POST['continent']);
-		unset($_POST['continent']);
+		$_POST['continent#'] = intval($_POST['continent#']);
 		new country($_POST);
 		echo '<div class="green">Country ', $_POST['name'], ' has been added</div>';
 	}
@@ -45,7 +44,7 @@ require 'inc.manage.php';
 			<input type="hidden" name="id" value="<?php echo $country->id; ?>" />
 			<div><input type="text" name="name" placeholder="Name" value="<?php echo $country->name; ?>" /></div>
 			<div><textarea name="desc" placeholder="Description"><?php echo $country->desc; ?></textarea></div>
-			<div><select name="continent">
+			<div><select name="continent#">
 			<option value="<?php echo $country->continent->id; ?>"><?php echo $country->continent->name; ?></option>
 			<?php
 			$continent = new continent(false);
@@ -68,7 +67,7 @@ require 'inc.manage.php';
 			?>
 			<div><input type="text" name="name" placeholder="Name" /></div>
 			<div><textarea name="desc" placeholder="Description"></textarea></div>
-			<div><select name="continent">
+			<div><select name="continent#">
 			<?php
 			$continent = new continent(false);
 			while ($continent->found())
@@ -107,7 +106,7 @@ require 'inc.manage.php';
 	?>
 	<div>
 		<form action="/manage/reason/add" method="post">
-			<div><select name="country">
+			<div><select name="country#">
 			<?php
 			$country = new country(false);
 			while ($country->found())
@@ -123,7 +122,7 @@ require 'inc.manage.php';
 	</div>
 	<div>
 		<form action="/manage/slang/add" method="post">
-			<div><select name="country">
+			<div><select name="country#">
 			<?php
 			$country = new country(false);
 			while ($country->found())
