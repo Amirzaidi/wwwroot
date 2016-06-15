@@ -88,8 +88,8 @@ $color = ['whiterow', 'greyrow'];
 
 		<div class="webstarinfo">
 
-		<p style="color: red;">([endat] <?php echo date('d/m H:i:s', time() + cron::timeUntil('pickrandom')); ?> [timezone])</p> </br>
-		<p style="font-weight: bold; font-variant: small-caps;"> <?php if (isset($msg)) echo $msg; ?> </p>
+		<p style="color: red;">([endat] <?php echo date('d/m H:i:s', time() + cron::timeUntil('pickrandom')); ?> [timezone])</p>
+		<p id="result"> <?php if (isset($msg)) echo $msg; ?> </p>
 		<a href="/ads">[advertisehere]</a>
 
 		</div>
