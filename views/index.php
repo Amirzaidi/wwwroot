@@ -88,6 +88,7 @@ $color = ['whiterow', 'greyrow'];
 
 		<div class="webstarinfo">
 
+		<p>Vote for a country by clicking on its name</p>
 		<p style="color: red;">([endat] <?php echo date('d/m H:i:s', time() + cron::timeUntil('pickrandom')); ?> [timezone])</p>
 		<p id="result"> <?php if (isset($msg)) echo $msg; ?> </p>
 		<a href="/ads">[advertisehere]</a>
@@ -188,7 +189,11 @@ while ($country->found())
 							<div class="medals">
 								<p><?php echo $country->medal()->count(); ?> medal(s) in total</p>
 
-								<p id="topmdld">Of which</p>
+						<?php
+						if ($country->medal()->count() > 0)
+						{
+						?>
+							<p id="topmdld">Of which</p>
 
 							<div class="medaldetails">
 								<p><?php
@@ -207,16 +212,19 @@ while ($country->found())
 								}
 								?></p>
 							</div>
+						<?php
+						}
+						?>
 
 							</div>
 						</div>
-					
 					</div>
 
 					<?php
 					}
 					?>
 
+					<!--
 					<div class="col-md-12">
 
 						<h3> Caption </h3>
@@ -246,6 +254,7 @@ while ($country->found())
 						</div>
 
 					</div>
+					-->
 
 				</div>
 
