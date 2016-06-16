@@ -163,6 +163,66 @@ while ($country->found())
 	</div>
 </div>
 
+<div class="specialrow">
+	<div class="headconbody">
+		<div class="row">
+			<div class="description" id="specialdesc">
+				<h5>Explanation</h5>
+				<p id="explp">We will explain you what this site is and what we do on this site</p>
+
+				<div class="contentrow">
+					<div class="col-md-18">
+						<div class="exptxt">
+							<h1> [qwhatisthis] <a href="#dp1"><img id="dpexp" src="/style/images/dpimg.png"></img></a></h1>
+							<div id="dp1"><p id="dpp"> [exp_whatisthis] </p></div>
+						</div>
+					</div>	
+					<div class="col-md-18">
+						<div class="exptxt">
+							<h1> [qhowdoesthiswork] <a href="#dp2"><img id="dpexp" src="/style/images/dpimg.png"></img></a></h1>
+							<div id="dp2"><p id="dpp"> [exp_howdoesthiswork] </p></div>
+						</div>
+					</div>
+					<div class="col-md-18">
+						<div class="exptxt">
+							<h1> [qwhatisthegoalofthis] <a href="#dp3"><img id="dpexp" src="/style/images/dpimg.png"></img></a></h1>
+							<div id="dp3"><p id="dpp"> [exp_whatisthegoalofthis] </p></div>
+						</div>
+					</div>	
+					<div class="col-md-18">
+						<div class="exptxt">
+							<h1> [qhowdoestheleaderboardwork] <a href="#dp4"><img id="dpexp" src="/style/images/dpimg.png"></img></a></h1>
+							<div id="dp4"><p id="dpp"> [exp_howdoestheleaderboardwork] </p></div>
+						</div>
+					</div>	
+					<div class="col-md-18">
+						<div class="exptxt">
+							<h1> [qhowdoesvotingwork] <a href="#dp5"><img id="dpexp" src="/style/images/dpimg.png"></img></a></h1>
+							<div id="dp5"><p id="dpp"> [exp_howdoesvotingwork] </p></div>
+						</div>
+					</div>	
+					<div class="col-md-18">
+						<div class="exptxt">
+							<h1> [qwhatnow] <a href="#dp6"><img id="dpexp" src="/style/images/dpimg.png"></img></a></h1>
+							<div id="dp6"><p id="dpp"> [exp_whatnow] </p></div>
+						</div>
+					</div>				
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="<?php echo $color[$c++ % 2]; ?>">
+	<div class="headconbody">
+		<div class="row">
+			<div class="description">
+				<p><a href="/ads">[advertisehere]</a></p>
+			</div>
+		</div>
+	</div>
+</div>
+
 <div class="<?php echo $color[$c++ % 2]; ?>">
 
 	<div class="headconbody">

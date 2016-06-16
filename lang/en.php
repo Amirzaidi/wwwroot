@@ -83,6 +83,9 @@ function lang_ads(&$t)
 
 function lang_contact(&$t)
 {
+	$t['country'] = 'Country - The Netherlands';
+	$t['phone'] = 'Phone Number';
+	$t['altphone'] = 'Alternative Phone Number';
 	$t['sendmailtitle'] = 'Send us an email!';
 	$t['sendmailtext'] = 'Send us an email about it!';
 	$t['your_name'] = 'Your name';

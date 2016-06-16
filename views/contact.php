@@ -8,6 +8,7 @@ if (count($_POST) == 3 && !$found)
 {
 	$_POST['ip'] = $ip;
 	new contact($_POST);
+	$found = true;
 }
 ?>
 <?php require 'inc.nav.php'; ?>
@@ -24,10 +25,10 @@ if (count($_POST) == 3 && !$found)
 	<div class="headconbody">
 		<div class="row">
 			<div class="description" id="opg">
-				<h3> Contact us </h3>
-				<p>Country - The Netherlands</p>
-				<p>Phone - 0031 6 4217 1654</p>
-				<p>Alternative Phone - ?</p></br>
+				<h3> [nav_contact] </h3>
+				<p>[country]</p>
+				<p>[phone] - 0031 6 4217 1654</p>
+				<p>[altphone] - ?</p></br>
 			</div>
 		</div>
 	</div>
