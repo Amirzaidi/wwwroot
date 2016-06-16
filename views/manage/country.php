@@ -82,29 +82,6 @@ require 'inc.manage.php';
 			?>
 		</form>
 	</div>
-	<p id="countries" style="margin: 0"></p>
-	<?php
-	$country = new country(false);
-	while ($country->found())
-	{
-	?>
-	<div>
-		<?php
-		echo '[', $country->continent->name, '] <a href="/manage/country/', $country->id, '">', $country->name, '</a> - ', $country->desc;
-		while ($country->reason()->found())
-		{
-			echo '<br/>Remove reason: <a href="/manage/reason/remove/', $country->reason()->id, '">', $country->reason()->name, '</a> - ', $country->reason()->desc;
-		}
-
-		while ($country->slang()->found())
-		{
-			echo '<br/>Remove slang: <a href="/manage/slang/remove/', $country->slang()->name, '">', $country->slang()->name, '</a>';
-		}
-		?>
-	</div>	
-	<?php
-	}
-	?>
 	<div>
 		<form action="/manage/reason/add" method="post">
 			<div><select name="country#">
@@ -136,6 +113,29 @@ require 'inc.manage.php';
 			<div><input type="submit" value="Add Slang"/></div>
 		</form>
 	</div>
+	<p id="countries" style="margin: 0"></p>
+	<?php
+	$country = new country(false);
+	while ($country->found())
+	{
+	?>
+	<div>
+		<?php
+		echo '[', $country->continent->name, '] <a href="/manage/country/', $country->id, '">', $country->name, '</a> - ', $country->desc;
+		while ($country->reason()->found())
+		{
+			echo '<br/>Remove reason: <a href="/manage/reason/remove/', $country->reason()->id, '">', $country->reason()->name, '</a> - ', $country->reason()->desc;
+		}
+
+		while ($country->slang()->found())
+		{
+			echo '<br/>Remove slang: <a href="/manage/slang/remove/', $country->slang()->name, '">', $country->slang()->name, '</a>';
+		}
+		?>
+	</div>	
+	<?php
+	}
+	?>
 	<?php
 	require 'inc.footer.php';
 	?>
