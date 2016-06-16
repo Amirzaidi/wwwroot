@@ -25,10 +25,19 @@ if (count($_POST) == 3 && !$found)
 		<div class="row">
 			<div class="description" id="opg">
 				<h3> Contact us </h3>
-				<p>Insert comp. details here (country, phone number etc.)</p>
-				<p>Insert comp. details here (country, phone number etc.)</p>
-				<p>Insert comp. details here (country, phone number etc.)</p>
-				<p>Insert comp. details here (country, phone number etc.)</p></br>
+				<p>Country - The Netherlands</p>
+				<p>Phone - 0031 6 4217 1654</p>
+				<p>Alternative Phone - ?</p></br>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="greyrow">
+	<div class="headconbody">
+		<div class="row">
+			<div class="description">
+				<p><a href="adverts/ads.html">[advertisehere]</a></p>
 			</div>
 		</div>
 	</div>
@@ -53,7 +62,7 @@ if (count($_POST) == 3 && !$found)
       								</div>
 
 								<div class="container" id="modalquery">
-								<form action="/ads" method="post">
+								<form action="/contact" method="post">
 									<input type="text" placeholder="[your_name]" id="name" name="name" />
 									<input type="text" placeholder="[your_mail]" id="email" name="mail"/>
 									<input type="text" placeholder="[subject]" id="subject" name="subject"/>
