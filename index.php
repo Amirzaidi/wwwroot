@@ -52,7 +52,7 @@ $page = router::path($uri);
 
 // auto-html template
 $tpl = new template();
-$tpl->title = 'CSO: ' . ucwords(str_replace('/', ' ', $page));
+$tpl->title = 'CSO - ' . ucwords(str_replace('/', ' ', $page));
 $tpl->url = $_SERVER['REQUEST_URI'];
 
 $css = ['/style/main.css', '/style/' . $session->theme . '.css'];
