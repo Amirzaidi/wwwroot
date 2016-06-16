@@ -46,6 +46,12 @@ $css = ['/dev/themes/material/main.css', '/dev/themes/material/white.css'];
 				<div>Show, add and edit continents</div>
 			</div>
 		</a>
+		<a href="/manage/contact">
+			<div>
+				<div>Contact</div>
+				<div>Show and dismiss contact requests</div>
+			</div>
+		</a>
 		<a href="/">
 			<div>
 				<div>Return</div>
