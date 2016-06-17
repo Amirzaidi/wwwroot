@@ -66,14 +66,6 @@ function lang_index(&$t)
 	$t['ofwhich'] = 'Of which';
 }
 
-function lang_example_langtest(&$t)
-{
-	$t['currlang'] = 'Current language';
-	$t['welcome'] = 'Welcome to page!';
-	$t['exit'] = 'Leave page';
-	$t['change'] = 'Change language';
-}
-
 function lang_about(&$t)
 {
 	$t['learnmore'] = 'Learn more about the makers of cso.uk!'; 

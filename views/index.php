@@ -1,6 +1,4 @@
 <?php
-$page = 'Welcome!';
-
 $ip = router::ip();
 $ipvote = new vote($ip);
 
@@ -333,4 +331,4 @@ while ($country->found())
 		</div>
 	</div>
 </div>
-<?php require 'inc.footer.php'; ?>
+<?php require 'inc.footer.php'; $page = 'Welcome!'; ?>

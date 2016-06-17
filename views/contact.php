@@ -4,7 +4,7 @@ $ip = router::Ip();
 $found = new contact($ip);
 $found = $found->found();
 
-if (count($_POST) == 3 && !$found)
+if (count($_POST) == 4 && !$found)
 {
 	$_POST['ip'] = $ip;
 	new contact($_POST);

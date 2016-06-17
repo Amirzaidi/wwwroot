@@ -27,13 +27,12 @@ function lang_404(&$t)
 	$t['nopanic'] = 'Geen paniek! We begrepen je gewoon niet goed :(';
 	$t['notfound'] = 'De pagina die je zocht is niet in dit universum...';
 	$t['previous'] = 'Vorige pagina';
-	$t['home'] = 'Start pagina';
 }
 
 function lang_index(&$t)
 {
 	$t['nav_vote'] = 'Stem';
-	$t['nav_leaderboard'] = 'Stemstatus';
+	$t['nav_leaderboard'] = 'Prijzen';
 
 	$t['indexmsg'] = 'Dit is de voorpagina van CSO';
 	$t['qwhatisthis'] = 'Wat is dit?';
@@ -64,14 +63,6 @@ function lang_index(&$t)
 	$t['leaderboarddesc'] = 'Hier wordt je geinformeerd over hoeveel prijzen elk land heeft gewonnen!';
 	$t['medalstotal'] = 'prijzen';
 	$t['ofwhich'] = 'Waarvan';
-}
-
-function lang_example_langtest(&$t)
-{
-	$t['currlang'] = 'Huidige taal';
-	$t['welcome'] = 'Welkom op de pagina!';
-	$t['exit'] = 'Pagina verlaten';
-	$t['change'] = 'Taal veranderen';
 }
 
 function lang_about(&$t)
