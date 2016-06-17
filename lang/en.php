@@ -65,6 +65,7 @@ function lang_index(&$t)
 	$t['leaderboarddesc'] = 'Here you will be informed about the amount of medals each country has won!';
 	$t['medalstotal'] = 'medal(s) in total';
 	$t['ofwhich'] = 'Of which';
+	$t['caption'] = 'Caption';
 	$t['year'] = 'Winning the most medals in a year';
 	$t['1st'] = 'Winning a competition on place 1';
 	$t['2nd'] = 'Winning a competition on place 2';

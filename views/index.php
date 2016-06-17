@@ -139,7 +139,7 @@ while ($country->found())
 					</div>
 
 					<div class="imglink">
-						<a href="/ads">Advertise for your country</a>
+						<a href="/ads">[advertisehere]</a>
 					</div>
 				</div>
 			<?php
@@ -283,7 +283,7 @@ while ($country->found())
 					
 					<div class="col-md-12">
 
-						<h3> Caption </h3>
+						<h3> [caption] </h3>
 
 						<div class="contentrow">
 

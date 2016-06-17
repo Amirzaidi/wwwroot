@@ -64,7 +64,8 @@ function lang_index(&$t)
 	$t['leaderboarddesc'] = 'Hier wordt je geinformeerd over hoeveel prijzen elk land heeft gewonnen!';
 	$t['medalstotal'] = 'prijzen';
 	$t['ofwhich'] = 'Waarvan';
-	$t['year'] = 'Meeste behalen medailles binnen een jaar';
+	$t['caption'] = 'Legenda';
+	$t['year'] = 'Meeste medailles gewonnen binnen een jaar';
 	$t['1st'] = 'Op nummer 1 eindigen in de competitie';
 	$t['2nd'] = 'Op nummer 2 eindigen in de competitie';
 	$t['3rd'] = 'Op nummer 3 eindigen in de competitie';
