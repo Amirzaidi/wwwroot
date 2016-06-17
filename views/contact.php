@@ -28,7 +28,7 @@ if (count($_POST) == 4 && !$found)
 				<h3> [nav_contact] </h3>
 				<p>[country]</p>
 				<p>[phone] - 0031 6 4217 1654</p>
-				<p>[altphone] - ?</p></br>
+				<p>[altphone] - 0031 6 1685 8008</p></br>
 			</div>
 		</div>
 	</div>
