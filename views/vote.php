@@ -6,9 +6,7 @@ if (isset($uri[0]))
 	{
 		router::redirect('/index/' . $slang->country->id);
 	}
-	else
-	{
-		router::redirect('/');
-	}
 }
+
+router::redirect($session->lastpage);
 ?>

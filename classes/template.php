@@ -29,6 +29,7 @@ class template
 			$data .= $t . '<link rel="stylesheet" type="text/css" href="' . $css[$i] . '" />' . $b;
 		for ($i = 0; $i < $jsCount; $i++)
 			$data .= $t . '<script src="' . $js[$i] . '" type="text/javascript"></script>' . $b;
+			$data .= $t . '<meta name="viewport" content="width=device-width, initial-scale=0.85">';
 			$data .= $t . '<meta name="description" value="[metadesc]" />';
 		$data .= '</head>' . $b;
 		$data .= '<body>' . $b;

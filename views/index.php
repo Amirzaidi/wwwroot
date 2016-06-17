@@ -1,4 +1,6 @@
 <?php
+$page = 'Welcome!';
+
 $ip = router::ip();
 $ipvote = new vote($ip);
 
@@ -88,7 +90,7 @@ $color = ['whiterow', 'greyrow'];
 
 		<div class="webstarinfo">
 
-		<p>Vote for a country by clicking on its name</p>
+		<p>[voteby]</p>
 		<p style="color: red;">([endat] <?php echo date('d/m H:i:s', time() + cron::timeUntil('pickrandom')); ?> [timezone])</p>
 		<p id="result"> <?php if (isset($msg)) echo $msg; ?> </p>
 		<a href="/ads">[advertisehere]</a>
@@ -119,7 +121,7 @@ while ($country->found())
 		<div class="row">
 			<div class="description">
 				<h3> <a href="/index/<?php echo $country->id; ?>"><?php echo $country->name; ?></a> (<?php echo $country->votes; ?> [votes]) </h3>
-				<p> [whyvote] </p>
+				<p><a href="/reason/<?php echo $country->id; ?>"> [whyvote] </a></p>
 			</div>
 			<div class="contentrow">
 			<?php
@@ -223,16 +225,12 @@ while ($country->found())
 	</div>
 </div>
 
-<div class="<?php echo $color[$c++ % 2]; ?>">
-
+<div class="<?php echo $color[$c++ % 2]; ?>" id="leaderboard">
 	<div class="headconbody">
-
 		<div class="row">
-			
 			<div class="description">
-
-				<h3>Leaderboard</h3>
-				<p>Here you will be informed about the amount of medals each countries has won!</p>
+				<h3>[nav_leaderboard]</h3>
+				<p>[leaderboarddesc]</p>
 
 				<div class="contentrow">
 					<?php
@@ -247,13 +245,13 @@ while ($country->found())
 							<h1><?php echo $country->name; ?> </h1>
 
 							<div class="medals">
-								<p><?php echo $country->medal()->count(); ?> medal(s) in total</p>
+								<p><?php echo $country->medal()->count(); ?> [medalstotal]</p>
 
 						<?php
 						if ($country->medal()->count() > 0)
 						{
 						?>
-							<p id="topmdld">Of which</p>
+							<p id="topmdld">[ofwhich]</p>
 
 							<div class="medaldetails">
 								<p><?php

@@ -37,7 +37,7 @@
 	<div class="headconbody">
 		<div class="row">
 			<div class="description">
-				<p><a href="adverts/ads.html">[advertisehere]</a></p>
+				<p><a href="#">[advertisehere]</a></p>
 			</div>
 		</div>
 	</div>

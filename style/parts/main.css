@@ -19,7 +19,7 @@ a:hover {
 	color: #000;
 }
 
-body#select1 > div#select2 > div#select3 > div#select4 {
+div#select1 > div#select2 > div#select3 > div#select4 {
 	position: fixed;
 	height: 100%;
 	width: 100%;
@@ -94,12 +94,19 @@ a.button > div:hover {
 	}
 }
 
-a#close {
+a#close, a#back {
 	position: absolute;
 	z-index: 2;
 	bottom: 30px;
+}
+
+a#close {
 	right: calc(50% + 30px);
 	display: none;
+}
+
+a#back {
+	left: 30px;
 }
 
 a#close > div {
@@ -122,7 +129,7 @@ div.part > div::-webkit-scrollbar-thumb {
 }
 
 div.part > div > div {
-	padding: 20px 25px;
+	padding: 18px 23px;
 	border-bottom: 1px solid #ddd;
 }
 
@@ -131,138 +138,138 @@ div.part > div > div:last-child {
 }
 
 div.part > div > div > h1 {
-	margin: 0 0 7px 0;
+	margin: 4px 0 14px 0;
 	font-weight: 500;
 }
 
-body#select1 > div#select2 > div#select3 > div#select4 > div#part1 {
+div#select1 > div#select2 > div#select3 > div#select4 > div#part1 {
 	top: 0;
 	left: 0;
 }
 
-body#select1 > div#select2 > div#select3 > div#select4 > div#part2 {
+div#select1 > div#select2 > div#select3 > div#select4 > div#part2 {
 	top: 0;
 	left: 50%;
 }
 
-body#select1 > div#select2 > div#select3 > div#select4 > div#part3 {
+div#select1 > div#select2 > div#select3 > div#select4 > div#part3 {
 	top: 50%;
 	left: 0;
 }
 
-body#select1 > div#select2 > div#select3 > div#select4 > div#part4 {
+div#select1 > div#select2 > div#select3 > div#select4 > div#part4 {
 	top: 50%;
 	left: 50%;
 }
 
-body#select1:target > div#select2 > div#select3 > div#select4 > div#part1 {
+div#select1:target > div#select2 > div#select3 > div#select4 > div#part1 {
 	height: 100%;
 }
 
-body#select1:target > div#select2 > div#select3 > div#select4 > div#part1 > div {
+div#select1:target > div#select2 > div#select3 > div#select4 > div#part1 > div {
 	font-size: 1.3em;
-	line-height: 2em;
+	line-height: 1.9em;
 }
 
-body#select1:target > div#select2 > div#select3 > div#select4 > div#part1 > div > a.button {
+div#select1:target > div#select2 > div#select3 > div#select4 > div#part1 > div > a.button {
 	display: none;
 }
 
-body#select1:target > div#select2 > div#select3 > div#select4 > div#part2 {
+div#select1:target > div#select2 > div#select3 > div#select4 > div#part2 {
 	left: 50%;
 }
 
-body#select1:target > div#select2 > div#select3 > div#select4 > div#part3 {
+div#select1:target > div#select2 > div#select3 > div#select4 > div#part3 {
 	top: 33.3%;
 	left: 50%;
 }
 
-body#select1:target > div#select2 > div#select3 > div#select4 > div#part4 {
+div#select1:target > div#select2 > div#select3 > div#select4 > div#part4 {
 	top: 66.7%;
 }
 
 
-body#select1 > div#select2:target > div#select3 > div#select4 > div#part1 {
+div#select1 > div#select2:target > div#select3 > div#select4 > div#part1 {
 	left: 50%;
 }
 
-body#select1 > div#select2:target > div#select3 > div#select4 > div#part2 {
+div#select1 > div#select2:target > div#select3 > div#select4 > div#part2 {
 	height: 100%;
 	left: 0;
 }
 
-body#select1 > div#select2:target > div#select3 > div#select4 > div#part2 > div {
+div#select1 > div#select2:target > div#select3 > div#select4 > div#part2 > div {
 	font-size: 1.3em;
-	line-height: 2em;
+	line-height: 1.9em;
 }
 
-body#select1 > div#select2:target > div#select3 > div#select4 > div#part2 > div > a.button {
+div#select1 > div#select2:target > div#select3 > div#select4 > div#part2 > div > a.button {
 	display: none;
 }
 
-body#select1 > div#select2:target > div#select3 > div#select4 > div#part3 {
+div#select1 > div#select2:target > div#select3 > div#select4 > div#part3 {
 	top: 33.3%;
 	left: 50%;
 }
 
-body#select1 > div#select2:target > div#select3 > div#select4 > div#part4 {
+div#select1 > div#select2:target > div#select3 > div#select4 > div#part4 {
 	top: 66.7%;
 }
 
 
-body#select1 > div#select2 > div#select3:target > div#select4 > div#part1 {
+div#select1 > div#select2 > div#select3:target > div#select4 > div#part1 {
 	left: 50%;
 }
 
-body#select1 > div#select2 > div#select3:target > div#select4 > div#part2 {
+div#select1 > div#select2 > div#select3:target > div#select4 > div#part2 {
 	top: 33.3%;
 }
 
-body#select1 > div#select2 > div#select3:target > div#select4 > div#part3 {
+div#select1 > div#select2 > div#select3:target > div#select4 > div#part3 {
 	height: 100%;
 	top: 0;
 	left: 0;
 }
 
-body#select1 > div#select2 > div#select3:target > div#select4 > div#part3 > div {
+div#select1 > div#select2 > div#select3:target > div#select4 > div#part3 > div {
 	font-size: 1.3em;
-	line-height: 2em;
+	line-height: 1.9em;
 }
 
-body#select1 > div#select2 > div#select3:target > div#select4 > div#part3 > div > a.button {
+div#select1 > div#select2 > div#select3:target > div#select4 > div#part3 > div > a.button {
 	display: none;
 }
 
-body#select1 > div#select2 > div#select3:target > div#select4 > div#part4 {
+div#select1 > div#select2 > div#select3:target > div#select4 > div#part4 {
 	top: 66.7%;
 }
 
 
-body#select1 > div#select2 > div#select3 > div#select4:target > div#part1 {
+div#select1 > div#select2 > div#select3 > div#select4:target > div#part1 {
 	left: 50%;
 }
 
-body#select1 > div#select2 > div#select3 > div#select4:target > div#part2 {
+div#select1 > div#select2 > div#select3 > div#select4:target > div#part2 {
 	top: 33.3%;
 }
 
-body#select1 > div#select2 > div#select3 > div#select4:target > div#part3 {
+div#select1 > div#select2 > div#select3 > div#select4:target > div#part3 {
 	left: 50%;
 	top: 66.7%;
 }
 
-body#select1 > div#select2 > div#select3 > div#select4:target > div#part4 {
+div#select1 > div#select2 > div#select3 > div#select4:target > div#part4 {
 	height: 100%;
 	top: 0;
 	left: 0;
 }
 
-body#select1 > div#select2 > div#select3 > div#select4:target > div#part4 > div {
+div#select1 > div#select2 > div#select3 > div#select4:target > div#part4 > div {
 	font-size: 1.3em;
-	line-height: 2em;
+	line-height: 1.9em;
 }
 
-body#select1 > div#select2 > div#select3 > div#select4:target > div#part4 > div > a.button {
+div#select1 > div#select2 > div#select3 > div#select4:target > div#part4 > div > a.button {
 	display: none;
 }
 
@@ -276,7 +283,7 @@ body > #scroll {
 }
 
 @media screen and (max-width: 540px) {
-	body#select1 > div#select2 > div#select3 > div#select4 {
+	div#select1 > div#select2 > div#select3 > div#select4 {
 		max-height: 100%;
 		max-width: 100%;
 	}

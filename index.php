@@ -24,14 +24,15 @@ if (!$session->started())
 	$session->cronCheck = 0;
 	$session->language = 'en';
 	$session->theme = 'light';
-	$session->lastpage = '';
+	$session->lastpage = '/';
 	$session->admin = false;
+	$session->translate = true;
 	router::refresh();
 }
 
 // connect to localhost:3306/root
 mysql::$models = root . 'models/';
-mysql::connect('adm78', 'csodb');
+mysql::connect('usbw', 'csodb');
 
 // check cron but block spam
 if ($debug || $session->cronCheck < (time() - 3))
@@ -52,7 +53,6 @@ $page = router::path($uri);
 
 // auto-html template
 $tpl = new template();
-$tpl->title = 'CSO - ' . ucwords(str_replace('/', ' ', $page));
 $tpl->url = $_SERVER['REQUEST_URI'];
 
 $css = ['/style/main.css', '/style/' . $session->theme . '.css'];
@@ -66,6 +66,7 @@ $language = new language($session->language);
 $language->load($page);
 
 require router::$views . $page . '.php';
+$tpl->title = 'CSO - ' . ucwords(str_replace('/', ' ', $page));
 
 $language->translate($tpl);
 $tpl->end($css, $js, $favicon);

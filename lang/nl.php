@@ -18,6 +18,16 @@ function lang(&$t)
 	$t['privacy'] = 'Anonimiteit';
 	$t['terms'] = 'Algemene Voorwaarden';
 	$t['hoster'] = 'Hoster';
+	$t['togglegoogle'] = 'Zet Google Vertalen Aan/Uit';
+}
+
+function lang_404(&$t)
+{
+	$t['404'] = '404 fout!';
+	$t['nopanic'] = 'Geen paniek! We begrepen je gewoon niet goed :(';
+	$t['notfound'] = 'De pagina die je zocht is niet in dit universum...';
+	$t['previous'] = 'Vorige pagina';
+	$t['home'] = 'Start pagina';
 }
 
 function lang_index(&$t)
@@ -41,6 +51,7 @@ function lang_index(&$t)
 
 	$t['infinale'] = 'In Finale';
 	$t['preround'] = 'Voorrondes';
+	$t['voteby'] = 'Stem op een land door op de naam te klikken';
 	$t['previousvote'] = 'You hebt al gestemd voor';
 	$t['timetovote'] = 'seconde tot je weer kan stemmen';
 	$t['newvote'] = 'Je hebt nu gestemd voor';
@@ -49,6 +60,10 @@ function lang_index(&$t)
 	$t['votes'] = 'stemmen';
 	$t['whyvote'] = 'We hebben wat redenen waarom je op dit land moet stemmen';
 	$t['medals'] = 'Medailles';
+
+	$t['leaderboarddesc'] = 'Hier wordt je geinformeerd over hoeveel prijzen elk land heeft gewonnen!';
+	$t['medalstotal'] = 'prijzen';
+	$t['ofwhich'] = 'Waarvan';
 }
 
 function lang_example_langtest(&$t)
@@ -61,7 +76,7 @@ function lang_example_langtest(&$t)
 
 function lang_about(&$t)
 {
-	$t['learnmore'] = 'Leer meer over de makers van cso.com!'; 
+	$t['learnmore'] = 'Leer meer over de makers van cso.uk!'; 
 	$t['developers'] = 'Ontwikkelaars';
 	$t['devtext'] = 'Wij, de ontwikkelaars van deze website, doen ons best om de website up-to-date en goed ontwikkeld te houden. We controleren continu op fouten in de code en leren nieuwe dingen, om de site stabieler en sneller te maken. We willen graag jullie feedback over de site horen!';
 	$t['designers'] = 'Ontwerpers';
@@ -70,13 +85,13 @@ function lang_about(&$t)
 
 function lang_ads(&$t)
 {
-	$t['advertiseon'] = 'Adverteer op cso.com';
+	$t['advertiseon'] = 'Adverteer op cso.uk';
 	$t['advertiser'] = 'Ben jij een adverteerder?';
 	$t['advertisertext'] = 'Wil je adverteren op deze website? Dan ben je op de juiste plaats! We zijn altijd aan het zoeken naar nieuwe adverteerders die op onze website willen adverteren. We hebben een wijde doelgroep over de hele wereld. Deze website is een internetspel, of beter beschreven, een internationaal spel waarbij je kan stemmen voor een land. De website kan mensen actief bezig houden omdat het onduidelijk is wie het spel zal winnen.';
 	$t['adskind'] = 'Wat voor advertenties zoeken we?';
-	$t['adskindtext'] = 'We zouden graag willen bespreken wat voor advertenties je wilt laten zien op cso.com. Zo kunnen we beter begrijpen wat het doel is en een goede afspraak maken. We hebben een paar regels over de inhoud van de advertenties. We accepteren geen 18+ advertenties zonder uitzondering. We zouden onze website namelijk graag schoon willen houden van potentieel afstotend materiaal. We zullen zulke advertenties dan ook niet accepteren.';
-	$t['adskindtext2'] = 'We accepteren wel advertenties die bestaan uit text of een simpele foto. Als je een video advertentie wilt plaatsen op cso.com, kan je ons er nog steeds over contacteren. We zullen dan overwegen om de advertentie aan te nemen.';
-	$t['adplacement'] = 'Adverteerruimte op cso.com';
+	$t['adskindtext'] = 'We zouden graag willen bespreken wat voor advertenties je wilt laten zien op cso.uk. Zo kunnen we beter begrijpen wat het doel is en een goede afspraak maken. We hebben een paar regels over de inhoud van de advertenties. We accepteren geen 18+ advertenties zonder uitzondering. We zouden onze website namelijk graag schoon willen houden van potentieel afstotend materiaal. We zullen zulke advertenties dan ook niet accepteren.';
+	$t['adskindtext2'] = 'We accepteren wel advertenties die bestaan uit text of een simpele foto. Als je een video advertentie wilt plaatsen op cso.uk, kan je ons er nog steeds over contacteren. We zullen dan overwegen om de advertentie aan te nemen.';
+	$t['adplacement'] = 'Adverteerruimte op cso.uk';
 	$t['adplacetext'] = 'Omdat we verschillende soorten advertenties accepteren, hebben we ook verschillende plaatsen voor de verschillende soorten. Simpele foto\'s zullen in de grijze balken worden geplaatst tussen de informatie, zoals het voorbeeld hieronder. Als je zo\'n rij vindt met een link naar deze pagina is er een grote kans dat er nog geen afspraak is gemaakt met een andere adverteerder om die ruimte te gebruiken.';
 	$t['adplacetext2'] = 'Als je alleen tekst advertenties hebt aan te bieden, kan je hier nog steeds terecht! We hebben ook genoeg plaats voor zulke advertenties. Je kan je tekst in de hoofdbalk van de stempagina zetten, of helemaal onderaan elke pagina. Vertel in je e-mail over de soort advertentie, hoeveel de advertentie op de website moet voorkomen, hoeveel geld er onderhandeld zal worden en op welke manier.';
 }

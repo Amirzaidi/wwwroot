@@ -1,13 +1,13 @@
 <nav id="wnav">
 	<div class="title">
-		<a href="index.php">cso.com</a>
+		<a href="/">cso.uk</a>
 	</div>
 	<div class="navcon" id="wnavcon">
 		<ul>
 			<?php if ($page == 'index') { ?>
-			<li><a href="/#">[nav_home]</a></li><!--
+			<li><a href="#">[nav_home]</a></li><!--
 			--><li><a href="#vote">[nav_vote]</a></li><!--
-			--><!--<li><a href="#leaderboard">[nav_leaderboard]</a></li>--><!--
+			--><li><a href="#leaderboard">[nav_leaderboard]</a></li><!--
 			<?php } else { ?>
 			<li><a href="/index">[nav_home]</a></li><!--
 			<?php } ?>
@@ -35,22 +35,29 @@
 
 			<div class="sidebarmenu">
 				<ul>
-					<a href=""><li style="border-top: 0;">Home</li></a>
-					<a href=""><li>Suchi</li></a>
-					<a href=""><li>Anime</li></a>
-					<a href=""><li>Come at me</li></a>
-					<a href=""><li style="border-bottom: 0;">Banter</li></a>
+			<?php if ($page == 'index') { ?>
+			<a href="#"><li style="border-top: 0;">[nav_home]</li></a>
+			<a href="#vote"><li>[nav_vote]</li></a>
+			<a href="#leaderboard"><li>[nav_leaderboard]</li></a>
+			<?php } else { ?>
+			<a href="/index"><li>[nav_home]</li></a>
+			<?php } ?>
+
+			<a href="/ads"><li>[nav_adv]</li></a>
+			<a href="/about"><li>[nav_about]</li></a>
+			<a href="/themechange" id="tcbuta"><li>[nav_themechange]</li></a>
+			<a href="/contact"><li>[nav_contact]</li></a>
+			<?php if ($session->language != 'en') { ?>
+			<a href="/language/en"><li>Engels</li></a>
+			<?php } if ($session->language != 'nl') { ?>
+			<a href="/language/nl"><li>Dutch</li></a>
+			<?php } ?>
 				</ul>
 			</div>
 		</div>
 
 		<div class="title" id="mtitle">
-			<a href="index.php">cso.com</a>
+			<a href="/">cso.uk</a>
 		</div>
 	</div>
 </nav>
-
-
-
-
-

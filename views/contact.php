@@ -38,7 +38,7 @@ if (count($_POST) == 3 && !$found)
 	<div class="headconbody">
 		<div class="row">
 			<div class="description">
-				<p><a href="adverts/ads.html">[advertisehere]</a></p>
+				<p><a href="/ads">[advertisehere]</a></p>
 			</div>
 		</div>
 	</div>

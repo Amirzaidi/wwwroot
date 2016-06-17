@@ -9,7 +9,7 @@ if (!$session->admin)
 	router::redirect('/');
 }
 
-$css = ['/dev/themes/material/main.css', '/dev/themes/material/white.css'];
+$css = ['/style/material/main.css', '/style/material/white.css'];
 ?>
 <div id="nav" class="main">
 	<a href="#"><div></div></a>
