@@ -718,7 +718,7 @@ input[type="text"]:focus {
 	color: white;
 }
 
-#dp1 {
+/* #dp1 {
 	opacity: 0;
 	max-height: 0px;
 }
@@ -783,7 +783,8 @@ input[type="text"]:focus {
 	opacity: 1;
 	max-height: 1000px;
 	transition: all ease-in-out 2s;
-}
+} */
+
 
 /* QUERY FOR THE PAGES */
 
