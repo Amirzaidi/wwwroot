@@ -168,7 +168,7 @@ while ($country->found())
 		<div class="row">
 			<div class="description" id="specialdesc">
 				<h5>Explanation</h5>
-				<p id="explp">We will explain you what this site is and what we do on this site</p>
+				<p id="explp">[expl]</p>
 
 				<div class="contentrow">
 					<div class="col-md-18">
@@ -256,15 +256,15 @@ while ($country->found())
 								$medalCounts = $country->medal()->typeCounts();
 								if ($medalCounts[0] > 0)
 								{
-									echo '<img src="/style/images/medal_gold.png" />','<p>', $medalCounts[0], ' gold medal(s)</p>';
+									echo '<img src="/style/images/medal_gold.png" />','<p>', $medalCounts[0], ' [gold] [medal](s)</p>';
 								} 
 								if ($medalCounts[1] > 0)
 								{
-									echo '<img src="/style/images/medal_silver.png" />','<p>', $medalCounts[1], ' silver medal(s)</p>';
+									echo '<img src="/style/images/medal_silver.png" />','<p>', $medalCounts[1], ' [silver] [medal](s)</p>';
 								} 
 								if ($medalCounts[2] > 0)
 								{
-									echo '<img src="/style/images/medal_bronze.png" />','<p>', $medalCounts[2], ' bronze medal(s)</p>';
+									echo '<img src="/style/images/medal_bronze.png" />','<p>', $medalCounts[2], ' [bronze] [medal](s)</p>';
 								}
 								?>
 							</div>
@@ -288,19 +288,19 @@ while ($country->found())
 						<div class="contentrow">
 
 							<div class="col-md-24">
-								<h1>Gold </br> Medal</h1><img src="/style/images/medal_gold.png"></img><p>Winning a competition on place 1</p>
+								<h1>[gold] </br> [medal]</h1><img src="/style/images/medal_gold.png"></img><p>[1st]</p>
 							</div>
 
 							<div class="col-md-24">
-								<h1>Silver</br> Medal </h1><img src="/style/images/medal_silver.png"></img><p>Winning a competition on place 2</p>
+								<h1>[silver]</br> [medal] </h1><img src="/style/images/medal_silver.png"></img><p>[2nd]</p>
 							</div>
 
 							<div class="col-md-24">
-								<h1>Bronze</br> Medal </h1><img src="/style/images/medal_bronze.png"></img><p>Winning a competition on place 3</p>
+								<h1>[bronze]</br> [medal] </h1><img src="/style/images/medal_bronze.png"></img><p>[3rd]</p>
 							</div>
 
 							<div class="col-md-24">
-								<h1>Crown</br> Emperor of cso.uk</h1><img src="/style/images/medal_king.png"></img><p>Winning the most medals in a year</p>
+								<h1>[crown]</br> [emperor] cso.uk</h1><img src="/style/images/medal_king.png"></img><p>[year]</p>
 							</div>
 
 						</div>

@@ -36,6 +36,7 @@ function lang_index(&$t)
 	$t['nav_leaderboard'] = 'Leaderboard';
 
 	$t['indexmsg'] = 'This is the index of CSO';
+	$t['expl'] = 'We will explain you what this site is and what we do on this site!';
 	$t['qwhatisthis'] = 'What is this?';
 	$t['exp_whatisthis'] = 'This is a website that lets you vote on the country you like or you think should win the contest. You can read the reasons to vote on a country down below or you can vote on your own country.';
 	$t['qhowdoesthiswork'] = 'How does this work?';
@@ -64,6 +65,16 @@ function lang_index(&$t)
 	$t['leaderboarddesc'] = 'Here you will be informed about the amount of medals each country has won!';
 	$t['medalstotal'] = 'medal(s) in total';
 	$t['ofwhich'] = 'Of which';
+	$t['year'] = 'Winning the most medals in a year';
+	$t['1st'] = 'Winning a competition on place 1';
+	$t['2nd'] = 'Winning a competition on place 2';
+	$t['3rd'] = 'Winning a competition on place 3';
+	$t['gold'] = 'Gold';
+	$t['silver'] = 'Silver';
+	$t['bronze'] = 'Bronze';
+	$t['crown'] = 'Crown';
+	$t['medal'] = 'Medal';
+	$t['emperor'] = 'Emperor of';
 }
 
 function lang_about(&$t)

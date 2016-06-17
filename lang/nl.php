@@ -35,6 +35,7 @@ function lang_index(&$t)
 	$t['nav_leaderboard'] = 'Prijzen';
 
 	$t['indexmsg'] = 'Dit is de voorpagina van CSO';
+	$t['expl'] = 'We zullen je uitleggen wat deze site is en wat we op deze site doen!';
 	$t['qwhatisthis'] = 'Wat is dit?';
 	$t['exp_whatisthis'] = 'Dit is een website waarop je kan stemmen op het land dat je vind dat de huidige wedstrijd moet winnen. Je kan redenen om op het land te stemmen vinden onder het land, of stemmen op je eigen land.';
 	$t['qhowdoesthiswork'] = 'Hoe werkt het?';
@@ -63,6 +64,16 @@ function lang_index(&$t)
 	$t['leaderboarddesc'] = 'Hier wordt je geinformeerd over hoeveel prijzen elk land heeft gewonnen!';
 	$t['medalstotal'] = 'prijzen';
 	$t['ofwhich'] = 'Waarvan';
+	$t['year'] = 'Meeste behalen medailles binnen een jaar';
+	$t['1st'] = 'Op nummer 1 eindigen in de competitie';
+	$t['2nd'] = 'Op nummer 2 eindigen in de competitie';
+	$t['3rd'] = 'Op nummer 3 eindigen in de competitie';
+	$t['gold'] = 'Goud';
+	$t['silver'] = 'Zilver';
+	$t['bronze'] = 'Brons';
+	$t['crown'] = 'Kroon';
+	$t['medal'] = 'Medaille';
+	$t['emperor'] = 'Keizer van';
 }
 
 function lang_about(&$t)
