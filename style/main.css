@@ -383,6 +383,12 @@ input[type="submit"]:hover {
 	width: 19%;
 	vertical-align: top;
 	margin: 0px 3px 20px;
+	padding: 5px;
+}
+
+.col-md-4:hover {
+	background-color: #f1f1f1;
+	transform: scale(1.035);
 }
 
 h1 > img {
@@ -822,7 +828,17 @@ input[type="text"]:focus {
 	margin-left: 0px;
 	opacity: 1;
 	border-right: 3px solid #dfdfdf;
+	overflow: hidden;
 }
+
+.medaldetails > p {
+	color: teal;
+	display: inline-block;
+}
+
+.medaldetails > img {
+	vertical-align: middle;
+} 
 
 @media only screen and (max-width: 1024px) and (min-width: 910px) {
 

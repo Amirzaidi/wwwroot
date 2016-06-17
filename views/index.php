@@ -252,21 +252,21 @@ while ($country->found())
 							<p id="topmdld">[ofwhich]</p>
 
 							<div class="medaldetails">
-								<p><?php
+								<?php
 								$medalCounts = $country->medal()->typeCounts();
 								if ($medalCounts[0] > 0)
 								{
-									echo '<img src="/style/images/medal_gold.png" />', $medalCounts[0];
-								}
+									echo '<img src="/style/images/medal_gold.png" />','<p>', $medalCounts[0], ' gold medal(s)</p>';
+								} 
 								if ($medalCounts[1] > 0)
 								{
-									echo '<img src="/style/images/medal_silver.png" />', $medalCounts[1];
-								}
+									echo '<img src="/style/images/medal_silver.png" />','<p>', $medalCounts[1], ' silver medal(s)</p>';
+								} 
 								if ($medalCounts[2] > 0)
 								{
-									echo '<img src="/style/images/medal_bronze.png" />', $medalCounts[2];
+									echo '<img src="/style/images/medal_bronze.png" />','<p>', $medalCounts[2], ' bronze medal(s)</p>';
 								}
-								?></p>
+								?>
 							</div>
 						<?php
 						}
@@ -280,7 +280,7 @@ while ($country->found())
 					}
 					?>
 
-					<!--
+					
 					<div class="col-md-12">
 
 						<h3> Caption </h3>
@@ -288,29 +288,25 @@ while ($country->found())
 						<div class="contentrow">
 
 							<div class="col-md-24">
-								<h1>Versus</h1><img src="/style/images/vs.png"></img><p>The Standoff</p>
+								<h1>Gold </br> Medal</h1><img src="/style/images/medal_gold.png"></img><p>Winning a competition on place 1</p>
 							</div>
 
 							<div class="col-md-24">
-								<h1>Medal</h1><img src="/style/images/winvoting.png"></img><p>Won a voting contest</p>
+								<h1>Silver</br> Medal </h1><img src="/style/images/medal_silver.png"></img><p>Winning a competition on place 2</p>
 							</div>
 
 							<div class="col-md-24">
-								<h1>Trophy </br> Rookie </h1><img src="/style/images/trophy.png"></img><p>Won a year of voting</p>
+								<h1>Bronze</br> Medal </h1><img src="/style/images/medal_bronze.png"></img><p>Winning a competition on place 3</p>
 							</div>
 
 							<div class="col-md-24">
-								<h1>Honour </br> Veteran </h1><img src="/style/images/honour.png"></img><p>Won two years of voting</p>
-							</div>
-
-							<div class="col-md-24">
-								<h1>Crown </br> Emperor of cso.com</h1><img src="/style/images/win4years.png"></img><p>Won four years of voting</p>
+								<h1>Crown</br> Emperor of cso.uk</h1><img src="/style/images/medal_king.png"></img><p>Winning the most medals in a year</p>
 							</div>
 
 						</div>
 
 					</div>
-					-->
+					
 
 				</div>
 
