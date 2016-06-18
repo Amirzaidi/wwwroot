@@ -40,7 +40,7 @@ function lang_index(&$t)
 	$t['qwhatisthis'] = 'What is this?';
 	$t['exp_whatisthis'] = 'This is a website that lets you vote on the country you like or you think should win the contest. You can read the reasons to vote on a country down below or you can vote on your own country.';
 	$t['qhowdoesthiswork'] = 'How does this work?';
-	$t['exp_howdoesthiswork'] = 'You can vote on five countries during a period of a week. After a period of five weeks the season ends and a final week starts. The winners of those weeks will now enter the final end and compete with each other. The winner of the final week will receive a medal. It will be honoured on the ranking list. ';
+	$t['exp_howdoesthiswork'] = 'You can vote on five countries during a period of a week. After a period of five weeks the season ends and a final week starts. The winners of those weeks will now enter the final end and compete with each other. The winner of the final week will receive a medal.  It will be honoured on the ranking list. The status of the competitions are showed at the frontpage (header). <strong>The more you share this, the more votes you get, the more you win.</strong> ';
 	$t['qwhatisthegoalofthis'] = 'What is the goal of this?';
 	$t['exp_whatisthegoalofthis'] = 'The goal of this website is to entertain and to understand which country is more prefered by the majority. Votings will result in season winners and thus countries will be able to score medals, become higher in the ranking list and be honoured on our list.';
 	$t['qhowdoestheleaderboardwork'] = 'How does the leaderboard work?';
