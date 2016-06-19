@@ -59,7 +59,7 @@
 				<div class="clearfix"></div>
 			</div>
 
-			<div class="card"><img src="http://www.planwallpaper.com/static/images/ZhGEqAP.jpg" /></div>
+			<div class="card"><img src="https://wallpaperscraft.com/image/night_lake_stars_water_smooth_surface_fog_14664_2560x1080.jpg" /></div>
 
 			<div class="card">Information about picture, not &copy; Amir Zaidi
 			</div>

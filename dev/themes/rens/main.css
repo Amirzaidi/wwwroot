@@ -45,8 +45,12 @@ body > div#navbar > div {
 
 body > div#navbar > div > a > div {
 	padding: 15px 20px;
-	font-size: 24px;
 	float: left;
+	font-size: 18px;
+}
+
+body > div#navbar > div:first-child > a > div {
+	font-size: 24px;
 }
 
 body > div#navbar > div:first-child > a:first-child > div {
@@ -63,7 +67,10 @@ body:target > div#navbar > div:first-child > a:first-child > div {
 body > div#header {
 	top: 60px;
 	height: 190px;
-	background: #673AB7;
+	#background: #673AB7;
+	background: url('https://wallpaperscraft.com/image/night_lake_stars_water_smooth_surface_fog_14664_2560x1080.jpg');
+	background-position: center;
+	background-size: cover;
 	z-index: 2;
 	transition: height 0.25s;
 }
@@ -133,7 +140,6 @@ body > div#content > div#nav > a > div:hover {
 
 body > div#content > div#cards {
 	width: calc(100% - 250px);
-	min-width: 400px;
 	right: 0;
 	transition: width 0.25s;
 	z-index: 1;
@@ -148,17 +154,21 @@ body > div#content > div#cards > div.column {
 	width: 50%;
 }
 
-body > div#content > div#cards > div.column:first-child > div.card {
-	margin-right: 0;
-}
-
 body > div#content > div#cards div.card {
-	margin: 15px;
+	margin: 0 12px 12px 12px;
 	padding: 15px 20px;
 	background: #fff;
 	transition: box-shadow 0.25s ease-out;
 	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 	border-radius: 1px;
+}
+
+body > div#content > div#cards > div.column:first-child > div.card {
+	margin-right: 0;
+}
+
+body > div#content > div#cards > div.column > div.card:first-child {
+	margin-top: 12px;
 }
 
 body > div#content > div#cards div.card > img {
@@ -248,17 +258,19 @@ form > div > a.button > div:hover {
 
 body > div#toast {
 	bottom: -60px;
+	opacity: 0;
 	left: 0;
 	right: 0;
 	z-index: 4;
 	text-align: center;
 	position: fixed;
-	transition: bottom 0.25s;
+	transition: bottom 0.25s, opacity 0.25s;
 	display: inline-block;
 }
 
 body > div#toast:target {
 	bottom: 10px;
+	opacity: 1;
 }
 
 body > div#toast > div {
@@ -286,23 +298,25 @@ input:-webkit-autofill {
 	box-shadow: 0 0 0 1000px white inset;
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 960px) {
 	body > div#content > div#cards > div.column {
 		width: 100%;
 	}
 
 	body > div#content > div#cards > div.column:first-child > div.card {
-		margin-right: 15px;
+		margin-right: 12px;
+	}
+
+	body > div#content > div#cards > div.column > div.card:first-child {
+		margin-top: 0;
+	}
+
+	body > div#content > div#cards > div.column:first-child > div.card:first-child {
+		margin-top: 12px;
 	}
 }
 
-@media screen and (max-width: 400px) {
-	body {
-		width: 400px;
-		min-width: 800px;
-		overflow: scroll;
-	}
-
+@media screen and (max-width: 520px) {
 	body > div#navbar {
 		box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 	}
@@ -321,6 +335,10 @@ input:-webkit-autofill {
 		left: 196px;
 	}
 
+	body:target > div#content > div#cards {
+		width: calc(100% - 250px);
+	}
+
 	body > div#content {
 		top: 60px;
 		height: calc(100% - 60px);
@@ -329,5 +347,13 @@ input:-webkit-autofill {
 	body > div#content > div#cards div.card {
 		margin: 6px !important;
 		width: auto;
+	}
+
+	body > div#content > div#cards > div.column > div.card:first-child {
+		margin-top: 0 !important;
+	}
+
+	body > div#content > div#cards > div.column:first-child > div.card:first-child {
+		margin-top: 6px !important;
 	}
 }
