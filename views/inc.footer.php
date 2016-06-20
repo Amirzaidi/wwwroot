@@ -5,7 +5,7 @@
 				<div class="footer">
 					<a href="/ads">[advertisehere]</a>
 					</br>
-					<a href="#">[privacy]</a> | <a href="#">[terms]</a> | <a href="#">[hoster]</a> | <a href="/index/toggletranslate">[togglegoogle]</a>
+					<a href="http://www.flaticon.com" title="Flaticon">Favicon source</a> | <a href="#">[privacy]</a> | <a href="#">[terms]</a> | <a href="#">[hoster]</a> | <a href="/index/toggletranslate">[togglegoogle]</a>
 				</div>			
 			</div>
 		</div>
