@@ -5,14 +5,22 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-	<div id="navbar" class="d2">
+	<div id="navbar" class="d2 orange">
 		<input type="checkbox" id="navbox" class="hide" />
-		<label for="navbox" id="navboxlabel"><div>=</div></label>
+		<label for="navbox" id="navboxlabel" style="color: white"><div>=</div></label>
 
-		<div id="nav" class="d3 hd5">
+		<div id="nav" class="d5">
+			<a style="color: white"><div class="orange">New Theme</div></a>
 			<?php for ($i = 6; $i < 16; $i++) { ?>
 			<a href="/dev/themes/new/index.php"><div class="hd1">Kek</div></a>
 			<?php } ?>
+		</div>
+
+		<div id="search">
+			<form action="#" method="post">
+				<input type="text" placeholder="Search..." name="search" />
+				<input type="submit" value="Q" />
+			</form>
 		</div>
 	</div>
 
