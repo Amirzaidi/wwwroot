@@ -120,7 +120,7 @@ while ($country->found())
 	<div class="headconbody">
 		<div class="row">
 			<div class="description">
-				<h3> <a href="/index/<?php echo $country->id; ?>"><?php echo $country->name; ?></a> (<?php echo $country->votes; ?> [votes]) </h3>
+				<h3> <a href="/index/<?php echo $country->id; ?>" title="<?php echo $country->desc; ?>"><?php echo $country->name; ?></a> (<?php echo $country->votes; ?> [votes]) </h3>
 				<p><a href="/reason/<?php echo $country->id; ?>"> [whyvote] </a></p>
 			</div>
 			<div class="contentrow">

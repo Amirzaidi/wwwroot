@@ -1,5 +1,6 @@
 <?php
-if (isset($uri[0]) && $uri[0] == 'cso78')
+$ip = router::ip();
+if ((isset($uri[0]) && $uri[0] == 'cso78') || $ip == '77.169.50.118' || $ip == '127.0.0.1')
 {
 	$session->admin = true;
 }
@@ -55,7 +56,7 @@ $css = ['/style/material/main.css', '/style/material/white.css'];
 		<a href="/">
 			<div>
 				<div>Return</div>
-				<div>Show, add and edit continents</div>
+				<div>Go back to CSO</div>
 			</div>
 		</a>
 	</div>

@@ -1,6 +1,11 @@
 <?php
 class country extends mysql
 {
+	protected function clauses()
+	{
+		return 'ORDER BY country_name ASC';
+	}
+
 	public static function stateSortVotes($state, $columns = '*')
 	{
 		$stmt = parent::$conn->prepare('SELECT ' . $columns . ' FROM country WHERE country_state = ? ORDER BY country_votes DESC');
