@@ -31,31 +31,31 @@ $css = ['/style/material/main.css', '/style/material/white.css'];
 		?>
 		<a href="/manage/contest">
 			<div>
-				<div>Contest</div>
+				<div><img style="margin:-13px 0px; height:auto; width:50%;" src="/style/images/contest.png"></img></div>
 				<div>Show and add contests</div>
 			</div>
 		</a>
 		<a href="/manage/country">
 			<div>
-				<div>Country</div>
+				<div><img style="margin:-12px 0px; height:auto; width:50%;" src="/style/images/country.png"></img></div>
 				<div>Show, add and edit countries</div>
 			</div>
 		</a>
 		<a href="/manage/continent">
 			<div>
-				<div>Continent</div>
+				<div><img style="margin:-13px 0px; height:auto; width:50%;" src="/style/images/continent.png"></img></div>
 				<div>Show, add and edit continents</div>
 			</div>
 		</a>
 		<a href="/manage/contact">
 			<div>
-				<div>Contact</div>
+				<div><img style="margin:-11px 0px; height:auto; width:50%;" src="/style/images/contact.png"></img></div>
 				<div>Show and dismiss contact requests</div>
 			</div>
 		</a>
 		<a href="/">
 			<div>
-				<div>Return</div>
+				<div><img style="margin:-14px 0px; height:auto; width:50%;" src="/style/images/return.png"></img></div>
 				<div>Go back to CSO</div>
 			</div>
 		</a>
