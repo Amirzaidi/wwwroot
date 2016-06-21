@@ -15,8 +15,11 @@ body, .light {
 }
 
 .dark {
-	background: #bbb !important;
-	color: #fff;
+	#background: #bbb !important;
+	#color: #fff;
+
+	background: #4CAF50 !important;
+	color: #fff !important;
 }
 
 ::-webkit-scrollbar-thumb {

@@ -53,7 +53,7 @@ function lang_index(&$t)
 	$t['preround'] = 'Voorrondes';
 	$t['voteby'] = 'Stem op een land door op de naam te klikken';
 	$t['previousvote'] = 'Je hebt al gestemd voor';
-	$t['timetovote'] = 'seconde tot je weer kan stemmen';
+	$t['timetovote'] = 'uur tot je weer kan stemmen';
 	$t['newvote'] = 'Je hebt nu gestemd voor';
 	$t['invalidvote'] = 'Je kan hier niet op stemmen';
 	$t['endat'] = 'Stemmen eindigt op';

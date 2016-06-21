@@ -26,7 +26,7 @@ require 'inc.manage.php';
 	?>
 	<div>
 		<?php
-		echo '<a href="/manage/contact/', $contact->id, '">[Dismiss]</a> ', $contact->name, ' - from ', $contact->ip, '<br/><b>', $contact->subject, '</b><br/>', $contact->content;
+		echo '<a href="/manage/contact/', $contact->id, '">[Dismiss]</a> ', $contact->name, ' - from ', $contact->ip, '<br/><b>', $contact->subject, '</b><br/>', nl2br($contact->content);
 		?>
 	</div>
 	<?php

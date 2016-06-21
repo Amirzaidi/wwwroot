@@ -4,7 +4,7 @@ $ipvote = new vote($ip);
 
 if ($ipvote->found())
 {
-	$msg = '[previousvote] ' . $ipvote->country->name . ' (' . cron::timeUntil('clearvotes') . ' [timetovote])';
+	$msg = '[previousvote] ' . $ipvote->country->name . ' (' . gmdate('H:i', cron::timeUntil('clearvotes')) . ' [timetovote])';
 }
 else if (isset($uri[0]))
 {

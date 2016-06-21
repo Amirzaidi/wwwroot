@@ -54,7 +54,7 @@ function lang_index(&$t)
 	$t['preround'] = 'Preliminaries';
 	$t['voteby'] = 'Vote for a country by clicking on its name';
 	$t['previousvote'] = 'You have previously voted for';
-	$t['timetovote'] = 'seconds until you can vote again';
+	$t['timetovote'] = 'hours until you can vote again';
 	$t['newvote'] = 'You have now voted for';
 	$t['invalidvote'] = 'You can\'t vote for this';
 	$t['endat'] = 'Voting ends at';
