@@ -12,7 +12,7 @@ body {
 a {
 	color: #888;
 	text-decoration: none;
-	transition: color 0.25s ease-in;
+	transition: color 0.25s;
 }
 
 a:hover {
@@ -48,7 +48,7 @@ div.part > div {
 	margin: 10px;
 	height: calc(100% - 20px);
 	width: calc(100% - 20px);
-	box-shadow: 0 0 12px -2px #000;
+	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 	background: #fff;
 	overflow: auto;
 	font-size: 1em;
@@ -57,7 +57,7 @@ div.part > div {
 }
 
 div.part > div:hover {
-	box-shadow: 0 0 20px -2px #000;
+	box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
 div.part > div > a {
@@ -72,14 +72,14 @@ a.button > div {
 	line-height: 40px;
 	width: 40px;
 	border-radius: 999px;
-	box-shadow: 0 5px 20px -2px #000;
+	box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 	text-align: center;
 	font-size: 22px;
 	transition: all 0.25s;
 }
 
 a.button > div:hover {
-	box-shadow: 0 8px 30px -4px #000;
+	box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
 }
 
 @keyframes showclose {

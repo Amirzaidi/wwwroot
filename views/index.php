@@ -48,6 +48,8 @@ if (!isset($imgs[0]))
 	$imgs[0] = '/style/images/bg0.jpg';
 }
 
+$contest = contest::active();
+
 $c = 0;
 $color = ['whiterow', 'greyrow'];
 ?>
@@ -82,13 +84,13 @@ $color = ['whiterow', 'greyrow'];
 
 		<div class="webstar">
 
-			<h2> <a href="#"><?php echo ($state == 'finale') ? '[infinale]' : '[preround]'; ?></a> </br></h2>
+			<h2> <a href="#"><?php echo $contest->name; ?> - <?php echo ($state == 'finale') ? '[infinale]' : '[preround]'; ?></a> </br></h2>
 
 		</div>
 
 		<div class="webstarinfo">
 
-		<p>[voteby]</p>
+		<p><?php echo $contest->desc; ?><br/>[voteby]</p>
 		<p style="color: red;">([endat] <?php echo date('d/m H:i:s', time() + cron::timeUntil('pickrandom')); ?> [timezone])</p>
 		<p id="result"> <?php if (isset($msg)) echo $msg; ?> </p>
 		<a href="/ads">[advertisehere]</a>

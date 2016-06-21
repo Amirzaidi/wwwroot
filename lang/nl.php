@@ -110,6 +110,6 @@ function lang_contact(&$t)
 	$t['your_mail'] = 'Je email';
 	$t['subject'] = 'Onderwerp';
 	$t['comment'] = 'Bericht';
-	$t['send_mail'] = 'Verzend';
+	$t['send'] = 'Verzend';
 }
 ?>
