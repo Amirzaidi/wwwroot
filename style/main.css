@@ -463,12 +463,8 @@ h1 {
 	cursor: pointer;
 	border-width: medium medium 3px;
 	border-style: none none solid;
-	border-color: -moz-use-text-color -moz-use-text-color #025A5A;
-	-moz-border-top-colors: none;
-	-moz-border-right-colors: none;
-	-moz-border-bottom-colors: none;
-	-moz-border-left-colors: none;
 	border-image: none;
+	border-color: #005656;
 }
 
 .par > a:hover { 
@@ -476,6 +472,7 @@ h1 {
 	border-bottom: 3px solid #e1e1e1;
 	color: teal;
 }
+
 
 .par {
 	margin-top: 20px;
