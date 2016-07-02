@@ -23,8 +23,8 @@ $imgcount = count($img);
 </head>
 <body>
 	<div id="navbar" class="d2 orange">
-		<a href="#open" id="open"><div>=</div></label>
-		<a href="#" id="close"><div></div></a>
+		<input type="checkbox" id="navbox" class="hide" />
+		<label for="navbox" id="navboxlabel" style="color: white"><div>=</div></label>
 
 		<div id="nav">
 			<a style="color: white" href="#"><div class="orange" style="padding-top: 112px;">New Theme</div></a>
@@ -48,7 +48,7 @@ $imgcount = count($img);
 				<div class="text"><b>Wallpaper Image</b><br/><?php echo $img[$i]; ?></div>
 				<img src="<?php echo $img[$i]; ?>" />
 				<div class="collapse">
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
 					<p style="background: #eee;"><a href="#">Download</a><br/><a href="#">Share</a></p>
 				</div>
 				<label for="e<?php echo $i; ?>"><p>VIEW MORE <b style="float: right">&#x25BE;</b></p></label>

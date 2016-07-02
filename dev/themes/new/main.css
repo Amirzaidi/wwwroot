@@ -112,36 +112,27 @@ body > div#navbar > div#nav > a#current > div {
 	background: #eee !important;
 }
 
-body > div#navbar > a#open {
+body > div#navbar > label#navboxlabel {
 	position: fixed; 
 	font-size: 36px;
 	cursor: pointer;
-	color: white;
+	transition: background 0.25s;
 }
 
-body > div#navbar > a#open > div {
+body > div#navbar > label#navboxlabel > div {
 	padding: 16px 24px;
 	float: left;
 }
 
-body > div#navbar > a#open:target ~ div#nav {
+body > div#navbar > input#navbox:checked ~ div#nav {
 	margin-left: 0;
-	box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
 }
 
-body > div#navbar > a#close > div {
-	background: none;
-	transition: background 0.25s;
+body > div#navbar > input#navbox:checked ~ label#navboxlabel {
+	width: 100vw;
 	left: 0;
 	top: 0;
-	width: 0;
-	height: 0;
-	position: fixed;
-}
-
-body > div#navbar > a#open:target ~ a#close > div {
-	width: 100vw !important;
-	height: 100vh !important;
+	height: 100vh;
 	background: rgba(0, 0, 0, 0.2);
 }
 
@@ -150,8 +141,9 @@ body > div#content {
 	margin: 0 auto;
 	width: 100%;
 	max-width: 2560px;
-	transition: padding 0.25s, width 0.25s, max-height 0.25s;
-	padding-top: 54px;
+	background: #fff;
+	transition: padding 0.25s, width 0.25s, max-height 0.25s, background 0.25s;
+	padding-top: 60px;
 	bottom: 0;
 	overflow: show;
 }
@@ -280,6 +272,7 @@ body > div#toast > div {
 	body > div#content {
 		padding: 64px 4px 0 4px;
 		width: calc(100% - 8px);
+		background: none;
 	}
 
 	body > div#content > div > div {
