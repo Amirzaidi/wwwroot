@@ -27,7 +27,7 @@ $imgcount = count($img);
 <body>
 	<div id="navbar" class="d2 orange">
 		<input type="checkbox" id="navbox" class="hide" />
-		<a href="#" id="close"><div></div></a>
+		<a href="#close" id="close"><div></div></a>
 		<a href="#navbar" id="open"><div>&#9776;</div></label>
 
 		<div id="nav">
