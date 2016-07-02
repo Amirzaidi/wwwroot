@@ -152,7 +152,6 @@ body > div#content {
 	max-width: 2560px;
 	transition: padding 0.25s, width 0.25s, max-height 0.25s;
 	padding-top: 54px;
-	#max-height: calc(100% - 56px);
 	bottom: 0;
 	overflow: show;
 }
@@ -279,7 +278,7 @@ body > div#toast > div {
 
 @media screen and (min-width: 500px) {
 	body > div#content {
-		padding: 62px 4px 0 4px;
+		padding: 64px 4px 0 4px;
 		width: calc(100% - 8px);
 	}
 
@@ -295,20 +294,12 @@ body > div#toast > div {
 		box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 	}
 
-	body > div#content > div > div > div.collapse {
-		#max-height: 100px;
-	}
-
-	body > div#content > div > div > label {
-		#max-height: 0;
-	}
-
 	body > div#content > div#footer > div {
 		margin-bottom: 8px;
 	}
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 800px) {
 	body > div#content > div#columns {
 		column-count: 2;
 		-moz-column-count: 2;
