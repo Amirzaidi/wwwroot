@@ -32,7 +32,7 @@ if (!$session->started())
 
 // connect to localhost:3306/root
 mysql::$models = root . 'models/';
-mysql::connect('usbw', 'csodb');
+mysql::connect('adm78', 'csodb');
 
 // check cron but block spam
 if ($debug || $session->cronCheck < (time() - 3))

@@ -10,7 +10,6 @@ body, input, textarea, select, option {
 	font-weight: 400;
 	line-height: 24px;
 	text-shadow: 0 1px rgba(230, 230, 230, 0.6);
-	overflow: hidden;
 	color: rgb(64, 64, 64);
 }
 
@@ -63,13 +62,8 @@ input.hide {
 	background: #ff5722 !important;
 }
 
-body > div {
-	position: fixed;
-	left: 0;
-	right: 0;
-}
-
 body > div#navbar {
+	position: fixed;
 	z-index: 2;
 	height: 56px;
 	overflow: show;
@@ -157,11 +151,10 @@ body > div#content {
 	width: 100%;
 	max-width: 2560px;
 	transition: padding 0.25s, width 0.25s, max-height 0.25s;
-	padding-top: 0;
-	max-height: calc(100% - 56px);
-	top: 56px;
+	padding-top: 54px;
+	#max-height: calc(100% - 56px);
 	bottom: 0;
-	overflow: auto;
+	overflow: show;
 }
 
 body > div#content > div { 
@@ -243,7 +236,6 @@ body > div#content > div > div > div.collapse {
 	max-height: 0;
 	overflow: hidden;
 	transition: max-height 0.5s;
-	background: #eee;
 	width: 100%;
 }
 
@@ -287,9 +279,8 @@ body > div#toast > div {
 
 @media screen and (min-width: 500px) {
 	body > div#content {
-		padding: 8px 4px 0 4px;
+		padding: 62px 4px 0 4px;
 		width: calc(100% - 8px);
-		max-height: calc(100% - 64px);
 	}
 
 	body > div#content > div > div {
