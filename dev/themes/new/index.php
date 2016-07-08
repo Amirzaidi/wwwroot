@@ -25,17 +25,17 @@ $imgcount = count($img);
 	<meta name="theme-color" content="#ff5722" />
 </head>
 <body>
-	<div id="navbar" class="d2 orange">
+	<div id="navbar" class="d2">
 		<input type="checkbox" id="navbox" class="hide" />
 		<a href="#close" id="close"><div></div></a>
 		<a href="#navbar" id="open"><div>&#9776;</div></label>
 
 		<div id="nav">
-			<a style="color: white"><div class="orange" style="padding-top: 112px;">New Theme</div></a>
-			<a href="#login"><div>Login</div></a>
-			<a id="current"><div>Your Feed</div></a>
-			<a href="/dev/themes/new/new.php"><div>What's New</div></a>
+			<a id="first"><div class="orange">New Theme</div></a>
+			<a href="slide.php"><div>Portal</div></a>
+			<a id="current"><div>What's New</div></a>
 			<a href="/dev/themes/new/trending.php"><div>Currently Trending</div></a>
+			<a href="#login"><div>Login</div></a>
 		</div>
 	</div>
 
@@ -52,7 +52,7 @@ $imgcount = count($img);
 				<form action="index.php" method="post">
 					<div><input type="text" name="name" placeholder="Username" /></div>
 					<div><input type="password" name="pass" placeholder="Password" /></div>
-					<div><input type="submit" value="Login" class="orange button hd3" /></div>
+					<div><button type="submit" class="orange button hd3">Submit</button><button type="reset" class="button hd3">Cancel</button></div>
 					<div class="clearfix"></div>
 				</form>
 				<div class="clearfix"></div>
@@ -64,7 +64,7 @@ $imgcount = count($img);
 					<div><input type="text" name="url" placeholder="Url" /></div>
 					<div><textarea placeholder="Description" name="text"></textarea></div>
 					<div><select><option>Keep direct link</option><option>Rehost on our servers</option></select></div>
-					<div><input type="submit" value="Submit" class="orange button hd3" /><a href="#" class="button hd3"><div>Cancel</div></a></div>
+					<div><button type="submit" class="orange button hd3">Submit</button><button type="reset" class="button hd3">Cancel</button></div>
 					<div class="clearfix"></div>
 				</form>
 				<div class="clearfix"></div>

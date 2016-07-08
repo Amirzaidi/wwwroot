@@ -6,38 +6,35 @@ body {
 	background: #ddd;
 }
 
-body, input, textarea, select, option {
+body, input, textarea, select, option, button {
 	font: 14px Roboto;
 	font-weight: 400;
 	line-height: 24px;
-	text-shadow: 0 1px rgba(230, 230, 230, 0.6);
 	color: rgb(64, 64, 64);
 }
 
-input[type="submit"] {
+button {
 	border: none;
-}
-
-.button {
+	border-image-width: 0;
 	border-radius: 3px;
-	padding: 8px 16px;
+	padding: 5px 13px;
 	cursor: pointer;
 	transition: box-shadow 0.25s;
 	text-align: right;
 	color: #fff;
 	float: right;
 	position: relative;
+	font-weight: 500;
+	text-transform: uppercase;
+	display: block;
+	background: #fff;
 }
 
-a.button {
+button[type="reset"] {
 	color: #ff5722 !important;
 }
 
-input[type="submit"].button {
-	line-height: 22px;
-}
-
-.button:hover {
+button:hover {
 	z-index: 2;
 }
 
@@ -119,6 +116,9 @@ body > div#navbar {
 	height: 56px;
 	overflow: show;
 	width: 100%;
+	background: #ff5722;
+	border-top: 1px solid #ff5722;
+	top: -1px;
 }
 
 body > div#navbar > div#nav {
@@ -145,9 +145,13 @@ body > div#navbar > div#nav > a > div:hover {
 	background: #ddd;
 }
 
-body > div#navbar > div#nav > a:first-child > div {
-	padding-top: 122px;
-	font-size: 17px;
+body > div#navbar > div#nav > a#first {
+	color: white;
+}
+
+body > div#navbar > div#nav > a#first > div {
+	padding-top: 112px;
+	font-size: 18px;
 }
 
 body > div#navbar > div#nav > a#current {
@@ -160,15 +164,15 @@ body > div#navbar > div#nav > a#current > div {
 
 body > div#navbar > a#open {
 	position: fixed; 
-	font-size: 20px;
+	font-size: 27px;
 	cursor: pointer;
 }
 
 body > div#navbar > a#open > div {
-	padding: 16px 24px;
+	padding: 16px 20px;
 	float: left;
 	color: white;
-	transform: scaleX(1.25);
+	transform: scaleY(0.66);
 }
 
 body > div#navbar:target > div#nav {
@@ -218,7 +222,7 @@ body > div#content > div > div {
 	transition: all 0.25s;
 	overflow: hidden;
 	page-break-inside: avoid;
-	line-height: 24px;
+	line-height: 23px;
 	position:relative;
 }
 
