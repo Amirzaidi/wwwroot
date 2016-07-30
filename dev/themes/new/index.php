@@ -21,21 +21,51 @@ $imgcount = count($img);
 <head>
 	<title>New Theme</title>
 	<link rel="stylesheet" type="text/css" href="main.css" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<?php if (!isset($_GET['desktop'])) { ?><meta name="viewport" content="width=device-width, initial-scale=1"><?php } ?>
 	<meta name="theme-color" content="#ff5722" />
 </head>
 <body>
 	<div id="navbar" class="d2">
-		<input type="checkbox" id="navbox" class="hide" />
 		<a href="#close" id="close"><div></div></a>
-		<a href="#navbar" id="open"><div>&#9776;</div></label>
+		<a href="#navbar" id="open"><div>&#9776;</div></a>
+
+		<input type="checkbox" id="search" class="hide" />
+
+		<div id="title">What's New</div>
+		<label for="search" class="btn"><b>&#9906;</b></label>
+
+		<form action="index.php" method="post">
+			<input type="text" name="search" placeholder="Search" />
+			<label for="search" class="btn">&#215;</label>
+		</form>
 
 		<div id="nav">
-			<a id="first"><div class="orange">New Theme</div></a>
-			<a href="slide.php"><div>Portal</div></a>
-			<a id="current"><div>What's New</div></a>
-			<a href="/dev/themes/new/trending.php"><div>Currently Trending</div></a>
-			<a href="#login"><div>Login</div></a>
+			<input type="checkbox" id="extendnav" class="hide" />
+			<label for="extendnav" class="orange">
+				<a href="#"><div class="round" style="background-image: url('https://i.ytimg.com/vi/kMQZsEjEd84/maxresdefault.jpg')"></div></a>
+				<div>Amir Zaidi</div>
+				<div>azaidi@live.nl<b>&#9698;</b></div>
+			</label>
+			<div id="extended">
+				<a class="subheader">Accounts</a>
+				<a href="#login"><img src="http://i.imgur.com/gkA2Rwk.png" />Add Account</a>
+				<a href="#toast"><img src="http://i.imgur.com/p8T81Wo.png" />Logout</a>
+			</div>
+			<div>
+				<a class="subheader">Navigation</a>
+				<a href="slide.php"><img src="http://i.imgur.com/LZhSZbL.png" />Portal</a>
+				<a href="#" id="current"><img src="http://i.imgur.com/ga7l1GQ.png" />What's New</a>
+				<a href="#"><img src="http://i.imgur.com/e7Vdxc7.png" />Currently Trending</a>
+				<a href="#"><img src="http://i.imgur.com/E8uqYXn.png" />Top Posts</a>
+				<a href="#"><img src="http://i.imgur.com/YrudrDh.png" />My Submissions</a>
+			</div>
+			<div>
+				<a class="subheader">More</a>
+				<a href="#"><img src="http://i.imgur.com/8HHoXLq.png" />Settings</a>
+				<?php if (!isset($_GET['desktop'])) { ?><a href="?desktop=true"><img src="http://i.imgur.com/ZzYQgo8.png" />Desktop Version</a><?php } ?>
+				<a href="#"><img src="http://i.imgur.com/RvLuAQB.png" />Donate</a>
+				<a href="#"><img src="http://i.imgur.com/HK1kcgv.png" />Info</a>
+			</div>
 		</div>
 	</div>
 
@@ -47,17 +77,6 @@ $imgcount = count($img);
 		</div>
 
 		<div id="columns">
-			<div>
-				<a id="login" class="jump"></a>
-				<form action="index.php" method="post">
-					<div><input type="text" name="name" placeholder="Username" /></div>
-					<div><input type="password" name="pass" placeholder="Password" /></div>
-					<div><button type="submit" class="orange button hd3">Submit</button><button type="reset" class="button hd3">Cancel</button></div>
-					<div class="clearfix"></div>
-				</form>
-				<div class="clearfix"></div>
-			</div>
-
 			<div>
 				<a id="add" class="jump"></a>
 				<form action="index.php" method="post">
@@ -73,18 +92,34 @@ $imgcount = count($img);
 			<?php for ($i = 0; $i < $imgcount; $i++) { ?>
 			<input type="checkbox" id="c<?php echo $i; ?>" class="hide" />
 			<div id="e<?php echo $i; ?>">
+				<?php if ($i % 3 != 0) { ?>
 				<a id="j<?php echo $i; ?>" class="jump"></a>
-				<div class="photo"><img src="<?php echo $img[$i]; ?>" /></div>
-				<div class="text"><b>Wallpaper Image</b><br/><?php echo $img[$i]; ?></div>
+				<?php if ($i % 3 == 1) { ?>
+				<div class="round" style="background-image: url('https://i.ytimg.com/vi/kMQZsEjEd84/maxresdefault.jpg')"></div>
+				<?php } ?>
+				<div class="text"><b>Amir Zaidi</b><br/>Posted 3 days ago</div>
+				<?php } ?>
+
 				<img src="<?php echo $img[$i]; ?>" />
 				<div class="collapse">
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-					<p style="background: #eee;"><a href="#">Download</a><br/><a href="#">Share</a></p>
-					<label for="c<?php echo $i; ?>"><p>HIDE <b style="float: right">&#x25B4;</b></p></label>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+					<p style="background: #eee;"><a href="<?php echo $img[$i]; ?>" target=_blank>Download</a><br/><a href="#">Share</a></p>
+					<label for="c<?php echo $i; ?>"><p>HIDE</p></label>
 				</div>
-				<label for="c<?php echo $i; ?>"><p>VIEW MORE <b style="float: right">&#x25BE;</b></p></label>
+				<label for="c<?php echo $i; ?>"><p>VIEW MORE</p></label>
 			</div>
 			<?php } ?>
+
+			<div>
+				<a id="login" class="jump"></a>
+				<form action="index.php" method="post">
+					<div><input type="text" name="name" placeholder="Username" /></div>
+					<div><input type="password" name="pass" placeholder="Password" /></div>
+					<div><button type="submit" class="orange button hd3">Submit</button><button type="reset" class="button hd3">Cancel</button></div>
+					<div class="clearfix"></div>
+				</form>
+				<div class="clearfix"></div>
+			</div>
 		</div>
 
 		<div id="footer">
@@ -92,13 +127,7 @@ $imgcount = count($img);
 		</div>
 	</div>
 
-	<a id="button" href="#add">
-		<div class="orange d3 hd5">+</div>
-	</a>
-
-	<input type="checkbox" id="toastbox" class="hide" />
-	<div id="toast">
-		<div class="d3 hd5"><label for="toastbox" id="toastboxlabel">&#215;</label> You have added something</div>
-	</div>
+	<div id="toast">Removed account<a href="#" class="hd5">UNDO</a></div>
+	<a id="button" href="#add" class="orange d3 hd5"><b>+</b></a>
 </body>
 </html>

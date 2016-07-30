@@ -12,7 +12,6 @@ body, input, textarea, select, option {
 	font: 14px Roboto;
 	font-weight: 400;
 	line-height: 24px;
-	text-shadow: 0 1px rgba(230, 230, 230, 0.6);
 	color: rgb(64, 64, 64);
 }
 
