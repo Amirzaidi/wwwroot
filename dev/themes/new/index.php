@@ -29,14 +29,12 @@ $imgcount = count($img);
 		<a href="#close" id="close"><div></div></a>
 		<a href="#navbar" id="open"><div>&#9776;</div></a>
 
-		<input type="checkbox" id="search" class="hide" />
-
 		<div id="title">What's New</div>
 		<label for="search" class="btn"><b>&#9906;</b></label>
 
 		<form action="index.php" method="post">
-			<input type="text" name="search" placeholder="Search" />
-			<label for="search" class="btn">&#215;</label>
+			<input type="text" name="search" id="search" placeholder="Search.." />
+			<label class="btn">&#215;</label>
 		</form>
 
 		<div id="nav">
@@ -77,8 +75,12 @@ $imgcount = count($img);
 		</div>
 
 		<div id="columns">
+			<style type="text/css">
+			a#add + div { display: none !important }
+			a#add:target + div { display: inline-block !important }
+			</style>
+			<a id="add" class="jump"></a>
 			<div>
-				<a id="add" class="jump"></a>
 				<form action="index.php" method="post">
 					<div><input type="text" name="url" placeholder="Url" /></div>
 					<div><textarea placeholder="Description" name="text"></textarea></div>

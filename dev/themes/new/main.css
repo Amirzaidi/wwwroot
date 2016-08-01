@@ -132,9 +132,9 @@ body > div#navbar > div#nav {
 	position: fixed;
 	top: 0;
 	bottom: 0;
-	transition: margin-left 0.25s, box-shadow 0.25s, width 0.25s;
 	overflow: auto;
 	font-weight: 500;
+	transition: margin-left 0.25s, box-shadow 0.25s, width 0.25s;
 }
 
 body > div#navbar > div#nav > div {
@@ -268,7 +268,7 @@ body > div#navbar > div#title {
 
 body > div#navbar label.btn {
 	font-size: 28px;
-	position: relative; 
+	position: relative;
 	height: 100%;
 	display: flex;
 	align-items: center;
@@ -276,53 +276,55 @@ body > div#navbar label.btn {
 	padding: 0 24px;
 }
 
-body > div#navbar label > b {
+body > div#navbar label.btn > b {
 	transform: rotate(-45deg);
 	display: block;
 }
 
 body > div#navbar > form {
-	width: calc(100% - 63px);
-	position: relative;
-	height: 100%;
-	display: none;
-	align-items: center;
-	float: right;
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	top: 100%;
 }
 
 body > div#navbar > form > input {
-	color: #fff;
-	font-size: 20px;
-	position: relative;
-	margin-right: -44px;
-}
-
-body > div#navbar > form > input::-webkit-input-placeholder {
-	color: rgba(255, 255, 255, 0.7);
-}
-
-body > div#navbar > form > input::-moz-placeholder {  /* Firefox 19+ */
-	color: rgba(255, 255, 255, 0.7);
+	float: right;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	height: 0;
+	width: 0;
+	padding: 0;
+	margin: 28px 32px;
+	border-radius: 2px;
+	font-size: 16px;
+	background: #fff;
+	border: none;
+	z-index: 2;
 }
 
 body > div#navbar > form > input:focus {
-	border-bottom-color: #fff;
+	height: 24px;
+	width: calc(100% - 68px);
+	padding: 8px 40px 8px 12px;
+	margin: 8px;
+	box-shadow: 0 0 0 1000px rgba(0, 0, 0, 0.4);
+	transition: all 0.25s;
 }
 
-body > div#navbar > form > label {
-	z-index: 2;
-	float: right;
-}
-
-body > div#navbar > input#search:checked ~ div#title {
+body > div#navbar > form > label.btn {
+	position: absolute;
+	z-index: 3;
+	right: 0;
+	bottom: 0;
+	padding-left: 0;
 	display: none;
+	color: rgba(64, 64, 64, 0.75);
+	height: 56px;
 }
 
-body > div#navbar > input#search:checked ~ label {
-	display: none;
-}
-
-body > div#navbar > input#search:checked ~ form {
+body > div#navbar > form > input:focus ~ label.btn {
 	display: flex;
 }
 
@@ -386,7 +388,6 @@ body > div#content > div#columns > div {
 body > div#content > div > div p {
 	margin: 16px;
 	padding: 0;
-	transition: margin 0.25s;
 }
 
 body > div#content > div > div a.action {
@@ -401,7 +402,6 @@ body > div#content > div > div a.action {
 }
 
 body > div#content > div > div a.disabled {
-	margin: 8px;
 	color: rgba(0, 0, 0, 0.26);
 	cursor: pointer;
 }
@@ -467,9 +467,11 @@ body > div#content > div > div > form > div {
 	margin-bottom: 8px;
 }
 
-body > div#content > div > div > a.jump {
-	position: absolute;
+body > div#content > div > a.jump {
+	position: relative;
 	top: -56px;
+	display: block;
+	width: 0;
 }
 
 body > div#content > div#footer > div {
@@ -650,12 +652,12 @@ body > a#button > b {
 	}
 
 	body > div#content > div > div p {
-		margin: 16px 24px;
+		#margin: 16px 24px;
 	}
 
 	body > div#content > div > div a.action {
-		margin-left: 16px;
-		margin-right: -8px;
+		#margin-left: 16px;
+		#margin-right: -8px;
 	}
 }
 
@@ -679,5 +681,28 @@ body > a#button > b {
 	body > div#content > div#columns {
 		column-count: 5;
 		-moz-column-count: 5;
+	}
+}
+
+@media screen and (min-height: 720px) {
+	body > div#navbar {
+		height: 112px;
+	}
+
+	body > div#navbar > div#title {
+		height: 50%;
+	}
+
+	body > div#navbar label.btn {
+		height: 50%;
+	}
+
+	body > div#navbar > a#open {
+		float: none;
+		height: 50%;
+	}
+
+	body > div#navbar > div#title {
+		padding-left: 20px;
 	}
 }
