@@ -1,11 +1,11 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:700,500,400,300);
+@import url(shadows.css);
 
 body {
 	margin: 0;
 	overflow: hidden;
-	width: 100%;
-	height: 100%;
-	position: fixed;
+	width: 100vw;
+	height: 100vh;
 }
 
 body, input, textarea, select, option {
@@ -49,17 +49,18 @@ body > div#pages > div {
 }
 
 body > div#pages > div > h1 {
-	margin-top: 32px;
-	font-size: 32px;
+	margin-top: 48px;
+	font-size: 28px;
 }
 
 body > div#pages > div > img {
-	height: 116px;
-	margin: 4px 0;
+	#width: 80%;
+	width: 200px;
+	margin: 20px 0;
 }
 
 body > div#pages > div > p {
-	width: 90%;
+	width: 80%;
 	margin: 8px auto;
 	font-size: 16px;
 }
@@ -90,22 +91,31 @@ body > div#bar {
 	bottom: 0;
 	left: 0;
 	width: 500%;
+	overflow: hidden;
+	height: 64px;
+	border-top: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 body > div#bar > div div {
-	padding: 12px 20px;
 	color: #fff;
-	border-radius: 5px;
+	border-radius: 50%;
 	background: none;
 	transition: background 0.25s;
+	width: 96px;
+	height: 96px;
+	display: flex;
+	align-items: center;
+	position: relative;
+	top: -16px;
 }
 
-body > div#bar > div div:hover {
-	background: rgba(255, 255, 255, 0.1);
+body > div#bar > div div > * {
+	width: 100%;
+	text-align: center;
 }
 
 body > div#bar > div div > b {
-	transform: scaleX(0.60);
+	transform: scaleX(0.45) scale(1.2);
 	font-size: 24px;
 	display: block;
 	font-weight: 400;
@@ -115,37 +125,43 @@ body > div#bar > div div > b {
 
 body > div#bar > div div.left {
 	float: left;
-	margin-left: 20px;
-	margin-bottom: 12px;
 }
 
 body > div#bar > div div.right {
 	float: right;
-	margin-right: 20px;
-	margin-bottom: 12px;
 }
 
 body > p {
 	position: fixed;
 	bottom: 0;
-	margin-bottom: 24px;
-	left: calc(50vw - 35px);
-	width: 70px;
+	height: 64px;
+	left: calc(50vw - 30px);
+	width: 60px;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	margin: 0;
 }
 
 body > p > img {
 	display: inline-block;
 	background: #fff;
 	opacity: 0.2;
-	border-radius: 1000px;
-	height: 10px;
-	width: 10px;
-	margin: 0 2px;
+	border-radius: 50%;
+	height: 12px;
+	width: 12px;
 	transition: opacity 0.25s;
+	transform: scale(0.75);
 }
 
 p > img:nth-of-type(1) {
 	opacity: 1.0;
+}
+
+@keyframes onclick {
+	1% { margin: 32px; width: 32px; height: 32px; background: none; }
+	50% { margin: 0; width: 96px; height: 96px; background: rgba(255, 255, 255, 0.1); }
+	100% { background: none; }
 }
 
 input#a1:checked ~ div {
@@ -160,6 +176,11 @@ input#a1:checked ~ p > img:nth-of-type(2) {
 	opacity: 1.0;
 }
 
+input#a1:checked ~ div#bar > div > label[for="a2"] > div {
+	animation-name: onclick;
+	animation-duration: 0.5s;
+}
+
 input#a2:checked ~ div {
 	left: -200vw;
 }
@@ -170,6 +191,11 @@ input#a2:checked ~ p > img:nth-of-type(2) {
 
 input#a2:checked ~ p > img:nth-of-type(3) {
 	opacity: 1.0;
+}
+
+input#a2:checked ~ div#bar > div > label[for="a3"] > div {
+	animation-name: onclick;
+	animation-duration: 0.5s;
 }
 
 input#a3:checked ~ div {
@@ -184,6 +210,11 @@ input#a3:checked ~ p > img:nth-of-type(4) {
 	opacity: 1.0;
 }
 
+input#a3:checked ~ div#bar > div > label[for="a4"] > div {
+	animation-name: onclick;
+	animation-duration: 0.5s;
+}
+
 input#a4:checked ~ div {
 	left: -400vw;
 }
@@ -196,44 +227,14 @@ input#a4:checked ~ p > img:nth-of-type(5) {
 	opacity: 1.0;
 }
 
-.d1 {
-	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+input#a4:checked ~ div#bar > div > a > div {
+	animation-name: onclick;
+	animation-duration: 0.5s;
 }
 
-.d2 {
-	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-}
-
-.d3 {
-	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-}
-
-.d4 {
-	box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-}
-
-.d5 {
-	box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
-}
-
-.hd1:hover {
-	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-}
-
-.hd2:hover {
-	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-}
-
-.hd3:hover {
-	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-}
-
-.hd4:hover {
-	box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-}
-
-.hd5:hover {
-	box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+div#bar > div > a > div:focus {
+	animation-name: onclick;
+	animation-duration: 0.5s;
 }
 
 @media only screen and (max-height: 440px) {

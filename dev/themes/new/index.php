@@ -21,7 +21,7 @@ $imgcount = count($img);
 <head>
 	<title>New Theme</title>
 	<link rel="stylesheet" type="text/css" href="main.css" />
-	<?php if (!isset($_GET['desktop'])) { ?><meta name="viewport" content="width=device-width, initial-scale=1"><?php } ?>
+	<?php if (!isset($_GET['desktop'])) { ?><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"><?php } ?>
 	<meta name="theme-color" content="#ff5722" />
 </head>
 <body>
@@ -42,7 +42,7 @@ $imgcount = count($img);
 		<div id="nav">
 			<input type="checkbox" id="extendnav" class="hide" />
 			<label for="extendnav" class="orange">
-				<a href="#"><div class="round" style="background-image: url('https://i.ytimg.com/vi/kMQZsEjEd84/maxresdefault.jpg')"></div></a>
+				<a class="round" style="background-image: url('https://i.ytimg.com/vi/kMQZsEjEd84/maxresdefault.jpg')" href="#"></a>
 				<div>Amir Zaidi</div>
 				<div>azaidi@live.nl<b>&#9698;</b></div>
 			</label>
@@ -92,21 +92,25 @@ $imgcount = count($img);
 			<?php for ($i = 0; $i < $imgcount; $i++) { ?>
 			<input type="checkbox" id="c<?php echo $i; ?>" class="hide" />
 			<div id="e<?php echo $i; ?>">
-				<?php if ($i % 3 != 0) { ?>
 				<a id="j<?php echo $i; ?>" class="jump"></a>
-				<?php if ($i % 3 == 1) { ?>
-				<div class="round" style="background-image: url('https://i.ytimg.com/vi/kMQZsEjEd84/maxresdefault.jpg')"></div>
-				<?php } ?>
-				<div class="text"><b>Amir Zaidi</b><br/>Posted 3 days ago</div>
+				<?php if ($i % 5 < 3) { ?>
+				<a class="round" style="background-image: url('https://i.ytimg.com/vi/kMQZsEjEd84/maxresdefault.jpg')" href="#"></a>
+				<div class="text"><b>Amir Zaidi</b><br/>Posted <?php echo ($i + 2); ?> days ago</div>
+				<?php } else { ?>
+				<div class="text"><b>Archive</b></div>
 				<?php } ?>
 
 				<img src="<?php echo $img[$i]; ?>" />
-				<div class="collapse">
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-					<p style="background: #eee;"><a href="<?php echo $img[$i]; ?>" target=_blank>Download</a><br/><a href="#">Share</a></p>
-					<label for="c<?php echo $i; ?>"><p>HIDE</p></label>
-				</div>
 				<label for="c<?php echo $i; ?>"><p>VIEW MORE</p></label>
+				<div class="collapse">
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+					</p>
+					<a href="<?php echo $img[$i]; ?>" target=_blank class="action">DOWNLOAD</a>
+					<a href="#" class="action">SHARE</a>
+					<a class="action disabled">SAVE</a>
+					<label for="c<?php echo $i; ?>"><a class="action">HIDE</a></label>
+				</div>
 			</div>
 			<?php } ?>
 
@@ -127,7 +131,7 @@ $imgcount = count($img);
 		</div>
 	</div>
 
-	<div id="toast">Removed account<a href="#" class="hd5">UNDO</a></div>
+	<div id="toast"><a href="index.php" class="hd5">UNDO</a>Removed azaidi@live.nl</div>
 	<a id="button" href="#add" class="orange d3 hd5"><b>+</b></a>
 </body>
 </html>
