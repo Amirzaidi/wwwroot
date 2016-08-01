@@ -1,4 +1,7 @@
 <?php
+header('Location: /dev/themes/new/slide.php');
+exit();
+
 $debug = true;
 if ($debug)
 {
