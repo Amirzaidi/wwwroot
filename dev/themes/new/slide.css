@@ -1,35 +1,10 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:700,500,400,300);
-@import url(shadows.css);
-
-body {
-	margin: 0;
-	overflow: hidden;
+body.slide {
 	width: 100vw;
 	height: 100vh;
+	overflow: hidden;
 }
 
-body, input, textarea, select, option {
-	font: 14px Roboto;
-	font-weight: 400;
-	line-height: 24px;
-	color: rgb(64, 64, 64);
-}
-
-.hide {
-	display: none;
-}
-
-label {
-	cursor: pointer;
-	-webkit-touch-callout: none;
-	-webkit-user-select: none;
-	-khtml-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
-}
-
-body > div#pages {
+body.slide > div#pages {
 	width: 500%;
 	height: 100%;
 	transition: left 0.2s;
@@ -37,55 +12,56 @@ body > div#pages {
 	position: relative;
 }
 
-body > div > div {
+body.slide > div > div {
 	width: 20%;
 	float: left;
 }
 
-body > div#pages > div {
+body.slide > div#pages > div {
 	height: 100%;
 	text-align: center;
 	color: #fff;
 }
 
-body > div#pages > div > h1 {
+body.slide > div#pages > div > h1 {
 	margin-top: 48px;
 	font-size: 28px;
 }
 
-body > div#pages > div > img {
-	#width: 80%;
+body.slide > div#pages > div > img {
 	width: 200px;
 	margin: 20px 0;
+	display: inline-block;
 }
 
-body > div#pages > div > p {
+body.slide > div#pages > div > p {
 	width: 80%;
 	margin: 8px auto;
 	font-size: 16px;
+	line-height: 24px;
 }
 
-body > div#pages > div:nth-of-type(1) {
+body.slide > div#pages > div:nth-of-type(1) {
 	background: #3F51B5;
 }
 
-body > div#pages > div:nth-of-type(2) {
+body.slide > div#pages > div:nth-of-type(2) {
 	background: #2196F3;
 }
 
-body > div#pages > div:nth-of-type(3) {
+body.slide > div#pages > div:nth-of-type(3) {
 	background: #03A9F4;
 }
 
-body > div#pages > div:nth-of-type(4) {
+body.slide > div#pages > div:nth-of-type(4) {
 	background: #00BCD4;
 }
 
-body > div#pages > div:nth-of-type(5) {
+body.slide > div#pages > div:nth-of-type(5) {
 	background: #009688;
 }
 
-body > div#bar {
+body.slide > div#bar {
 	position: fixed;
 	z-index: 2;
 	bottom: 0;
@@ -96,7 +72,7 @@ body > div#bar {
 	border-top: 1px solid rgba(0, 0, 0, 0.2);
 }
 
-body > div#bar > div div {
+body.slide > div#bar > div div {
 	color: #fff;
 	border-radius: 50%;
 	background: none;
@@ -109,12 +85,12 @@ body > div#bar > div div {
 	top: -16px;
 }
 
-body > div#bar > div div > * {
+body.slide > div#bar > div div > * {
 	width: 100%;
 	text-align: center;
 }
 
-body > div#bar > div div > b {
+body.slide > div#bar > div div > b {
 	transform: scaleX(0.45) scale(1.2);
 	font-size: 24px;
 	display: block;
@@ -123,15 +99,15 @@ body > div#bar > div div > b {
 	top: -2px;
 }
 
-body > div#bar > div div.left {
+body.slide > div#bar > div div.left {
 	float: left;
 }
 
-body > div#bar > div div.right {
+body.slide > div#bar > div div.right {
 	float: right;
 }
 
-body > p {
+body.slide > p {
 	position: fixed;
 	bottom: 0;
 	height: 64px;
@@ -143,7 +119,7 @@ body > p {
 	margin: 0;
 }
 
-body > p > img {
+body.slide > p > img {
 	display: inline-block;
 	background: #fff;
 	opacity: 0.2;
@@ -154,11 +130,17 @@ body > p > img {
 	transform: scale(0.75);
 }
 
-p > img:nth-of-type(1) {
+body.slide > p > img:nth-of-type(1) {
 	opacity: 1.0;
 }
 
 @keyframes onclick {
+	1% { margin: 32px; width: 32px; height: 32px; background: none; }
+	50% { margin: 0; width: 96px; height: 96px; background: rgba(255, 255, 255, 0.1); }
+	100% { background: none; }
+}
+
+@keyframes onclickcopy {
 	1% { margin: 32px; width: 32px; height: 32px; background: none; }
 	50% { margin: 0; width: 96px; height: 96px; background: rgba(255, 255, 255, 0.1); }
 	100% { background: none; }
@@ -233,12 +215,12 @@ input#a4:checked ~ div#bar > div > a > div {
 }
 
 div#bar > div > a > div:focus {
-	animation-name: onclick;
+	animation-name: onclickcopy !important;
 	animation-duration: 0.5s;
 }
 
 @media only screen and (max-height: 440px) {
-	body > div#pages > div > img {
+	body.slide > div#pages > div > img {
 		display: none;
 	}
 }

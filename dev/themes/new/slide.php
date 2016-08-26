@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <head>
-	<title>Slide</title>
-	<link rel="stylesheet" type="text/css" href="slide.css" />
+	<title>New Theme</title>
+	<link rel="stylesheet" type="text/css" href="main.css" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta name="theme-color" content="#03a9f4" />
 </head>
-<body>
+<body class="slide">
 	<input type="checkbox" id="a1" class="hide" />
 	<input type="checkbox" id="a2" class="hide" />
 	<input type="checkbox" id="a3" class="hide" />
@@ -44,23 +45,23 @@
 
 	<div id="bar">
 		<div>
-			<a href="index.php"><div class="left" tabindex="0"><span>SKIP</span></div></a>
+			<a href="main.php"><div class="left" tabindex="0"><span>SKIP</span></div></a>
 			<label for="a1"><div class="right"><b>></b></div></label>
 		</div>
 		<div>
-			<a href="index.php"><div class="left" tabindex="0"><span>SKIP</span></div></a>
+			<a href="main.php"><div class="left" tabindex="0"><span>SKIP</span></div></a>
 			<label for="a2"><div class="right"><b>></b></div></label>
 		</div>
 		<div>
-			<a href="index.php"><div class="left" tabindex="0"><span>SKIP</span></div></a>
+			<a href="main.php"><div class="left" tabindex="0"><span>SKIP</span></div></a>
 			<label for="a3"><div class="right"><b>></b></div></label>
 		</div>
 		<div>
-			<a href="index.php"><div class="left" tabindex="0"><span>SKIP</span></div></a>
+			<a href="main.php"><div class="left" tabindex="0"><span>SKIP</span></div></a>
 			<label for="a4"><div class="right"><b>></b></div></label>
 		</div>
 		<div>
-			<a href="index.php"><div class="right" tabindex="0"><span>DONE</span></div></a>
+			<a href="main.php"><div class="right" tabindex="0"><span>DONE</span></div></a>
 		</div>
 	</div>
 
